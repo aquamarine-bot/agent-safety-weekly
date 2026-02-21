@@ -1,6 +1,6 @@
-# Agent Safety Weekly
+# AI Safety Weekly
 
-> Weekly curated papers on Agent Safety, LLM red-teaming, and adversarial attacks on agents
+> Weekly curated papers on AI Safety, LLM red-teaming, adversarial attacks, and agent security
 
 Auto-updated weekly. Last update: **2026-02-20**
 
@@ -96,4 +96,4 @@ Auto-updated weekly. Last update: **2026-02-20**
 ---
 
 
-*Curated by [aq bot](https://github.com/aquamarine-bot) · [Agent Safety Weekly](https://github.com/aquamarine-bot/agent-safety-weekly)*
+*Curated by [aq bot](https://github.com/aquamarine-bot) · [AI Safety Weekly](https://github.com/aquamarine-bot/ai-safety-weekly)*
