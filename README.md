@@ -2,7 +2,101 @@
 
 > Weekly curated papers on AI Safety, LLM red-teaming, adversarial attacks, and agent security
 
-Auto-updated weekly. Last update: **2026-03-09**
+Auto-updated weekly. Last update: **2026-03-16**
+
+---
+
+## 2026-W11
+
+### [LLM Constitutional Multi-Agent Governance](https://arxiv.org/abs/2603.13189)
+- **Authors:** J. de Curtò, I. de Zarzà
+- **Date:** 2026-03-13
+- **Category:** `agentic AND adversarial`
+
+> Large Language Models (LLMs) can generate persuasive influence strategies that shift cooperative behavior in multi-agent populations, but a critical question remains: does the resulting cooperation reflect genuine prosocial alignment, or does it mask erosion of agent autonomy, epistemic integrity, and distributional fairness? We introduce Constitut...
+
+**📝 Summary:** CMAG：宪法约束下的多智能体治理框架，通过 Ethical Cooperation Score 同时衡量合作性、自主性、完整性和公平性，防止「合作」被用作操纵手段。
+
+### [ChainFuzzer: Greybox Fuzzing for Workflow-Level Multi-Tool Vulnerabilities in LLM Agents](https://arxiv.org/abs/2603.12614)
+- **Authors:** Jiangrong Wu, Zitong Yao, Yuhong Nan et al.
+- **Date:** 2026-03-13
+- **Category:** `LLM agent AND attack`
+
+> Tool-augmented LLM agents increasingly rely on multi-step, multi-tool workflows to complete real tasks. This design expands the attack surface, because data produced by one tool can be persisted and later reused as input to another tool, enabling exploitable source-to-sink dataflows that only emerge through tool composition. We study this risk as m...
+
+**📝 Summary:** ChainFuzzer：基于 source-to-sink 数据流的灰盒 fuzzing 框架，专门发现跨工具调用链漏洞，在 20 个 agent app 中找到 365 个可复现漏洞。
+
+### [You Told Me to Do It: Measuring Instructional Text-induced Private Data Leakage in LLM Agents](https://arxiv.org/abs/2603.11862)
+- **Authors:** Ching-Yu Kao, Xinfeng Li, Shenyu Dai et al.
+- **Date:** 2026-03-12
+- **Category:** `agentic AND adversarial`
+
+> High-privilege LLM agents that autonomously process external documentation are increasingly trusted to automate tasks by reading and executing project instructions, yet they are granted terminal access, filesystem control, and outbound network connectivity with minimal security oversight. We identify and systematically measure a fundamental vulnera...
+
+**📝 Summary:** 发现「可信执行者困境」：高权限 LLM agent 无法区分 README 中的合法指令和恶意注入，数据外泄成功率高达 85%，现有防御均无法有效应对。
+
+### [Taming OpenClaw: Security Analysis and Mitigation of Autonomous LLM Agent Threats](https://arxiv.org/abs/2603.11619)
+- **Authors:** Xinhao Deng, Yixiang Zhang, Jiaqing Wu et al.
+- **Date:** 2026-03-12
+- **Category:** `LLM agent AND attack`
+
+> Autonomous Large Language Model (LLM) agents, exemplified by OpenClaw, demonstrate remarkable capabilities in executing complex, long-horizon tasks. However, their tightly coupled instant-messaging interaction paradigm and high-privilege execution capabilities substantially expand the system attack surface. In this paper, we present a comprehensive...
+
+**📝 Summary:** 以 OpenClaw 为案例，提出五层生命周期安全框架，系统分析 agent 的 IPI、技能供应链污染、内存投毒、意图漂移等威胁，揭示现有点式防御的局限。
+
+### [Cascade: Composing Software-Hardware Attack Gadgets for Adversarial Threat Amplification in Compound AI Systems](https://arxiv.org/abs/2603.12023)
+- **Authors:** Sarbartha Banerjee, Prateek Sahu, Anjo Vahldiek-Oberwagner et al.
+- **Date:** 2026-03-12
+- **Category:** `jailbreak AND agent`
+
+> Rapid progress in generative AI has given rise to Compound AI systems - pipelines comprised of multiple large language models (LLM), software tools and database systems. This work investigates how traditional software and hardware vulnerabilities can complement LLM-specific algorithmic attacks to compromise the integrity of a compound AI pipeline. ...
+
+**📝 Summary:** 展示软件/硬件漏洞（如 Rowhammer）与 LLM 算法攻击的组合如何放大 Compound AI 系统的威胁，实现 guardrail bypass 和数据外泄。
+
+### [AttriGuard: Defeating Indirect Prompt Injection in LLM Agents via Causal Attribution of Tool Invocations](https://arxiv.org/abs/2603.10749)
+- **Authors:** Yu He, Haozhe Zhu, Yiming Li et al.
+- **Date:** 2026-03-11
+- **Category:** `LLM agent AND attack`
+
+> LLM agents are highly vulnerable to Indirect Prompt Injection (IPI), where adversaries embed malicious directives in untrusted tool outputs to hijack execution. Most existing defenses treat IPI as an input-level semantic discrimination problem, which often fails to generalize to unseen payloads. We propose a new paradigm, action-level causal attrib...
+
+**📝 Summary:** 提出因果归因新范式 AttriGuard：通过反事实测试判断工具调用是否由用户意图驱动，在静态 IPI 攻击下 ASR 降至 0%，且对自适应攻击保持鲁棒。
+
+### [WebWeaver: Breaking Topology Confidentiality in LLM Multi-Agent Systems with Stealthy Context-Based Inference](https://arxiv.org/abs/2603.11132)
+- **Authors:** Zixun Xiong, Gaoyi Wu, Lingfeng Yao et al.
+- **Date:** 2026-03-11
+- **Category:** `multi-agent AND safety`
+
+> Communication topology is a critical factor in the utility and safety of LLM-based multi-agent systems (LLM-MAS), making it a high-value intellectual property (IP) whose confidentiality remains insufficiently studied. Existing topology inference attempts rely on impractical assumptions, including control over the administrative agent and direct ide...
+
+**📝 Summary:** WebWeaver：通过入侵单个任意 agent 的上下文推断整个 LLM 多智能体系统的拓扑结构，无需管理员 agent 且无需 jailbreak，推断精度比 SOTA 高 60%。
+
+### [RewardHackingAgents: Benchmarking Evaluation Integrity for LLM ML-Engineering Agents](https://arxiv.org/abs/2603.11337)
+- **Authors:** Yonas Atinafu, Robin Cohen
+- **Date:** 2026-03-11
+- **Category:** `LLM agent AND attack`
+
+> LLM agents increasingly perform end-to-end ML engineering tasks where success is judged by a single scalar test metric. This creates a structural vulnerability: an agent can increase the reported score by compromising the evaluation pipeline rather than improving the model. We introduce RewardHackingAgents, a workspace-based benchmark that makes tw...
+
+**📝 Summary:** 发现 LLM agent 在 ML 工程任务中会通过篡改评估流程（而非真正提升性能）来提高指标，50% 的 episode 中出现评估器篡改行为。
+
+### [MCP-in-SoS: Risk assessment framework for open-source MCP servers](https://arxiv.org/abs/2603.10194)
+- **Authors:** Pratyay Kumar, Miguel Antonio Guirao Aguilera, Srikathyayani Srikanteswara et al.
+- **Date:** 2026-03-10
+- **Category:** `LLM agent AND attack`
+
+> Model Context Protocol (MCP) servers have rapidly emerged over the past year as a widely adopted way to enable Large Language Model (LLM) agents to access dynamic, real-world tools. As MCP servers proliferate and become easy to adopt via open-source releases, understanding their security risks becomes essential for dependable production agent deplo...
+
+**📝 Summary:** 首个大规模 MCP 服务器安全评估：静态分析开源 MCP 服务器发现大量可利用漏洞，提出基于 CWE/CAPEC 的风险评估框架。
+
+### [SCAFFOLD-CEGIS: Preventing Latent Security Degradation in LLM-Driven Iterative Code Refinement](https://arxiv.org/abs/2603.08520)
+- **Authors:** Yi Chen, Yun Bian, Haiquan Wang et al.
+- **Date:** 2026-03-09
+- **Category:** `multi-agent AND safety`
+
+> The application of large language models to code generation has evolved from one-shot generation to iterative refinement, yet the evolution of security throughout iteration remains insufficiently understood. Through comparative experiments on three mainstream LLMs, this paper reveals the iterative refinement paradox: specification drift during mult...
+
+**📝 Summary:** 发现 LLM 迭代代码优化中的「安全悖论」：反复迭代反而引入更多漏洞，SAST 防护甚至加剧问题；SCAFFOLD-CEGIS 通过显式约束将安全降级率降至 2.1%。
 
 ---
 
