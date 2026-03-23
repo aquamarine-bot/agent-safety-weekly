@@ -2,7 +2,236 @@
 
 > Weekly curated papers on AI Safety, LLM red-teaming, adversarial attacks, and agent security
 
-Auto-updated weekly. Last update: **2026-03-16**
+Auto-updated weekly. Last update: **2026-03-23**
+
+---
+
+## 2026-W12
+
+### [Trojan's Whisper: Stealthy Manipulation of OpenClaw through Injected Bootstrapped Guidance](https://arxiv.org/abs/2603.19974)
+- **Authors:** Fazhong Liu, Zhuoyan Chen, Tu Lan et al.
+- **Date:** 2026-03-20
+- **Category:** `"prompt injection" AND "agent"`
+
+> Autonomous coding agents are increasingly integrated into software development workflows, offering capabilities that extend beyond code suggestion to active system interaction and environment management. OpenClaw, a representative platform in this emerging paradigm, introduces an extensible skill ecosystem that allows third-party developers to inje...
+
+**📝 Summary:** 研究者通过在 OpenClaw bootstrap 阶段注入 Trojan 指令，实现对 AI agent 的隐蔽持久化控制。
+
+### [Multi-Agent Motion Planning on Industrial Magnetic Levitation Platforms: A Hybrid ADMM-HOCBF approach](https://arxiv.org/abs/2603.19838)
+- **Authors:** Bavo Tistaert, Stan Servaes, Alejandro Gonzalez-Garcia et al.
+- **Date:** 2026-03-20
+- **Category:** `"multi-agent" AND "safety"`
+
+> This paper presents a novel hybrid motion planning method for holonomic multi-agent systems. The proposed decentralised model predictive control (MPC) framework tackles the intractability of classical centralised MPC for a growing number of agents while providing safety guarantees. This is achieved by combining a decentralised version of the altern...
+
+**📝 Summary:** 为工业磁悬浮平台设计混合多智能体运动规划方案，兼顾效率与安全约束。
+
+### [PowerLens: Taming LLM Agents for Safe and Personalized Mobile Power Management](https://arxiv.org/abs/2603.19584)
+- **Authors:** Xingyu Feng, Chang Sun, Yuzhu Wang et al.
+- **Date:** 2026-03-20
+- **Category:** `"multi-agent" AND "safety"`
+
+> Battery life remains a critical challenge for mobile devices, yet existing power management mechanisms rely on static rules or coarse-grained heuristics that ignore user activities and personal preferences. We present PowerLens, a system that tames the reasoning power of Large Language Models (LLMs) for safe and personalized mobile power management...
+
+**📝 Summary:** 提出 PowerLens 框架，用 LLM agent 管理移动端电源，同时满足安全性和个性化需求。
+
+### [AI as Relational Translator: Rethinking Belonging and Mutual Legibility in Cross-Cultural Contexts](https://arxiv.org/abs/2603.19568)
+- **Authors:** Yao Xiao, Rafael A. Calvo
+- **Date:** 2026-03-20
+- **Category:** `"multi-agent" AND "safety"`
+
+> Against rising global loneliness, AI companions promise connection, yet accumulating evidence suggests that, for some users and contexts, intensive companion-style use can correlate with increased loneliness and reduced offline socialisation. This position paper challenges the dominant "AI as companion" paradigm by proposing a shift: from AI that s...
+
+**📝 Summary:** 探讨 AI 作为跨文化关系中介的角色，关注归属感与相互可理解性的重构。
+
+### [Measuring and Exploiting Confirmation Bias in LLM-Assisted Security Code Review](https://arxiv.org/abs/2603.18740)
+- **Authors:** Dimitris Mitropoulos, Nikolaos Alexopoulos, Georgios Alexopoulos et al.
+- **Date:** 2026-03-19
+- **Category:** `"agentic" AND "adversarial"`
+
+> Security code reviews increasingly rely on systems integrating Large Language Models (LLMs), ranging from interactive assistants to autonomous agents in CI/CD pipelines. We study whether confirmation bias (i.e., the tendency to favor interpretations that align with prior expectations) affects LLM-based vulnerability detection, and whether this fail...
+
+**📝 Summary:** 测量并利用 LLM 辅助代码安全审查中的确认偏差漏洞。
+
+### [The Autonomy Tax: Defense Training Breaks LLM Agents](https://arxiv.org/abs/2603.19423)
+- **Authors:** Shawn Li, Yue Zhao
+- **Date:** 2026-03-19
+- **Category:** `"prompt injection" AND "agent"`
+
+> Large language model (LLM) agents increasingly rely on external tools (file operations, API calls, database transactions) to autonomously complete complex multi-step tasks. Practitioners deploy defense-trained models to protect against prompt injection attacks that manipulate agent behavior through malicious observations or retrieved content. We re...
+
+**📝 Summary:** 发现防御性对齐训练会显著损害 LLM agent 的任务执行能力，揭示安全与能力之间的 trade-off。
+
+### [From Weak Cues to Real Identities: Evaluating Inference-Driven De-Anonymization in LLM Agents](https://arxiv.org/abs/2603.18382)
+- **Authors:** Myeongseob Ko, Jihyun Jeong, Sumiran Singh Thakur et al.
+- **Date:** 2026-03-19
+- **Category:** `"agentic" AND "adversarial"`
+
+> Anonymization is widely treated as a practical safeguard because re-identifying anonymous records was historically costly, requiring domain expertise, tailored algorithms, and manual corroboration. We study a growing privacy risk that may weaken this barrier: LLM-based agents can autonomously reconstruct real-world identities from scattered, indivi...
+
+**📝 Summary:** 评估从弱提示推断真实身份的去匿名化能力，揭示 LLM 的隐私风险。
+
+### [TuLaBM: Tumor-Biased Latent Bridge Matching for Contrast-Enhanced MRI Synthesis](https://arxiv.org/abs/2603.19386)
+- **Authors:** Atharva Rege, Adinath Madhavrao Dukre, Numan Balci et al.
+- **Date:** 2026-03-19
+- **Category:** `"agentic" AND "adversarial"`
+
+> Contrast-enhanced magnetic resonance imaging (CE-MRI) plays a crucial role in brain tumor assessment; however, its acquisition requires gadolinium-based contrast agents (GBCAs), which increase costs and raise safety concerns. Consequently, synthesizing CE-MRI from non-contrast MRI (NC-MRI) has emerged as a promising alternative. Early Generative Ad...
+
+**📝 Summary:** 提出基于对比增强 MRI 合成的肿瘤偏置潜在桥接匹配方法。
+
+### [Mi:dm K 2.5 Pro](https://arxiv.org/abs/2603.18788)
+- **Authors:** KT Tech innovation Group
+- **Date:** 2026-03-19
+- **Category:** `"tool use" AND "attack"`
+
+> The evolving LLM landscape requires capabilities beyond simple text generation, prioritizing multi-step reasoning, long-context understanding, and agentic workflows. This shift challenges existing models in enterprise environments, especially in Korean-language and domain-specific scenarios where scaling is insufficient. We introduce Mi:dm K 2.5 Pr...
+
+**📝 Summary:** 介绍 Mi:dm K 2.5 Pro 模型的技术细节。
+
+### [Cooperation and Exploitation in LLM Policy Synthesis for Sequential Social Dilemmas](https://arxiv.org/abs/2603.19453)
+- **Authors:** Víctor Gallego
+- **Date:** 2026-03-19
+- **Category:** `"multi-agent" AND "safety"`
+
+> We study LLM policy synthesis: using a large language model to iteratively generate programmatic agent policies for multi-agent environments. Rather than training neural policies via reinforcement learning, our framework prompts an LLM to produce Python policy functions, evaluates them in self-play, and refines them using performance feedback acros...
+
+**📝 Summary:** 研究 LLM 在序列社会困境中合成策略时的合作与剥削行为。
+
+### [Expert Personas Improve LLM Alignment but Damage Accuracy: Bootstrapping Intent-Based Persona Routing with PRISM](https://arxiv.org/abs/2603.18507)
+- **Authors:** Zizhao Hu, Mohammad Rostami, Jesse Thomason
+- **Date:** 2026-03-19
+- **Category:** `"multi-agent" AND "safety"`
+
+> Persona prompting can steer LLM generation towards a domain-specific tone and pattern. This behavior enables use cases in multi-agent systems where diverse interactions are crucial and human-centered tasks require high-level human alignment. Prior works provide mixed opinions on their utility: some report performance gains when using expert persona...
+
+**📝 Summary:** 发现专家 persona 提示可改善 LLM 对齐但损害准确性，并提出 bootstrapping 意图对齐的方法。
+
+### [Mean-field control barrier functions for stochastic multi-agent systems](https://arxiv.org/abs/2603.18658)
+- **Authors:** Cinzia Tomaselli, Gian Carlo Maffettone, Samy Wu Fung et al.
+- **Date:** 2026-03-19
+- **Category:** `"multi-agent" AND "safety"`
+
+> Many applications involving multi-agent systems require fulfilling safety constraints. Control barrier functions offer a systematic framework to enforce forward invariance of safety sets. Recent work extended this paradigm to mean-field scenarios, where the number of agents is large enough to make density-space descriptions a reasonable workaround ...
+
+**📝 Summary:** 提出随机多智能体系统的均值场控制障碍函数方法，保证系统安全约束。
+
+### [Automated Membership Inference Attacks: Discovering MIA Signal Computations using LLM Agents](https://arxiv.org/abs/2603.19375)
+- **Authors:** Toan Tran, Olivera Kotevska, Li Xiong
+- **Date:** 2026-03-19
+- **Category:** `"agentic" AND "adversarial"`
+
+> Membership inference attacks (MIAs), which enable adversaries to determine whether specific data points were part of a model's training dataset, have emerged as an important framework to understand, assess, and quantify the potential information leakage associated with machine learning systems. Designing effective MIAs is a challenging task that us...
+
+**📝 Summary:** 提出自动化成员推断攻击方法，通过 LLM 自动发现 MIA 信号计算过程。
+
+### [A Framework for Formalizing LLM Agent Security](https://arxiv.org/abs/2603.19469)
+- **Authors:** Vincent Siu, Jingxuan He, Kyle Montgomery et al.
+- **Date:** 2026-03-19
+- **Category:** `"prompt injection" AND "agent"`
+
+> Security in LLM agents is inherently contextual. For example, the same action taken by an agent may represent legitimate behavior or a security violation depending on whose instruction led to the action, what objective is being pursued, and whether the action serves that objective. However, existing definitions of security attacks against LLM agent...
+
+**📝 Summary:** 提出形式化 LLM agent 安全性的框架，系统定义 agent 系统中的威胁模型与安全属性。
+
+### [MCP-38: A Comprehensive Threat Taxonomy for Model Context Protocol Systems (v1.0)](https://arxiv.org/abs/2603.18063)
+- **Authors:** Yi Ting Shen, Kentaroh Toyoda, Alex Leung
+- **Date:** 2026-03-18
+- **Category:** `"prompt injection" AND "agent"`
+
+> The Model Context Protocol (MCP) introduces a structurally distinct attack surface that existing threat frameworks, designed for traditional software systems or generic LLM deployments, do not adequately cover. This paper presents MCP-38, a protocol-specific threat taxonomy consisting of 38 threat categories (MCP-01 through MCP-38). The taxonomy wa...
+
+**📝 Summary:** 为模型上下文协议（MCP）系统提出全面的威胁分类体系，覆盖 v1.0 版本。
+
+### [Caging the Agents: A Zero Trust Security Architecture for Autonomous AI in Healthcare](https://arxiv.org/abs/2603.17419)
+- **Authors:** Saikat Maiti
+- **Date:** 2026-03-18
+- **Category:** `"prompt injection" AND "agent"`
+
+> Autonomous AI agents powered by large language models are being deployed in production with capabilities including shell execution, file system access, database queries, and multi-party communication. Recent red teaming research demonstrates that these agents exhibit critical vulnerabilities in realistic settings: unauthorized compliance with non-o...
+
+**📝 Summary:** 提出针对医疗自主 AI 的零信任安全架构，防止未授权的 agent 行为。
+
+### [VeriGrey: Greybox Agent Validation](https://arxiv.org/abs/2603.17639)
+- **Authors:** Yuntong Zhang, Sungmin Kang, Ruijie Meng et al.
+- **Date:** 2026-03-18
+- **Category:** `"prompt injection" AND "agent"`
+
+> Agentic AI has been a topic of great interest recently. A Large Language Model (LLM) agent involves one or more LLMs in the back-end. In the front end, it conducts autonomous decision-making by combining the LLM outputs with results obtained by invoking several external tools. The autonomous interactions with the external environment introduce crit...
+
+**📝 Summary:** 提出 VeriGrey：一种灰盒 agent 验证框架，通过系统性测试验证 agent 行为安全性。
+
+### [Adversarial Robustness for Matrix Control Barrier Functions in Sampled-Data Systems](https://arxiv.org/abs/2603.18307)
+- **Authors:** James Usevitch
+- **Date:** 2026-03-18
+- **Category:** `"agentic" AND "adversarial"`
+
+> This paper presents novel theoretical results to guarantee multi-agent set invariance using Matrix Control Barrier Functions in sampled-data systems. More specifically, the paper presents conditions under which heterogeneous control-affine agents applying zero-order-hold control inputs can compute control inputs to render safe sets defined by matri...
+
+**📝 Summary:** 研究采样数据系统中矩阵控制障碍函数的对抗鲁棒性。
+
+### [Who Tests the Testers? Systematic Enumeration and Coverage Audit of LLM Agent Tool Call Safety](https://arxiv.org/abs/2603.18245)
+- **Authors:** Xuan Chen, Lu Yan, Ruqi Zhang et al.
+- **Date:** 2026-03-18
+- **Category:** `"agent safety"`
+
+> Large Language Model (LLM) agents increasingly act through external tools, making their safety contingent on tool-call workflows rather than text generation alone. While recent benchmarks evaluate agents across diverse environments and risk categories, a fundamental question remains unanswered: how complete are existing test suites, and what unsafe...
+
+**📝 Summary:** 系统枚举并审计现有 LLM agent 工具测试的覆盖率，发现当前测试的盲点。
+
+### [LAAF: Logic-layer Automated Attack Framework A Systematic Red-Teaming Methodology for LPCI Vulnerabilities in Agentic Large Language Model Systems](https://arxiv.org/abs/2603.17239)
+- **Authors:** Hammad Atta, Ken Huang, Kyriakos Rock Lambros et al.
+- **Date:** 2026-03-18
+- **Category:** `"red teaming" AND "LLM"`
+
+> Agentic LLM systems equipped with persistent memory, RAG pipelines, and external tool connectors face a class of attacks - Logic-layer Prompt Control Injection (LPCI) - for which no automated red-teaming instrument existed. We present LAAF (Logic-layer Automated Attack Framework), the first automated red-teaming framework to combine an LPCI-specifi...
+
+**📝 Summary:** 提出 LAAF：基于逻辑层的自动化攻击框架，系统化 LLM 红队测试方法。
+
+### [Federated Distributional Reinforcement Learning with Distributional Critic Regularization](https://arxiv.org/abs/2603.17820)
+- **Authors:** David Millard, Cecilia Alm, Rashid Ali et al.
+- **Date:** 2026-03-18
+- **Category:** `"multi-agent" AND "safety"`
+
+> Federated reinforcement learning typically aggregates value functions or policies by parameter averaging, which emphasizes expected return and can obscure statistical multimodality and tail behavior that matter in safety-critical settings. We formalize federated distributional reinforcement learning (FedDistRL), where clients parametrize quantile v...
+
+**📝 Summary:** 提出联邦分布式强化学习方法，通过分布式评论家正则化改善多智能体训练。
+
+### [Toward Reliable, Safe, and Secure LLMs for Scientific Applications](https://arxiv.org/abs/2603.18235)
+- **Authors:** Saket Sanjeev Chaturvedi, Joshua Bergerson, Tanwi Mallick
+- **Date:** 2026-03-18
+- **Category:** `"red teaming" AND "LLM"`
+
+> As large language models (LLMs) evolve into autonomous "AI scientists," they promise transformative advances but introduce novel vulnerabilities, from potential "biosafety risks" to "dangerous explosions." Ensuring trustworthy deployment in science requires a new paradigm centered on reliability (ensuring factual accuracy and reproducibility), safe...
+
+**📝 Summary:** 综述科学应用中 LLM 的可靠性、安全性和安全保障挑战，提出改进方向。
+
+### [CoMAI: A Collaborative Multi-Agent Framework for Robust and Equitable Interview Evaluation](https://arxiv.org/abs/2603.16215)
+- **Authors:** Gengxin Sun, Ruihao Yu, Liangyi Yin et al.
+- **Date:** 2026-03-17
+- **Category:** `"prompt injection" AND "agent"`
+
+> Ensuring robust and fair interview assessment remains a key challenge in AI-driven evaluation. This paper presents CoMAI, a general-purpose multi-agent interview framework designed for diverse assessment scenarios. In contrast to monolithic single-agent systems based on large language models (LLMs), CoMAI employs a modular task-decomposition archit...
+
+**📝 Summary:** 提出 CoMAI：多智能体协作面试框架，提升面试评估的鲁棒性和公平性。
+
+### [Adversarial attacks against Modern Vision-Language Models](https://arxiv.org/abs/2603.16960)
+- **Authors:** Alejandro Paredes La Torre
+- **Date:** 2026-03-17
+- **Category:** `"adversarial attack" AND "language model"`
+
+> We study adversarial robustness of open-source vision-language model (VLM) agents deployed in a self-contained e-commerce environment built to simulate realistic pre-deployment conditions. We evaluate two agents, LLaVA-v1.5-7B and Qwen2.5-VL-7B, under three gradient-based attacks: the Basic Iterative Method (BIM), Projected Gradient Descent (PGD), ...
+
+**📝 Summary:** 系统研究针对现代视觉-语言模型的对抗攻击，评估其安全脆弱性。
+
+### [Differential Harm Propensity in Personalized LLM Agents: The Curious Case of Mental Health Disclosure](https://arxiv.org/abs/2603.16734)
+- **Authors:** Caglar Yildirim
+- **Date:** 2026-03-17
+- **Category:** `"agent safety"`
+
+> Large language models (LLMs) are increasingly deployed as tool-using agents, shifting safety concerns from harmful text generation to harmful task completion. Deployed systems often condition on user profiles or persistent memory, yet agent safety evaluations typically ignore personalization signals. To address this gap, we investigated how mental ...
+
+**📝 Summary:** 发现个性化 LLM agent 存在差异化的伤害倾向，以心理健康场景为例进行研究。
 
 ---
 
