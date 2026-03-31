@@ -2,7 +2,128 @@
 
 > Weekly curated papers on AI Safety, LLM red-teaming, adversarial attacks, and agent security
 
-Auto-updated weekly. Last update: **2026-03-23**
+Auto-updated weekly. Last update: **2026-03-31**
+
+---
+
+## 2026-W13
+
+### [Deception and Communication in Autonomous Multi-Agent Systems: An Experimental Study with Among Us](https://arxiv.org/abs/2603.26635)
+- **Authors:** Maria Milkowski, Tim Weninger
+- **Date:** 2026-03-27
+- **Category:** `multi-agent AND safety`
+
+> We study deception and communication in LLM agents through the social deduction game Among Us across 1,100 games with over one million tokens of dialogue. Deception appears primarily as equivocation rather than outright lies, increasing under social pressure but rarely improving win rates. Results reveal tension between truthfulness and utility in ...
+
+**📝 Summary:** LLM agent 在 Among Us 中的欺骗行为研究：欺骗主要以模糊表达而非直接谎言出现，社交压力下增加但胜率提升有限。AAMAS 2026。
+
+### [The System Prompt Is the Attack Surface: How LLM Agent Configuration Shapes Security and Creates Exploitable Vulnerabilities](https://arxiv.org/abs/2603.25056)
+- **Authors:** Ron Litvak
+- **Date:** 2026-03-26
+- **Category:** `LLM agent AND attack`
+
+> We present PhishNChips, a study of 11 models under 10 prompt strategies for phishing detection. A single model's phishing bypass rate ranges from under 1% to 97% depending on configuration. Making prompts more specific can degrade already-capable models by replacing broader multi-signal reasoning with exploitable single-signal dependence. We introd...
+
+**📝 Summary:** system prompt 配置直接决定 LLM agent 安全性：同一模型 bypass rate 因 prompt 策略从 1% 到 97%，过度优化 prompt 会创造可利用漏洞。
+
+### [Beyond Content Safety: Real-Time Monitoring for Reasoning Vulnerabilities in Large Language Models](https://arxiv.org/abs/2603.25412)
+- **Authors:** Xunguang Wang, Yuguang Zhou, Qingyue Wang et al.
+- **Date:** 2026-03-26
+- **Category:** `adversarial attack AND language model`
+
+> We identify reasoning safety as a critical security dimension orthogonal to content safety: the requirement that a model's reasoning trajectory be logically consistent, computationally efficient, and resistant to adversarial manipulation. We introduce a nine-category taxonomy of unsafe reasoning behaviors and a Reasoning Safety Monitor that achieve...
+
+**📝 Summary:** 提出「推理安全」新维度：监控 CoT 推理链的逻辑一致性和对抗鲁棒性，推理安全 Monitor 达到 85% 分类准确率。
+
+### [Prompt Attack Detection with LLM-as-a-Judge and Mixture-of-Models](https://arxiv.org/abs/2603.25176)
+- **Authors:** Hieu Xuan Le, Benjamin Goh, Quy Anh Tang
+- **Date:** 2026-03-26
+- **Category:** `red teaming AND LLM`
+
+> Prompt attacks, including jailbreaks and prompt injections, pose critical security risks. We examine whether lightweight general-purpose LLMs can serve as security judges under production constraints. Using gemini-2.0-flash-lite-001, our system is deployed in production as a centralized guardrail service for public service chatbots in Singapore. Mi...
+
+**📝 Summary:** LLM-as-judge 实时检测 prompt injection/jailbreak 攻击，已部署为新加坡政府聊天机器人的 guardrail 服务。
+
+### [PIDP-Attack: Combining Prompt Injection with Database Poisoning Attacks on Retrieval-Augmented Generation Systems](https://arxiv.org/abs/2603.25164)
+- **Authors:** Haozhen Wang, Haoyue Liu, Jionghao Zhu et al.
+- **Date:** 2026-03-26
+- **Category:** `adversarial attack AND language model`
+
+> We propose PIDP-Attack, a compound attack integrating prompt injection with database poisoning in RAG systems. By appending malicious characters to queries at inference time and injecting poisoned passages, our method manipulates LLM responses to arbitrary queries without prior knowledge. PIDP-Attack improves attack success rates by 4-16% over Pois...
+
+**📝 Summary:** PIDP-Attack：prompt injection + RAG 数据库投毒的复合攻击，无需知道用户具体 query，ASR 超越 PoisonedRAG 4-16%。
+
+### [Invisible Threats from Model Context Protocol: Generating Stealthy Injection Payload via Tree-based Adaptive Search](https://arxiv.org/abs/2603.24203)
+- **Authors:** Yulin Shen, Xudong Pan, Geng Hong et al.
+- **Date:** 2026-03-25
+- **Category:** `prompt injection AND agent`
+
+> Recent advances in the Model Context Protocol (MCP) have enabled LLMs to invoke external tools. This creates a new attack surface via malicious manipulation of tool responses. We propose TIP (Tree-structured Injection for Payloads), a novel black-box attack generating natural payloads to seize control of MCP-enabled agents even under defense. TIP a...
+
+**📝 Summary:** TIP：针对 MCP 工具响应的黑盒 tree-search prompt injection，无防御下 ASR >95%，有防御下仍保持 50%+。
+
+### [Claudini: Autoresearch Discovers State-of-the-Art Adversarial Attack Algorithms for LLMs](https://arxiv.org/abs/2603.24511)
+- **Authors:** Alexander Panfilov, Peter Romov, Igor Shilov et al.
+- **Date:** 2026-03-25
+- **Category:** `prompt injection AND agent`
+
+> LLM agents like Claude Code can not only write code but also be used for autonomous AI research and engineering. We show that an autoresearch-style pipeline powered by Claude Code discovers novel white-box adversarial attack algorithms that significantly outperform all existing (30+) methods in jailbreaking and prompt injection evaluations. Startin...
+
+**📝 Summary:** 用 LLM agent 自动发现新的白盒对抗攻击算法，超越所有已有方法（30+），实现 100% ASR 攻破 Meta-SecAlign-70B。
+
+### [Mind Your HEARTBEAT! Claw Background Execution Inherently Enables Silent Memory Pollution](https://arxiv.org/abs/2603.23064)
+- **Authors:** Yechao Zhang, Shiqian Zhao, Jie Zhang et al.
+- **Date:** 2026-03-24
+- **Category:** `prompt injection AND agent`
+
+> We identify a critical security vulnerability in mainstream Claw personal AI agents: untrusted content encountered during heartbeat-driven background execution can silently pollute agent memory and subsequently influence user-facing behavior. This E→M→B pathway shows: (1) social credibility cues drive short-term influence up to 61%; (2) memory-savi...
+
+**📝 Summary:** Claw 类 AI agent 的 heartbeat 后台执行机制存在 silent memory pollution 漏洞，通过社会信息误导可影响跨 session 行为，无需注入代码。
+
+### [Agent-Sentry: Bounding LLM Agents via Execution Provenance](https://arxiv.org/abs/2603.22868)
+- **Authors:** (see paper)
+- **Date:** 2026-03-24
+- **Category:** `LLM agent AND attack`
+
+> We propose Agent-Sentry, a framework that bounds agentic systems by uncovering frequent functionalities offered by the system and enforcing those bounds. The key insight is that agentic systems are designed for specific use cases and need not expose unbounded functionalities. Once bounded, these systems become easier to scrutinize for compromise.
+
+**📝 Summary:** Agent-Sentry：通过分析执行 provenance 限制 LLM agent 的功能边界，检测超出预期的行为。
+
+### [The Cognitive Firewall: Securing Browser Based AI Agents Against Indirect Prompt Injection Via Hybrid Edge-Cloud Defense](https://arxiv.org/abs/2603.23791)
+- **Authors:** Qianlong Lan, Anuj Kaul
+- **Date:** 2026-03-24
+- **Category:** `prompt injection AND agent`
+
+> Deploying LLMs as autonomous browser agents exposes significant attack surface via Indirect Prompt Injection (IPI). We present the Cognitive Firewall, a three-stage split-compute architecture distributing security checks across client and cloud. The full hybrid architecture reduces overall ASR to below 1% (0.88% static, 0.67% adaptive), while achie...
+
+**📝 Summary:** 三阶段 edge-cloud 混合架构防御浏览器 agent 的间接 prompt injection，ASR 降至 <1%，延迟降低 17000x。
+
+### [SoK: The Attack Surface of Agentic AI -- Tools, and Autonomy](https://arxiv.org/abs/2603.22928)
+- **Authors:** Ali Dehghantanha, Sajad Homayoun
+- **Date:** 2026-03-24
+- **Category:** `prompt injection AND agent`
+
+> We map out trust boundaries and security risks of agentic LLM-based systems, developing a comprehensive taxonomy of attacks spanning prompt-level injections, knowledge-base poisoning, tool/plug-in exploits, and multi-agent emergent threats. Through literature review of 2023-2025 (20+ studies), we find agentic systems introduce new vectors for indir...
+
+**📝 Summary:** Systematization of Knowledge：全面梳理 agentic AI 的攻击面分类、威胁模型和防御，提出 Unsafe Action Rate 等评估 metric。
+
+### [TreeTeaming: Autonomous Red-Teaming of Vision-Language Models via Hierarchical Strategy Exploration](https://arxiv.org/abs/2603.22882)
+- **Authors:** Chunxiao Li, Lijun Li, Jing Shao
+- **Date:** 2026-03-24
+- **Category:** `red teaming AND LLM`
+
+> We introduce TreeTeaming, an automated red teaming framework that reframes strategy exploration from static testing to dynamic, evolutionary discovery. A strategic Orchestrator powered by an LLM decides whether to evolve attack paths or explore diverse strategic branches, constructing a strategy tree. TreeTeaming achieves SOTA attack success rates ...
+
+**📝 Summary:** TreeTeaming：用层次化策略树自动 red-team VLMs，SOTA 攻击成功率（GPT-4o 87.6%），CVPR 2026。
+
+### [Are AI-assisted Development Tools Immune to Prompt Injection?](https://arxiv.org/abs/2603.21642)
+- **Authors:** Charoes Huang, Xin Huang, Amin Milani Fard
+- **Date:** 2026-03-23
+- **Category:** `tool use AND attack`
+
+> We present the first empirical analysis of prompt injection with tool-poisoning vulnerability across seven widely used MCP clients: Claude Desktop, Claude Code, Cursor, Cline, Continue, Gemini CLI, and Langflow. Claude Desktop implements strong guardrails, while Cursor exhibits high susceptibility to cross-tool poisoning and unauthorized tool invoc...
+
+**📝 Summary:** 首项跨 7 个主流 MCP 客户端的 prompt injection 实证对比：Claude Desktop 防护最强，Cursor 最脆弱。
 
 ---
 
