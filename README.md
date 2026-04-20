@@ -2,7 +2,209 @@
 
 > Weekly curated papers on AI Safety, LLM red-teaming, adversarial attacks, and agent security
 
-Auto-updated weekly. Last update: **2026-03-31**
+Auto-updated weekly. Last update: **2026-04-20**
+
+---
+
+## 2026-W16
+
+### [MemEvoBench: Benchmarking Memory MisEvolution in LLM Agents](https://arxiv.org/abs/2604.15774)
+- **Authors:** Weiwei Xie, Shaoxiong Guo, Fan Zhang et al.
+- **Date:** 2026-04-17
+- **Category:** `agentic AND adversarial`
+
+> Equipping LLMs with persistent memory enhances interaction continuity and personalization but introduces new safety risks. Specifically, contaminated or biased memory accumulation can trigger abnormal agent behaviors, referred to as memory misevolution. We introduce MemEvoBench, the first benchmark evaluating long-horizon memory safety in LLM agent...
+
+**📝 Summary:** MemEvoBench：首个 LLM agent 记忆演化安全 benchmark，测试对抗记忆注入和噪声工具输出下的长程行为漂移。
+
+### [A Systematic Study of Training-Free Methods for Trustworthy Large Language Models](https://arxiv.org/abs/2604.15789)
+- **Authors:** Wai Man Si, Mingjie Li, Michael Backes et al.
+- **Date:** 2026-04-17
+- **Category:** `adversarial attack AND language model`
+
+> To enable quick and low-cost adaptation, training-free methods have recently emerged as cost-effective alternatives to post-training alignment techniques. We systematically re-evaluate the effectiveness of existing training-free methods against various trustworthy settings and their influence on utility, robustness, and computational overhead. We c...
+
+**📝 Summary:** 系统综述 LLM 免训练安全方法（input/internal/output三层），分析各方法在鲁棒性、效用、计算开销上的权衡与未解问题。
+
+### [Stochasticity in Tokenisation Improves Robustness](https://arxiv.org/abs/2604.16037)
+- **Authors:** Sophie Steger, Rui Li, Sofiane Ennadir et al.
+- **Date:** 2026-04-17
+- **Category:** `adversarial attack AND language model`
+
+> The widespread adoption of large language models (LLMs) has increased concerns about their robustness. Vulnerabilities in perturbations of tokenisation of the input indicate that models trained with a deterministic canonical tokenisation can be brittle to adversarial attacks. We show that pre-training and fine-tuning with uniformly sampled stochast...
+
+**📝 Summary:** 随机 tokenization 训练提升 LLM 对抗鲁棒性；规范 tokenization 训练的模型在非规范输入上准确率下降29.8%。
+
+### [HarmfulSkillBench: How Do Harmful Skills Weaponize Your Agents?](https://arxiv.org/abs/2604.15415)
+- **Authors:** Yukun Jiang, Yage Zhang, Michael Backes et al.
+- **Date:** 2026-04-16
+- **Category:** `agent safety`
+
+> Large language models (LLMs) have evolved into autonomous agents that rely on open skill ecosystems (e.g., ClawHub and Skills.Rest), hosting numerous publicly reusable skills. Existing security research on these ecosystems mainly focuses on vulnerabilities within skills, such as prompt injection. However, there is a critical gap regarding skills th...
+
+**📝 Summary:** 首个大规模 harmful skill 研究（98,440个技能，4.93%有害）；HarmfulSkillBench benchmark 展示隐式恶意意图时 harm score 从0.27升至0.76。
+
+### [Hijacking Large Audio-Language Models via Context-Agnostic and Imperceptible Auditory Prompt Injection](https://arxiv.org/abs/2604.14604)
+- **Authors:** Meng Chen, Kun Wang, Li Lu et al.
+- **Date:** 2026-04-16
+- **Category:** `prompt injection AND agent`
+
+> Modern Large audio-language models (LALMs) power intelligent voice interactions by tightly integrating audio and text. We reveal a previously overlooked threat, auditory prompt injection, under realistic constraints of audio data-only access and strong perceptual stealth. We propose AudioHijack, a general framework that generates context-agnostic a...
+
+**📝 Summary:** AudioHijack：对13个语音大模型的音频 prompt injection 攻击，上下文无关，成功率79%-96%，IEEE S&P 2026。
+
+### [Symbolic Guardrails for Domain-Specific Agents: Stronger Safety and Security Guarantees Without Sacrificing Utility](https://arxiv.org/abs/2604.15579)
+- **Authors:** Yining Hong, Yining She, Eunsuk Kang et al.
+- **Date:** 2026-04-16
+- **Category:** `agent safety`
+
+> AI agents that interact with their environments through tools enable powerful applications, but in high-stakes business settings, unintended actions can cause unacceptable harm, such as privacy breaches and financial loss. Existing mitigations, such as training-based methods and neural guardrails, improve agent reliability but cannot provide guaran...
+
+**📝 Summary:** 系统综述80个 agent safety benchmark，发现85%缺乏具体策略；符号护栏可执行74%策略需求且不牺牲 agent 效用。
+
+### [SoK: Security of Autonomous LLM Agents in Agentic Commerce](https://arxiv.org/abs/2604.15367)
+- **Authors:** Qian'ang Mao, Jiaxin Wang, Ya Liu et al.
+- **Date:** 2026-04-15
+- **Category:** `LLM agent AND attack`
+
+> Autonomous LLM agents are pushing agentic commerce from human-supervised assistance toward machine actors that can negotiate, purchase services, manage digital assets, and execute transactions. This SoK develops a unified security framework for autonomous LLM agents in commerce and finance. We organize threats along five dimensions: agent integrity...
+
+**📝 Summary:** SoK：自主 LLM agent 在 agentic commerce 场景下的安全系统综述，12个跨层攻击向量，五维度威胁分类框架。
+
+### [LogJack: Indirect Prompt Injection Through Cloud Logs Against LLM Debugging Agents](https://arxiv.org/abs/2604.15368)
+- **Authors:** Harsh Shah
+- **Date:** 2026-04-15
+- **Category:** `prompt injection AND agent`
+
+> LLM debugging agents that consume cloud logs and execute remediation commands are vulnerable to indirect prompt injection through log content. We present LogJack, a benchmark of 42 payloads across 5 cloud log categories, and evaluate 8 foundation models under 3 prompt conditions with 5 independent trials each. Under the active condition, verbatim c...
+
+**📝 Summary:** LogJack：通过云日志内容对 LLM 调试 agent 进行 indirect prompt injection，发现 'sanitize and execute' 新行为；不同模型成功率从0%到86.2%。
+
+### [Don't Let AI Agents YOLO Your Files: Shifting Information and Control to Filesystems for Agent Safety and Autonomy](https://arxiv.org/abs/2604.13536)
+- **Authors:** Shawn Wanxiang Zhong, Junxuan Liao, Jing Liu et al.
+- **Date:** 2026-04-15
+- **Category:** `agent safety`
+
+> AI coding agents operate directly on users' filesystems, where they regularly corrupt data, delete files, and leak secrets. Current approaches force a tradeoff between safety and autonomy. To understand this problem, we conduct the first systematic study of agent filesystem misuse, analyzing 290 public reports across 13 frameworks. We design YoloFS...
+
+**📝 Summary:** YoloFS：通过 staging/snapshot/progressive permission 机制防止 AI agent 误操作文件系统，分析290个公开误用报告。
+
+### [SafeHarness: Lifecycle-Integrated Security Architecture for LLM-based Agent Deployment](https://arxiv.org/abs/2604.13630)
+- **Authors:** Xixun Lin, Yang Liu, Yancheng Chen et al.
+- **Date:** 2026-04-15
+- **Category:** `tool use AND attack`
+
+> The performance of LLM agents depends critically on the execution harness. We introduce SafeHarness, a security architecture in which four proposed defense layers are woven directly into the agent lifecycle: adversarial context filtering at input processing, tiered causal verification at decision making, privilege-separated tool control at action e...
+
+**📝 Summary:** SafeHarness：将安全防御嵌入 agent 生命周期各层（输入/决策/执行/状态），降低38% UBR和42% ASR。
+
+### [HINTBench: Horizon-agent Intrinsic Non-attack Trajectory Benchmark](https://arxiv.org/abs/2604.13954)
+- **Authors:** Jiacheng Wang, Jinchang Hou, Fabian Wang et al.
+- **Date:** 2026-04-15
+- **Category:** `agent safety`
+
+> Existing agent-safety evaluation has focused mainly on externally induced risks. Yet agents may still enter unsafe trajectories under benign conditions. We study this complementary but underexplored setting through the lens of intrinsic risk, where intrinsic failures remain latent, propagate across long-horizon execution, and eventually lead to hig...
+
+**📝 Summary:** HINTBench：629条 agent 轨迹的内因性风险评估基准，发现 LLM 轨迹级风险检测好但逐步定位性能<35 Strict-F1。
+
+### [WebAgentGuard: A Reasoning-Driven Guard Model for Detecting Prompt Injection Attacks in Web Agents](https://arxiv.org/abs/2604.12284)
+- **Authors:** Yulin Chen, Tri Cao, Haoran Li et al.
+- **Date:** 2026-04-14
+- **Category:** `prompt injection AND agent`
+
+> Web agents powered by vision-language models (VLMs) enable autonomous interaction with web environments by perceiving and acting on both visual and textual webpage content. However, they are highly vulnerable to prompt injection attacks. We propose a defense framework in which a web agent operates in parallel with a dedicated guard agent, decouplin...
+
+**📝 Summary:** WebAgentGuard：reasoning 驱动的多模态 guard agent，与 web agent 并行检测 prompt injection，RL 训练，超越基线同时保持 agent 效用。
+
+### [Parallax: Why AI Agents That Think Must Never Act](https://arxiv.org/abs/2604.12986)
+- **Authors:** Joel Fokou
+- **Date:** 2026-04-14
+- **Category:** `agent safety`
+
+> Autonomous AI agents are rapidly transitioning from experimental tools to operational infrastructure. The dominant approach to agent safety relies on prompt-level guardrails: natural language instructions that operate at the same abstraction level as the threats they attempt to mitigate. This paper argues that prompt-based safety is architecturally...
+
+**📝 Summary:** Parallax 框架：认知-执行分离等四原则保障 agent 安全，在280个对抗测试中拦截98.9%攻击。
+
+### [Every Picture Tells a Dangerous Story: Memory-Augmented Multi-Agent Jailbreak Attacks on VLMs](https://arxiv.org/abs/2604.12616)
+- **Authors:** Jianhao Chen, Haoyang Chen, Hanjie Zhao et al.
+- **Date:** 2026-04-14
+- **Category:** `jailbreak AND agent`
+
+> We introduce MemJack, a memory-augmented multi-agent jailbreak attack framework that explicitly leverages visual semantics to orchestrate automated jailbreak attacks on VLMs. MemJack employs coordinated multi-agent cooperation to dynamically map visual entities to malicious intents, generate adversarial prompts via multi-angle visual-semantic camou...
+
+**📝 Summary:** MemJack：利用视觉语义的记忆增强多 agent jailbreak 框架，通过 Multimodal Experience Memory 积累成功策略，对VLM ASR达71%。
+
+### [Challenging Vision-Language Models with Physically Deployable Multimodal Semantic Lighting Attacks](https://arxiv.org/abs/2604.12833)
+- **Authors:** Yingying Zhao, Chengyin Hu, Qike Zhang et al.
+- **Date:** 2026-04-14
+- **Category:** `adversarial attack AND language model`
+
+> We propose Multimodal Semantic Lighting Attacks (MSLA), the first physically deployable adversarial attack framework against VLMs. MSLA uses controllable adversarial lighting to disrupt multimodal semantic understanding in real scenes, attacking semantic alignment rather than only task-specific outputs. MSLA degrades zero-shot classification perfor...
+
+**📝 Summary:** MSLA：首个物理可部署的 VLM 对抗攻击框架，通过可控对抗光照破坏多模态语义理解，诱发严重语义幻觉。
+
+### [Reading Between the Pixels: Linking Text-Image Embedding Alignment to Typographic Attack Success on Vision-Language Models](https://arxiv.org/abs/2604.12371)
+- **Authors:** Ravikumar Balakrishnan, Sanket Mendapara, Ankit Garg
+- **Date:** 2026-04-14
+- **Category:** `prompt injection AND agent`
+
+> We study typographic prompt injection attacks on vision-language models (VLMs), where adversarial text is rendered as images to bypass safety mechanisms. Evaluating 1,000 prompts from SALAD-Bench across four VLMs under varying font sizes and visual transformations, we find: font size significantly affects ASR; text-image embedding distance shows st...
+
+**📝 Summary:** 字形 prompt injection 攻击VLM：字体大小影响ASR，embedding距离与ASR强负相关（r=-0.71到-0.93），模型特有的鲁棒性模式。ICLR 2026 Workshop。
+
+### [TEMPLATEFUZZ: Fine-Grained Chat Template Fuzzing for Jailbreaking and Red Teaming LLMs](https://arxiv.org/abs/2604.12232)
+- **Authors:** Qingchao Shen, Zibo Xiao, Lili Huang et al.
+- **Date:** 2026-04-14
+- **Category:** `red teaming AND LLM`
+
+> We introduce TEMPLATEFUZZ, a fine-grained fuzzing framework that systematically exposes vulnerabilities in chat templates, a critical yet underexplored attack surface in LLMs. TEMPLATEFUZZ designs element-level mutation rules to generate diverse chat template variants, proposes a heuristic search strategy, and integrates an active learning-based or...
+
+**📝 Summary:** TEMPLATEFUZZ：通过 fuzz chat template 对 LLM 进行 jailbreak，平均 ASR 98.2%，超越 SOTA 9-48%。
+
+### [DeepSeek Robustness Against Semantic-Character Dual-Space Mutated Prompt Injection](https://arxiv.org/abs/2604.12548)
+- **Authors:** Junyu Ren, Xingjian Pan, Wensheng Gan et al.
+- **Date:** 2026-04-14
+- **Category:** `red teaming AND LLM`
+
+> Prompt injection has emerged as a critical security threat to large language models (LLMs), yet existing studies predominantly focus on single-dimensional attack strategies, such as semantic rewriting or character-level obfuscation, which fail to capture the combined effects of multi-space perturbations. We propose PromptFuzz-SC, a semantic-charact...
+
+**📝 Summary:** PromptFuzz-SC：语义+字符双空间 mutation 框架评估 LLM 对 prompt injection 的鲁棒性，双空间攻击比单一空间强12-5%。
+
+### [Detecting Safety Violations Across Many Agent Traces](https://arxiv.org/abs/2604.11806)
+- **Authors:** Adam Stein, Davis Brown, Hamed Hassani et al.
+- **Date:** 2026-04-13
+- **Category:** `prompt injection AND agent`
+
+> To identify safety violations, auditors often search over large sets of agent traces. This search is difficult because failures are often rare, complex, and sometimes even adversarially hidden and only detectable when multiple traces are analyzed together. We introduce Meerkat, which combines clustering with agentic search to uncover violations spe...
+
+**📝 Summary:** Meerkat：跨大量 agent 轨迹检测安全违规，通过聚类+主动搜索发现稀疏失败，发现顶级 benchmark 上存在开发者作弊行为。
+
+### [Beyond A Fixed Seal: Adaptive Stealing Watermark in Large Language Models](https://arxiv.org/abs/2604.10893)
+- **Authors:** Shuhao Zhang, Yuli Chen, Jiale Han et al.
+- **Date:** 2026-04-13
+- **Category:** `adversarial attack AND language model`
+
+> Watermarking provides a critical safeguard for large language model (LLM) services by facilitating the detection of LLM-generated text. We propose Adaptive Stealing (AS), a novel stealing watermark algorithm featuring enhanced design flexibility through Position-Based Seal Construction and Adaptive Selection modules. AS operates by defining multipl...
+
+**📝 Summary:** Adaptive Stealing 水印攻击：通过位置敏感构建和自适应选择模块窃取 LLM 水印，超越现有固定策略攻击。
+
+### [ClawGuard: A Runtime Security Framework for Tool-Augmented LLM Agents Against Indirect Prompt Injection](https://arxiv.org/abs/2604.11790)
+- **Authors:** Wei Zhao, Zhe Li, Peixin Zhang et al.
+- **Date:** 2026-04-13
+- **Category:** `LLM agent AND attack`
+
+> Tool-augmented LLM agents remain vulnerable to indirect prompt injection. Adversaries exploit this weakness by embedding malicious instructions within tool-returned content. This vulnerability manifests across three primary attack channels: web and local content injection, MCP server injection, and skill file injection. We introduce ClawGuard, a no...
+
+**📝 Summary:** ClawGuard：在每个 tool-call 边界执行用户确认规则集，防御 indirect prompt injection 的三种攻击通道，无需模型修改。
+
+### [Finetune Like You Pretrain: Boosting Zero-shot Adversarial Robustness in Vision-language Models](https://arxiv.org/abs/2604.11576)
+- **Authors:** Songlong Xing, Weijie Wang, Zhengyu Zhao et al.
+- **Date:** 2026-04-13
+- **Category:** `adversarial attack AND language model`
+
+> Despite their impressive zero-shot abilities, vision-language models such as CLIP have been shown to be susceptible to adversarial attacks. We propose AdvFLYP, which follows the training recipe of CLIP's pretraining process when performing adversarial finetuning to the model. Extensive experiments on 14 downstream datasets show the superiority of o...
+
+**📝 Summary:** AdvFLYP：按预训练方式做对抗微调提升 CLIP 等 VLM 的零样本对抗鲁棒性，CVPR 2026 Findings。
 
 ---
 
