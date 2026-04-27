@@ -2,7 +2,110 @@
 
 > Weekly curated papers on AI Safety, LLM red-teaming, adversarial attacks, and agent security
 
-Auto-updated weekly. Last update: **2026-04-20**
+Auto-updated weekly. Last update: **2026-04-27**
+
+---
+
+## 2026-W17
+
+### [Automation-Exploit: A Multi-Agent LLM Framework for Adaptive Offensive Security with Digital Twin-Based Risk-Mitigated Exploitation](https://arxiv.org/abs/2604.22427)
+- **Authors:** Biagio Andreucci, Arcangelo Castiglione
+- **Date:** 2026-04-24
+- **Category:** `"multi-agent" AND "safety"`
+
+> Automation-Exploit is a fully autonomous Multi-Agent System (MAS) framework designed for adaptive offensive security in complex black-box scenarios. It bridges the abstraction gap between reconnaissance and exploitation by autonomously exfiltrating executables and contextual intelligence across multiple protocols. The framework introduces an adapti...
+
+**📝 Summary:** 多 agent 系统自动化漏洞利用框架，通过数字孪生进行风险缓解的内存漏洞利用，在真实黑盒场景中验证架构有效性。
+
+### [Black-Box Skill Stealing Attack from Proprietary LLM Agents: An Empirical Study](https://arxiv.org/abs/2604.21829)
+- **Authors:** Zihan Wang, Rui Zhang, Yu Liu et al.
+- **Date:** 2026-04-23
+- **Category:** `"agentic" AND "adversarial"`
+
+> LLM agents increasingly rely on skills to encapsulate reusable capabilities via progressively disclosed instructions. This paper presents the first empirical study of black-box skill stealing against LLM agent systems. An automated stealing prompt generation agent starts from model-generated seed prompts, expands them through scenario rationalizati...
+
+**📝 Summary:** 首个对 LLM agent skill（系统提示/指令）的黑盒窃取攻击实证研究：仅需 3 次交互即可提取技能内容，引发版权和知识产权风险。
+
+### [MCP Pitfall Lab: Exposing Developer Pitfalls in MCP Tool Server Security under Multi-Vector Attacks](https://arxiv.org/abs/2604.21477)
+- **Authors:** Run Hao, Zhuoran Tan
+- **Date:** 2026-04-23
+- **Category:** `"LLM agent" AND "attack"`
+
+> Model Context Protocol (MCP) is increasingly adopted for tool-integrated LLM agents, but its multi-layer design and third-party server ecosystem expand risks across tool metadata, untrusted outputs, cross-tool flows, multimodal inputs, and supply-chain vectors. MCP Pitfall Lab operationalizes developer pitfalls as reproducible scenarios and validat...
+
+**📝 Summary:** MCP 工具服务器安全 pitfall 测试框架：系统化暴露 tool-metadata 污染、puppet server、多模态注入等开发者陷阱，trace-based 验证揭示 agent narrative 与实际 trace 在 63.2% 情况下不一致。
+
+### [Adaptive Instruction Composition for Automated LLM Red-Teaming](https://arxiv.org/abs/2604.21159)
+- **Authors:** Jesse Zymet, Andy Luo, Swapnil Shinde et al.
+- **Date:** 2026-04-22
+- **Category:** `"red teaming" AND "LLM"`
+
+> This article introduces Adaptive Instruction Composition, a novel framework that combines crowdsourced texts according to an adaptive mechanism trained to jointly optimize effectiveness with diversity. It uses reinforcement learning to balance exploration with exploitation in a combinatorial space of instructions to guide the attacker toward divers...
+
+**📝 Summary:** 提出 Adaptive Instruction Composition：用 RL 训练的上下文 bandit 自适应组合众包 query+tactic，在多样性-有效性 Pareto 上超越已有方法，ACL 2026 Main 发表。
+
+### [Cross-Session Threats in AI Agents: Benchmark, Evaluation, and Algorithms](https://arxiv.org/abs/2604.21131)
+- **Authors:** Ari Azarafrooz
+- **Date:** 2026-04-22
+- **Category:** `"agentic" AND "adversarial"`
+
+> AI-agent guardrails are memoryless: each message is judged in isolation, so an adversary who spreads a single attack across dozens of sessions slips past every session-bound detector because only the aggregate carries the payload. This paper presents CSTM-Bench, 26 executable attack taxonomies classified by kill-chain stage and cross-session operat...
+
+**📝 Summary:** 提出跨会话威胁 benchmark CSTM-Bench：攻击意图被分散在多个独立会话中，现有无状态 guardrail 无法检测；Coreset Memory Reader 是唯一在两个测试 shard 下保持 recall 的方案。
+
+### [Breaking MCP with Function Hijacking Attacks: Novel Threats for Function Calling and Agentic Models](https://arxiv.org/abs/2604.20994)
+- **Authors:** Yannis Belkhiter, Giulio Zizzo, Sergio Maffeis et al.
+- **Date:** 2026-04-22
+- **Category:** `"jailbreak" AND "agent"`
+
+> This paper introduces a novel function hijacking attack (FHA) that manipulates the tool selection process of agentic models to force the invocation of a specific, attacker-chosen function. While existing attacks focus on semantic preference of the model for function-calling tasks, FHA is largely agnostic to the context semantics and robust to the f...
+
+**📝 Summary:** 提出函数劫持攻击（FHA）：操纵 agentic 模型的工具选择过程，强制调用攻击者指定函数，在 BFCL 数据集上 ASR 达 70-100%。
+
+### [Cyber Defense Benchmark: Agentic Threat Hunting Evaluation for LLMs in SecOps](https://arxiv.org/abs/2604.19533)
+- **Authors:** Alankrit Chona, Igor Kozlov, Ambuj Kumar
+- **Date:** 2026-04-21
+- **Category:** `"LLM agent" AND "attack"`
+
+> The Cyber Defense Benchmark measures how well LLM agents perform the core SOC analyst task of threat hunting: given a database of raw Windows event logs with no guided questions or hints, identify the exact timestamps of malicious events. The benchmark wraps 106 real attack procedures from the OTRF Security-Datasets corpus across 86 MITRE ATT&CK su...
+
+**📝 Summary:** 网络防御 benchmark：在真实 Windows 日志（75k-135k 条记录）中威胁猎取，Claude Opus 4.6 等最强模型仅能找到 3.8% 的恶意事件，LLM 在开放式安全分析上仍然非常弱。
+
+### [An AI Agent Execution Environment to Safeguard User Data](https://arxiv.org/abs/2604.19657)
+- **Authors:** Robert Stanley, Avi Verma, Lillian Tsai et al.
+- **Date:** 2026-04-21
+- **Category:** `"prompt injection" AND "agent"`
+
+> AI agents promise to serve as general-purpose personal assistants for their users, which requires them to have access to private user data. This poses a serious risk to security and privacy. Adversaries may attack the AI model via prompt injection to exfiltrate user data. This paper presents GAAP (Guaranteed Accounting for Agent Privacy), an execut...
+
+**📝 Summary:** 提出 GAAP 执行环境，通过信息流控制（IFC）在不信任 agent 模型的前提下，确定性地防止 prompt injection 导致的用户私有数据泄露。
+
+### [If you're waiting for a sign... that might not be it! Mitigating Trust Boundary Confusion from Visual Injections on Vision-Language Agentic Systems](https://arxiv.org/abs/2604.19844)
+- **Authors:** Jiamin Chang, Minhui Xue, Ruoxi Sun et al.
+- **Date:** 2026-04-21
+- **Category:** `"prompt injection" AND "agent"`
+
+> Recent advances in embodied Vision-Language Agentic Systems (VLAS), powered by large vision-language models (LVLMs), enable AI systems to perceive and reason over real-world scenes. Environmental signals such as traffic lights are essential in-band signals that can and should influence agent behavior. However, similar signals could also be crafted ...
+
+**📝 Summary:** 研究视觉语言 agent 中「信任边界混淆」问题：合法的环境信号（如交通灯）与恶意视觉注入难以区分，提出双进程防御框架（感知与决策分离）。
+
+### [STAR-Teaming: A Strategy-Response Multiplex Network Approach to Automated LLM Red Teaming](https://arxiv.org/abs/2604.18976)
+- **Authors:** MinJae Jung, YongTaek Lim, Chaeyun Kim et al.
+- **Date:** 2026-04-21
+- **Category:** `"jailbreak" AND "agent"`
+
+> This paper introduces STAR-Teaming, a novel black-box framework for automated red teaming that effectively generates jailbreak prompts. STAR-Teaming integrates a Multi-Agent System (MAS) with a Strategy-Response Multiplex Network and employs network-driven optimization to sample effective attack strategies. This network-based approach recasts the i...
+
+**📝 Summary:** STAR-Teaming：用多路复用策略网络驱动自动化红队测试，将攻击策略空间组织为语义社区，在 ACL 2026 Findings 发表，显著提升 ASR 同时降低计算成本。
+
+### [Do Agents Dream of Root Shells? Partial-Credit Evaluation of LLM Agents in Capture The Flag Challenges](https://arxiv.org/abs/2604.19354)
+- **Authors:** Ali Al-Kaswan, Maksim Plotnikov, Maxim Hájek et al.
+- **Date:** 2026-04-21
+- **Category:** `"LLM agent" AND "attack"`
+
+> DeepRed is an open-source benchmark for evaluating LLM-based agents on realistic Capture The Flag (CTF) challenges in isolated virtualized environments. DeepRed introduces a partial-credit scoring method based on challenge-specific checkpoints derived from public writeups, together with an automated summarise-then-judge labelling pipeline. Benchmar...
+
+**📝 Summary:** DeepRed：在真实 CTF VM 环境中评估 LLM agent，引入 checkpoint 部分计分方案，最强模型仅完成 35% checkpoint，非标准发现任务和长时程任务最弱。
 
 ---
 
