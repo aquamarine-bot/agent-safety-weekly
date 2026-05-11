@@ -2,7 +2,101 @@
 
 > Weekly curated papers on AI Safety, LLM red-teaming, adversarial attacks, and agent security
 
-Auto-updated weekly. Last update: **2026-05-04**
+Auto-updated weekly. Last update: **2026-05-11**
+
+---
+
+## 2026-W19
+
+### [Schema-Conditioned Classification for LLM Safeguard (GLiGuard)](https://arxiv.org/abs/2605.07982)
+- **Authors:** Urchade Zaratiana
+- **Date:** 2026-05-08
+- **Category:** `safety benchmark agent`
+
+> We introduce GLiGuard, a 0.3B-parameter schema-conditioned bidirectional encoder for LLM content moderation. The key idea is to encode task definitions and label semantics directly into the input sequence as structured token schemas, enabling simultaneous evaluation of prompt safety, response safety, refusal detection, 14 fine-grained harm categori...
+
+**📝 Summary:** GLiGuard：0.3B 编码器通过 schema 条件化同时检测 14 种危害类别和 11 种 jailbreak 策略，精度媲美 7B-27B 模型，速度快 16x。
+
+### [SafeHarbor: Hierarchical Memory-Augmented Guardrail for LLM Agent Safety](https://arxiv.org/abs/2605.05704)
+- **Authors:** Zhe Liu, Zonghao Ying, Wenxin Zhang et al.
+- **Date:** 2026-05-07
+- **Category:** `tool use attack LLM agent`
+
+> With the rapid evolution of foundation models, LLM agents have demonstrated increasingly powerful tool-use capabilities. However, this proficiency introduces significant security risks. We propose SafeHarbor, a novel framework designed to establish precise decision boundaries for LLM agents. SafeHarbor extracts context-aware defense rules through e...
+
+**📝 Summary:** SafeHarbor：通过分层记忆系统动态注入上下文感知防御规则，在不损失 utility 前提下拦截恶意工具调用。
+
+### [ClawGuard: Out-of-Band Detection of LLM Agent Workflow Hijacking via EM Side Channel](https://arxiv.org/abs/2605.06205)
+- **Authors:** Leo Linqian Gan, Jeffery Wu, Longyuan Ge et al.
+- **Date:** 2026-05-07
+- **Category:** `tool use attack LLM agent`
+
+> Autonomous LLM agents face a critical security risk known as workflow hijacking, where attackers subtly alter tool and skill invocations. Existing defenses rely on host-internal telemetry which can be forged if the host OS is compromised. We introduce ClawGuard, a passive, out-of-band monitor that audits LLM-agent workflows using electromagnetic (E...
+
+**📝 Summary:** 利用电磁侧信道（EM emanations）在带外检测 LLM agent 工作流劫持，AUC 0.9945，绕过被篡改的 OS 日志。
+
+### [AgentTrust: Runtime Safety Evaluation and Interception for AI Agent Tool Use](https://arxiv.org/abs/2605.04785)
+- **Authors:** Chen Yang
+- **Date:** 2026-05-06
+- **Category:** `tool use attack LLM agent`
+
+> Modern AI agents execute real-world side effects through tool calls such as file operations, shell commands, HTTP requests, and database queries. A single unsafe action, including accidental deletion, credential exposure, or data exfiltration, can cause irreversible harm. Existing defenses are incomplete: post-hoc benchmarks measure behavior after ...
+
+**📝 Summary:** 提出 AgentTrust，运行时拦截 agent tool calls 并给出 allow/warn/block 判决，支持多步攻击链检测，发布 300+630 场景 benchmark。
+
+### [SoK: Robustness in Large Language Models against Jailbreak Attacks](https://arxiv.org/abs/2605.05058)
+- **Authors:** Feiyue Xu, Hongsheng Hu, Chaoxiang He et al.
+- **Date:** 2026-05-06
+- **Category:** `jailbreak agent`
+
+> Large Language Models remain highly susceptible to jailbreak attacks. Existing evaluation practices are inadequate, often relying on narrow metrics like attack success rate that fail to capture the multidimensional nature of LLM security. We present a systematic taxonomy of jailbreak attacks and defenses and introduce Security Cube, a unified, mult...
+
+**📝 Summary:** S&P 2026 系统综述：13 种 jailbreak 攻击和 5 种防御的多维度评估框架 Security Cube，梳理 LLM 鲁棒性现状与挑战。
+
+### [ARGUS: Defending LLM Agents Against Context-Aware Prompt Injection](https://arxiv.org/abs/2605.03378)
+- **Authors:** Shihao Weng, Yang Feng, Jinrui Zhang et al.
+- **Date:** 2026-05-05
+- **Category:** `prompt injection agent`
+
+> The rise of Large Language Model (LLM) agents, augmented with tool use, skills, and external knowledge, has introduced new security risks. Among them, prompt injection attacks, where adversaries embed malicious instructions into the agent workflow, have emerged as the primary threat. However, existing benchmarks and defenses are fundamentally limit...
+
+**📝 Summary:** 提出 ARGUS 防御框架，通过 provenance graph 追踪不可信上下文传播路径，将 prompt injection ASR 降至 3.8%，同时保留 87.5% 任务效用。
+
+### [Exposing LLM Safety Gaps Through Mathematical Encoding: New Attacks and Systematic Analysis](https://arxiv.org/abs/2605.03441)
+- **Authors:** Haoyu Zhang
+- **Date:** 2026-05-05
+- **Category:** `adversarial attack language model`
+
+> We show that encoding harmful prompts as coherent mathematical problems -- using formalisms such as set theory, formal logic, and quantum mechanics -- bypasses safety filters at high rates, achieving 46%-56% average attack success across eight target models. The effectiveness depends not on mathematical notation itself, but on whether a helper LLM ...
+
+**📝 Summary:** 用集合论/形式逻辑等数学编码重写恶意 prompt 可绕过安全过滤器，8 个模型平均 ASR 46-56%；接受于 Canadian AI 2026。
+
+### [Redefining AI Red Teaming in the Agentic Era: From Weeks to Hours](https://arxiv.org/abs/2605.04019)
+- **Authors:** Raja Sekhar Rao Dheekonda
+- **Date:** 2026-05-05
+- **Category:** `red teaming LLM`
+
+> AI systems are entering critical domains like healthcare, finance, and defense, yet remain vulnerable to adversarial attacks. We introduce an AI red teaming agent built on the open-source Dreadnode SDK. The agent creates workflows grounded in 45+ adversarial attacks, 450+ transforms, and 130+ scorers. We red team Meta Llama Scout and achieve an 85%...
+
+**📝 Summary:** 提出基于 Dreadnode SDK 的 AI red teaming agent，集成 45+ 攻击/450+ transforms，将红队测试从数周压缩到数小时，对 Llama Scout 达 85% ASR。
+
+### [ContextualJailbreak: Evolutionary Red-Teaming via Simulated Conversational Priming](https://arxiv.org/abs/2605.02647)
+- **Authors:** Mario Rodriguez Bejar
+- **Date:** 2026-05-04
+- **Category:** `jailbreak agent`
+
+> We present ContextualJailbreak, a black-box red-teaming strategy that performs evolutionary search over a simulated multi-turn primed dialogue. Across 50 representative HarmBench behaviors, ContextualJailbreak achieves ASR of 100% on gpt-oss:20B, 100% on qwen3-8B, 100% on llama3.1:70B, and 90% on gpt-oss:120B. The 40 attacks discovered against gpt-...
+
+**📝 Summary:** 多轮对话 priming 攻击框架，发现 Claude 系列 robustness 显著优于其他模型（仅 15-17.5% ASR vs GPT/Gemini 的 70-90%），揭示 provider 级别的对齐不对称性。
+
+### [MAGE: Safeguarding LLM Agents against Long-Horizon Threats via Shadow Memory](https://arxiv.org/abs/2605.03228)
+- **Authors:** Yuhui Wang
+- **Date:** 2026-05-04
+- **Category:** `multi-agent safety`
+
+> As LLM-powered agents are increasingly deployed for complex tasks, they face attacks that exploit extended user-agent-environment interactions. We present MAGE (Memory As Guardrail Enforcement), a defensive framework inspired by the 'shadow stack' abstraction in systems security. MAGE maintains a dedicated, safety-focused agentic memory that distil...
+
+**📝 Summary:** MAGE：借鉴系统安全中 shadow stack 思想，维护独立的安全记忆追踪全轨迹，在长 horizon 威胁检测中显著优于现有防御。
 
 ---
 
