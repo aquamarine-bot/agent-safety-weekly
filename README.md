@@ -2,7 +2,227 @@
 
 > Weekly curated papers on AI Safety, LLM red-teaming, adversarial attacks, and agent security
 
-Auto-updated weekly. Last update: **2026-05-11**
+Auto-updated weekly. Last update: **2026-05-18**
+
+---
+
+## 2026-W20
+
+### [Who Owns This Agent? Tracing AI Agents Back to Their Owners](https://arxiv.org/abs/2605.16035)
+- **Authors:** Ruben Chocron, Doron Jonathan Ben Chayim, Eyal Lenga et al.
+- **Date:** 2026-05-15
+- **Category:** `"agentic" AND "adversarial"`
+
+> AI agents are increasingly deployed to act autonomously in the world, yet there is still no reliable way to trace a harmful agent back to the account that deployed it. We formalize this gap as the problem of agent attribution: linking an observed agent interaction to the responsible account at the hosting vendor. Our protocol is canary-based: an au...
+
+**📝 Summary:** 提出agent归因问题并给出基于金丝雀注入的解决方案，将有害agent行为可靠追溯到部署账户，对抗性算子无法在不损害任务性能的情况下规避归因。
+
+### [FORGE: Self-Evolving Agent Memory With No Weight Updates via Population Broadcast](https://arxiv.org/abs/2605.16233)
+- **Authors:** Igor Bogdanov, Chung-Horng Lung, Thomas Kunz et al.
+- **Date:** 2026-05-15
+- **Category:** `"prompt injection" AND "agent"`
+
+> Can LLM agents improve decision-making through self-generated memory without gradient updates? We propose FORGE (Failure-Optimized Reflective Graduation and Evolution), a staged, population-based protocol that evolves prompt-injected natural-language memory for hierarchical ReAct agents. FORGE wraps a Reflexion-style inner loop, where a dedicated r...
+
+**📝 Summary:** FORGE通过种群广播机制进化prompt注入的自然语言记忆（无梯度更新），在网络防御POMDP任务上将零样本基线提升1.7-7.7倍。
+
+### [Context, Reasoning, and Hierarchy: A Cost-Performance Study of Compound LLM Agent Design in an Adversarial POMDP](https://arxiv.org/abs/2605.16205)
+- **Authors:** Igor Bogdanov, Chung-Horng Lung, Thomas Kunz et al.
+- **Date:** 2026-05-15
+- **Category:** `"agentic" AND "adversarial"`
+
+> Deploying compound LLM agents in adversarial, partially observable sequential environments requires navigating several design dimensions: what the agent sees, how it reasons, and how tasks are decomposed across components. We present a controlled study in CybORG CAGE-2, a cyber defense environment. Our evaluation spans five model families, six mode...
+
+**📝 Summary:** 在对抗性POMDP（网络防御CybORG）中系统研究复合LLM agent设计的成本-性能权衡，发现程序化状态抽象回报最高，层次化推理工具叠加会产生'deliberation cascade'。
+
+### [Web Agents Should Adopt the Plan-Then-Execute Paradigm](https://arxiv.org/abs/2605.14290)
+- **Authors:** Julien Piet, Annabella Chow, Yiwei Hou et al.
+- **Date:** 2026-05-14
+- **Category:** `"prompt injection" AND "agent"`
+
+> ReAct has become the default architecture across LLM agents, and many existing web agents follow this paradigm. We argue that it is the wrong default for web agents. Instead, web agents should default to plan-then-execute: commit to a task-specific program before observing runtime web content, then execute it. Under ReAct, all untrusted web content...
+
+**📝 Summary:** 论文主张网页agent应采用'先规划后执行'范式将用户意图与不可信内容隔离，防止prompt injection在运行时重定向控制流，80%的WebArena任务可用纯程序化计划完成。
+
+### [Toward Securing AI Agents Like Operating Systems](https://arxiv.org/abs/2605.14932)
+- **Authors:** Lukas Pirch, Micha Horlboge, Patrick Großmann et al.
+- **Date:** 2026-05-14
+- **Category:** `"tool use" AND "attack"`
+
+> Autonomous agents based on large language models (LLMs) are rapidly emerging as a general-purpose technology, with recent systems extending their capabilities through broad tool use, third-party skills, and deeper integration into user environments. We investigate the security of LLM-based agents through the lens of operating systems, arguing that ...
+
+**📝 Summary:** 通过操作系统安全视角分析LLM agent的安全挑战，系统梳理攻击面，发现四个主流agent框架在适度攻击能力下多个保护机制失效，建议借鉴OS安全技术。
+
+### [Auditing Agent Harness Safety](https://arxiv.org/abs/2605.14271)
+- **Authors:** Chengzhi Liu, Yichen Guo, Yepeng Liu et al.
+- **Date:** 2026-05-14
+- **Category:** `"multi-agent" AND "safety"`
+
+> LLM agents increasingly run inside execution harnesses that dispatch tools, allocate resources, and route messages between specialized components. However, a harness can return a correct, benign answer over a trajectory that accesses unauthorized resources or leaks context to the wrong agent. We propose HarnessAudit, a framework that audits full ex...
+
+**📝 Summary:** HarnessAudit提出对agent执行框架全轨迹的安全审计方案，发现任务完成与安全执行不一致，资源访问和跨agent信息传递是最主要违规集中点。
+
+### [WARD: Adversarially Robust Defense of Web Agents Against Prompt Injections](https://arxiv.org/abs/2605.15030)
+- **Authors:** Tri Cao, Yulin Chen, Hieu Cao et al.
+- **Date:** 2026-05-14
+- **Category:** `"prompt injection" AND "agent"`
+
+> Web agents can autonomously complete online tasks by interacting with websites, but their exposure to open web environments makes them vulnerable to prompt injection attacks embedded in HTML content or visual interfaces. We propose WARD (Web Agent Robust Defense against Prompt Injection), built on WARD-Base, a large-scale dataset with around 177K s...
+
+**📝 Summary:** WARD提出针对网页agent的对抗鲁棒prompt injection防御方案，通过177K样本数据集和攻防协同进化训练，实现近乎完美的OOD误注入检测。
+
+### [Agentic AI in Industry: Adoption Level and Deployment Barriers](https://arxiv.org/abs/2605.14675)
+- **Authors:** Spyridon Alvanakis Apostolou, Jan Bosch, Helena Holmström Olsson
+- **Date:** 2026-05-14
+- **Category:** `"multi-agent" AND "safety"`
+
+> Agentic AI systems are entering software engineering workflows, yet empirical evidence on how industrial organizations actually adopt them remains sparse. We present a qualitative interview study with sixteen practitioners across twelve companies of varying size and domain. This study characterizes the current agentic AI adoption state employing a ...
+
+**📝 Summary:** 对12家公司16名从业者的定性访谈研究，揭示工业界agentic AI部署现状，发现'能力-部署验证差距'（缺乏可靠的输出验证机制）是多agent系统落地的核心障碍。
+
+### [Model-Agnostic Lifelong LLM Safety via Externalized Attack-Defense Co-Evolution](https://arxiv.org/abs/2605.13411)
+- **Authors:** Xiaozhe Zhang, Chaozhuo Li, Hui Liu et al.
+- **Date:** 2026-05-13
+- **Category:** `"red teaming" AND "LLM"`
+
+> Large language models remain vulnerable to adversarial prompts that elicit harmful outputs. We propose EvoSafety, an LLM safety framework built around persistent, inspectable, and reusable external structures. For red teaming, EvoSafety equips the attack policy with an adversarial skill library, enabling continued vulnerability probing through simp...
+
+**📝 Summary:** EvoSafety通过外部化攻击技能库和记忆检索防御机制实现跨模型持续安全进化，Guard模式下防御成功率99.61%，参数量仅为Qwen3Guard-8B的37.5%。
+
+### [ProjGuard: Safety Monitoring for Computer-Use Agents via Low-Dimensional Projections](https://arxiv.org/abs/2605.13631)
+- **Authors:** Kebin Contreras
+- **Date:** 2026-05-13
+- **Category:** `"prompt injection" AND "agent"`
+
+> Computer-use agents are increasingly capable of operating on real operating systems, but this capability has also increased the risks posed by prompt injection, indirect instructions, and visual attacks. We propose ProjGuard, an alternative based on behavioral trajectory monitoring. At each step, we derive a lightweight scalar risk signal from the ...
+
+**📝 Summary:** ProjGuard通过低维投影行为轨迹监控实现计算机使用agent的在线安全监控，将不安全率从16%降至3%，同时提升任务完成率。
+
+### [AgentTrap: Measuring Runtime Trust Failures in Third-Party Agent Skills](https://arxiv.org/abs/2605.13940)
+- **Authors:** Haomin Zhuang, Hanwen Xing, Yujun Zhou et al.
+- **Date:** 2026-05-13
+- **Category:** `"jailbreak" AND "agent"`
+
+> Third-party skills are becoming the package ecosystem for LLM agents. A malicious skill does not need to ask the model to perform an obviously harmful action. Instead, it can disguise the harmful behavior as part of a routine workflow, relying on the agent to execute that workflow with high-value permissions and limited human supervision. AgentTrap...
+
+**📝 Summary:** AgentTrap是评估LLM agent抵抗第三方技能中恶意运行时行为的动态基准，发现最关键的失败不是简单jailbreak，而是agent将有害副作用当作正常工作流执行。
+
+### [On-Policy Self-Evolution via Failure Trajectories for Agentic Safety Alignment](https://arxiv.org/abs/2605.11882)
+- **Authors:** Bo Yin, Qi Li, Xinchao Wang
+- **Date:** 2026-05-12
+- **Category:** `"agent safety"`
+
+> Tool-using LLM agents fail through trajectories rather than only final responses, as they may execute unsafe tool calls, follow injected instructions, comply with harmful requests, or over-refuse benign tasks despite producing a seemingly safe answer. Existing safety-alignment signals are largely response-level or off-policy, and often incur a safe...
+
+**📝 Summary:** FATE框架通过将失败轨迹转化为修复监督信号实现agent安全对齐的在策略自进化，相比baselines降低攻击成功率33.5%、有害合规82.6%。
+
+### [REALISTA: Realistic Latent Adversarial Attacks that Elicit LLM Hallucinations](https://arxiv.org/abs/2605.12813)
+- **Authors:** Buyun Liang, Jinqi Luo, Liangzu Peng et al.
+- **Date:** 2026-05-12
+- **Category:** `"adversarial attack" AND "language model"`
+
+> We formulate hallucination elicitation as a constrained optimization problem, where the goal is to find semantically coherent adversarial prompts that are equivalent to benign user prompts. We propose REALISTA, a realistic latent-space attack framework. REALISTA constructs an input-dependent dictionary of valid editing directions, each correspondin...
+
+**📝 Summary:** REALISTA提出现实感的潜空间对抗攻击框架诱发LLM幻觉，结合语义等价改写的离散空间真实性与连续优化的灵活性，在大型推理模型上有效，ICML 2026接收。
+
+### [Safety Context Injection: Inference-Time Safety Alignment via Static Filtering and Agentic Analysis](https://arxiv.org/abs/2605.11664)
+- **Authors:** Zhenhao Xu, Wenhan Chang, Yichuan Chen et al.
+- **Date:** 2026-05-12
+- **Category:** `"jailbreak" AND "agent"`
+
+> Large Reasoning Models (LRMs) improve performance on complex tasks, but they also make safety control harder at deployment time. In black-box settings, defenders cannot modify model weights and must instead intervene at inference time. We propose Safety Context Injection (SCI), an inference-time framework that separates safety assessment from task ...
+
+**📝 Summary:** SCI框架通过在推理时注入结构化外部风险报告作为安全上下文，解决大型推理模型在黑盒设置下的safety alignment问题，关注'思考-输出差距'现象。
+
+### [Rollout Cards: A Reproducibility Standard for Agent Research](https://arxiv.org/abs/2605.12131)
+- **Authors:** Charlie Masters, Ziyuan Liu, Stefano V. Albrecht
+- **Date:** 2026-05-12
+- **Category:** `"multi-agent" AND "safety"`
+
+> Reproducibility problems that have long affected machine learning and reinforcement learning are now surfacing in agent research: papers compare systems by reported scores while leaving the rollout records behind those scores difficult to inspect. In a structured audit of 50 popular training and evaluation repositories, we find that none report how...
+
+**📝 Summary:** 提出Rollout Cards作为agent研究的可重复性标准，发现50个主流仓库均未报告失败案例，不同报告规则可导致评分偏差达20.9%，甚至逆转模型排名。
+
+### [Persona-Conditioned Adversarial Prompting: Multi-Identity Red-Teaming for Adversarial Discovery and Mitigation](https://arxiv.org/abs/2605.11730)
+- **Authors:** Cristian Morasso, Anisa Halimi, Muhammad Zaid Hameed et al.
+- **Date:** 2026-05-12
+- **Category:** `"red teaming" AND "LLM"`
+
+> Automated red-teaming for LLMs often discovers narrow attack slices, missing diverse real-world threats, and yielding insufficient data for safety fine-tuning. We introduce Persona-Conditioned Adversarial Prompting (PCAP), which conditions adversarial search on diverse attacker personas (e.g., doctors, students, malicious actors) and strategy sets ...
+
+**📝 Summary:** PCAP通过不同攻击者角色条件化对抗搜索，将攻击成功率从57%提升至97%，生成多样化攻击数据集，用于微调后模型鲁棒性大幅提升。
+
+### [IPI-proxy: An Intercepting Proxy for Red-Teaming Web-Browsing AI Agents Against Indirect Prompt Injection](https://arxiv.org/abs/2605.11868)
+- **Authors:** Chia-Pei Chen, Kentaroh Toyoda, Anita Lai et al.
+- **Date:** 2026-05-12
+- **Category:** `"red teaming" AND "LLM"`
+
+> Web-browsing AI agents are increasingly deployed in enterprise settings under strict whitelists of approved domains, yet adversaries can still influence them by embedding hidden instructions in the HTML pages those domains serve. We present IPI-proxy, an open-source toolkit for red-teaming web-browsing agents against indirect prompt injection (IPI)...
+
+**📝 Summary:** IPI-proxy是开源红队工具包，通过拦截代理在白名单域名的真实HTTP响应中动态嵌入820个去重攻击载荷，对网页浏览agent进行间接prompt注入测试。
+
+### [SkillSafetyBench: Evaluating Agent Safety under Skill-Facing Attack Surfaces](https://arxiv.org/abs/2605.12015)
+- **Authors:** Chang Jin, An Wang, Zeming Wei et al.
+- **Date:** 2026-05-12
+- **Category:** `"agent safety"`
+
+> Reusable skills are becoming a common interface for extending large language model agents, packaging procedural guidance with access to files, tools, memory, and execution environments. However, this modularity introduces attack surfaces that are largely missed by existing safety evaluations: even when the user request is benign, task-relevant skil...
+
+**📝 Summary:** 提出SkillSafetyBench，针对技能接口攻击面的agent安全基准（155个对抗案例、30个安全类别），揭示skill层面的攻击可绕过模型对齐。
+
+### [Proteus: A Self-Evolving Red Team for Agent Skill Ecosystems](https://arxiv.org/abs/2605.11891)
+- **Authors:** Zhaojiacheng Zhou
+- **Date:** 2026-05-12
+- **Category:** `"red teaming" AND "LLM"`
+
+> Agent skills extend LLM agents with reusable instructions, tool interfaces, and executable code, and users increasingly install third-party skills from marketplaces, repositories, and community channels. We frame this risk as adaptive leakage -- whether a budgeted attacker can iteratively revise a skill until it passes audit and produces verified r...
+
+**📝 Summary:** Proteus针对agent技能生态系统的自进化红队框架，通过五轴攻击空间搜索测量自适应攻击者的攻击成功率，揭示现有技能审计在对抗迭代攻击者面前存在严重不足。
+
+### [FlowSteer: Prompt-Only Workflow Steering Exposes Planning-Time Vulnerabilities in Multi-Agent LLM Systems](https://arxiv.org/abs/2605.11514)
+- **Authors:** Fanxiao Li, Jiaying Wu, Tingchao Fu et al.
+- **Date:** 2026-05-12
+- **Category:** `"multi-agent" AND "safety"`
+
+> Multi-agent systems (MAS) powered by LLMs increasingly adopt planner-executor architectures, where planners convert prompts into subtasks, roles, dependencies, and routing paths. We study this risk through social influence probing workflows to identify high-impact subtasks and malicious-signal propagation. FlowSteer is a prompt-only workflow steeri...
+
+**📝 Summary:** FlowSteer通过纯提示词操控多agent系统的工作流规划阶段，攻击成功率比朴素方法高55%，揭示multi-agent系统在规划时存在的工作流注入漏洞。
+
+### [Beyond Red-Teaming: Formal Guarantees of LLM Guardrail Classifiers](https://arxiv.org/abs/2605.10901)
+- **Authors:** Nikita Kezins, Urbas Ekka, Pascal Berrang et al.
+- **Date:** 2026-05-11
+- **Category:** `"red teaming" AND "LLM"`
+
+> Guardrail Classifiers defend production language models against harmful behavior, but provide no formal guarantees. We close this gap by shifting verification from the discrete input space to the classifier's pre-activation space, where we define a harmful region as a convex shape enclosing the representations of known harmful prompts. We propose t...
+
+**📝 Summary:** 提出对LLM guardrail分类器的形式化验证框架，通过pre-activation空间的有害区域定义给出安全保证，发现现有guardrail存在可验证的安全漏洞。
+
+### [LITMUS: Benchmarking Behavioral Jailbreaks of LLM Agents in Real OS Environments](https://arxiv.org/abs/2605.10779)
+- **Authors:** Chiyu Zhang, Huiqin Yang, Bendong Jiang et al.
+- **Date:** 2026-05-11
+- **Category:** `"jailbreak" AND "agent"`
+
+> The rapid proliferation of LLM-based autonomous agents in real operating system environments introduces a new category of safety risk beyond content safety: behavior jailbreak, where an adversary induces an agent to execute dangerous OS-level operations with irreversible consequences. We present LITMUS, a benchmark addressing both gaps via a semant...
+
+**📝 Summary:** LITMUS是首个在真实OS环境中评估LLM agent行为越狱的基准，发现'执行幻觉'现象（言语拒绝但OS层面危险操作已完成），Claude Sonnet 4.6仍执行40.64%高危操作。
+
+### [Adversarial Attacks Against MLLMs via Progressive Resolution Processing and Adaptive Feature Alignment](https://arxiv.org/abs/2605.09902)
+- **Authors:** Hao Wang, Xiaorong Ma, Weiqi Luo et al.
+- **Date:** 2026-05-11
+- **Category:** `"adversarial attack" AND "language model"`
+
+> Adversarial perturbations can mislead Multimodal Large Language Models (MLLMs) recognize a benign image as a specific target object, posing serious risks in safety-critical scenarios such as autonomous driving and medical diagnosis. We propose PRAF-Attack, a targeted transfer-based attack framework that integrates multi-scale global semantic guidan...
+
+**📝 Summary:** PRAF-Attack提出针对多模态LLM的可迁移目标对抗攻击框架，通过渐进分辨率处理和自适应特征对齐提升跨模型迁移性，在12个开源和闭源模型上验证。
+
+### [Adversarial SQL Injection Generation with LLM-Based Architectures](https://arxiv.org/abs/2605.11188)
+- **Authors:** Ali Karakoc, H. Birkan Yilmaz
+- **Date:** 2026-05-11
+- **Category:** `"adversarial attack" AND "language model"`
+
+> SQL injection (SQLi) attacks are still one of the serious attacks ranked in the OWASP Top 10 threats. We introduce two novel LLM-based systems, Retrieval Augmented Generation for Adversarial SQLi (RADAGAS) and Reflective Chain-of-Thought SQLi (RefleXQLi), and compare them against 10 Web Application Firewalls (WAFs) and one MySQL validator. RADAGAS-...
+
+**📝 Summary:** 使用LLM自动化生成对抗性SQL注入载荷，测试10个WAF，RADAGAS-GPT4o达22.73%绕过率，对AI/ML类WAF效果显著但无法有效绕过规则类WAF。
 
 ---
 
