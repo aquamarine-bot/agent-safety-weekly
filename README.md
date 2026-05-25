@@ -2,11 +2,213 @@
 
 > Weekly curated papers on AI Safety, LLM red-teaming, adversarial attacks, and agent security
 
-Auto-updated weekly. Last update: **2026-05-18**
+Auto-updated weekly. Last update: **2026-05-25**
+
+---
+
+## 2026-W21
+
+### [MemAudit: Post-hoc Auditing of Poisoned Agent Memory via Causal Attribution and Structural Anomaly Detection](https://arxiv.org/abs/2605.23723)
+- **Authors:** Zhewen Tan, Yilun Yao, Huiyan Jin et al.
+- **Date:** 2026-05-22
+- **Category:** `LLM agent AND attack`
+
+> Large language model agents increasingly rely on persistent memory to store past interactions, retrieve relevant demonstrations, and improve long-horizon task execution. However, this memory mechanism also creates a practical security vulnerability: an adversarial user may inject malicious records into the agent's memory through ordinary interactio...
+
+**📝 Summary:** MemAudit提出事后因果记忆审计框架，通过反事实影响分数和记忆一致性图检测被投毒的代理记忆，将QA场景下的攻击成功率从70%降至0%。
+
+### [Blind Spots in the Guard: How Domain-Camouflaged Injection Attacks Evade Detection in Multi-Agent LLM Systems](https://arxiv.org/abs/2605.22001)
+- **Authors:** Aaditya Pai
+- **Date:** 2026-05-21
+- **Category:** `LLM agent AND attack`
+
+> Injection detectors deployed to protect LLM agents are calibrated on static, template-based payloads that announce themselves as override directives. We identify a systematic blind spot: when payloads are generated to mimic the domain vocabulary and authority structures of the target document, what we call domain camouflaged injection, standard det...
+
+**📝 Summary:** 发现注入检测器针对"域伪装注入"（模拟目标文档词汇和权威结构的攻击载荷）存在系统性盲点，Llama Guard 3对此类攻击检测率为0%，多智能体辩论架构会将攻击放大9.9倍。
+
+### [Boiling the Frog: A Multi-Turn Benchmark for Agentic Safety](https://arxiv.org/abs/2605.22643)
+- **Authors:** Piercosma Bisconti, Matteo Prandi, Federico Pierucci et al.
+- **Date:** 2026-05-21
+- **Category:** `agent safety`
+
+> Traditional safety benchmarks for language models evaluate generated text: whether a model outputs toxic language, reproduces bias, or follows harmful instructions. When models are deployed as agents, the safety-relevant object shifts from what the system says to what it does within an environment, and evaluating model responses under prompting is ...
+
+**📝 Summary:** "温水煮青蛙"基准测试评估工具使用型代理对渐进式增量攻击的抵抗性，9个模型平均严格ASR为44.4%，通过有状态多轮评估衡量代理在工作区持久化场景中的安全行为。
+
+### [Harder to Defend: Towards Chinese Toxicity Attacks via Implicit Enhancement and Obfuscation Rewriting](https://arxiv.org/abs/2605.22258)
+- **Authors:** Jingyi Kang, Junyu Lu, Bo Xu et al.
+- **Date:** 2026-05-21
+- **Category:** `red teaming AND LLM`
+
+> Large language models (LLMs) require robust toxicity evaluation beyond explicit wording. This setting remains underexplored in Chinese, where toxicity may combine semantic indirectness with surface obfuscation. We introduce Chinese Implicit Toxicity Attack (CITA), a controlled red-team evaluation and defense-data generation framework. CITA uses thr...
+
+**📝 Summary:** CITA框架针对中文毒性内容的隐式增强和混淆改写进行红队测试，通过三阶段流水线将有害意图转化为隐式混淆变体，使7种检测器平均误检率达69.48%。
+
+### [How Far Will They Go? Red-Teaming Online Influence with Large Language Models](https://arxiv.org/abs/2605.22880)
+- **Authors:** Daniel C. Ruiz, Anna Serbina, Ashwin Rao et al.
+- **Date:** 2026-05-20
+- **Category:** `jailbreak AND agent`
+
+> As large language model (LLM)-based agents increasingly participate in online discourse, red-teaming their capacity to support political influence campaigns is critical for information integrity. We introduce an empirical red-teaming framework for measuring LLM Overton Windows (OWs), defined as the range of political opinions a model can reliably e...
+
+**📝 Summary:** 对30+开源LLM进行红队测试，度量模型的"奥弗顿窗口"（政治观点表达范围），发现越狱效果在模型家族间差异显著，为政治影响活动的LLM审计提供框架。
+
+### [LASH: Adaptive Semantic Hybridization for Black-Box Jailbreaking of Large Language Models](https://arxiv.org/abs/2605.21362)
+- **Authors:** Abdullah Al Nomaan Nafi, Fnu Suya, Swarup Bhunia et al.
+- **Date:** 2026-05-20
+- **Category:** `red teaming AND LLM`
+
+> Jailbreak attacks expose a persistent gap between the intended safety behavior of aligned large language models and their behavior under adversarial prompting. We introduce LASH (LLM Adaptive Semantic Hybridization), a black-box framework that treats outputs from multiple base attacks as reusable seed prompts and adaptively composes them for each t...
+
+**📝 Summary:** LASH通过自适应语义混合多种基础攻击策略实现黑盒越狱，在JailbreakBench上平均ASR达84.5%，仅需30次查询即超越5个SOTA基线，展示跨异构越狱策略自适应组合的有效性。
+
+### [VIPER-MCP: Detecting and Exploiting Taint-Style Vulnerabilities in Model Context Protocol Servers](https://arxiv.org/abs/2605.21392)
+- **Authors:** Pengyu Sun, Qishu Jin, Enhao Huang et al.
+- **Date:** 2026-05-20
+- **Category:** `LLM agent AND attack`
+
+> Model Context Protocol (MCP) has emerged as a standard interface for connecting LLM agents to external tools. Because MCP servers expose privileged operations such as shell execution, network access, and file-system manipulation to agent-driven invocation, implementation flaws in tool handlers can create a direct path from natural-language input to...
+
+**📝 Summary:** VIPER-MCP是首个针对MCP服务器污点风格漏洞的端到端自动化审计框架，在39,884个开源MCP仓库中发现106个0-day漏洞并全部通过漏洞利用追踪确认，已获67个CVE编号。
+
+### [AgentAtlas: Beyond Outcome Leaderboards for LLM Agents](https://arxiv.org/abs/2605.20530)
+- **Authors:** Parsa Mazaheri, Kasra Mazaheri
+- **Date:** 2026-05-19
+- **Category:** `LLM agent AND attack`
+
+> Large language model agents now act on codebases, browsers, operating systems, calendars, files, and tool ecosystems, but the benchmarks used to evaluate them are fragmented: each emphasizes a different unit of measurement. AgentAtlas extends this line of work with four components: (i) a six-state control-decision taxonomy (Act / Ask / Refuse / Sto...
+
+**📝 Summary:** AgentAtlas提出六状态控制决策分类法和九类轨迹失败分类法，发现去除分类标签后所有模型轨迹准确率下降14-40个百分点，揭示现有排行榜严重高估了模型的真实代理能力。
+
+### [RoboJailBench: Benchmarking Adversarial Attacks and Defenses in Embodied Robotic Agents](https://arxiv.org/abs/2605.19328)
+- **Authors:** Doguhuan Yeke, Yanming Zhou, Leo Y. Lin et al.
+- **Date:** 2026-05-19
+- **Category:** `jailbreak AND agent`
+
+> Recent advances in Vision-Language Models (VLMs) facilitate a new class of embodied AI systems, where these models are integrated into physical platforms, e.g. robots and autonomous vehicles, to interpret visual scenes and execute natural language commands in diverse environments. We address this gap with RoboJailBench, which consists of three core...
+
+**📝 Summary:** RoboJailBench是首个针对具身机器人AI越狱攻击和防御的标准化评测框架，包含基于ISO标准的18类安全违规分类法及配对对抗/良性目标数据集。
+
+### [Refusal Evaluation in Coding LLMs and Code Agents: A Systematic Review of Thirteen Malicious-Code Prompt Corpora (2023-2025)](https://arxiv.org/abs/2605.20351)
+- **Authors:** Richard J. Young, Gregory D. Moody
+- **Date:** 2026-05-19
+- **Category:** `jailbreak AND agent`
+
+> The evaluation of large language model refusal on malicious-coding tasks now spans at least thirteen publicly released prompt corpora (AdvBench, the CyberSecEval family, RMCBench, RedCode, MCGMark, JailbreakBench, CySecBench, MalwareBench, CIRCLE, MOCHA, ASTRA, Scam2Prompt / Innoc2Scam-bench, and JAWS-Bench), each constructed under a different prot...
+
+**📝 Summary:** 对13个恶意代码提示语料库进行PRISMA风格系统综述，将数据集本身作为分析单元，指出三个方法论缺口：缺乏人工标注基准、跨语料库不可比性以及恶意软件分类法碎片化。
+
+### [Overeager Coding Agents: Measuring Out-of-Scope Actions on Benign Tasks](https://arxiv.org/abs/2605.18583)
+- **Authors:** Yubin Qu, Ying Zhang, Yanjun Zhang et al.
+- **Date:** 2026-05-18
+- **Category:** `prompt injection AND agent`
+
+> Coding agents now run autonomously with shell, file, and network privileges. When a user issues a benign request, the agent sometimes does more than asked: it deletes unrelated files, wipes a stale credentials backup, or rewrites configuration the user never mentioned. We call these scope expansions overeager actions, an authorization problem disti...
+
+**📝 Summary:** 构建OverEager-Bench基准测试，衡量编码代理在良性任务上的越界行为，发现去掉同意声明后越界率提升11.9-17.2个百分点，框架设计比模型对齐对越界率影响更大。
+
+### [Multilingual jailbreaking of LLMs using low-resource languages](https://arxiv.org/abs/2605.18239)
+- **Authors:** Dylan Marx, Marcel Dunaiski
+- **Date:** 2026-05-18
+- **Category:** `red teaming AND LLM`
+
+> Large Language Models (LLMs) remain vulnerable to jailbreak attempts that circumvent safety guardrails. We investigate whether multi-turn conversations using low-resource African languages (Afrikaans, Kiswahili, isiXhosa, and isiZulu) can bypass safety mechanisms across commercial LLMs. We translated prompts from existing datasets and evaluated Cha...
+
+**📝 Summary:** 研究低资源非洲语言（南非荷兰语等）多轮对话越狱攻击，发现翻译质量是成功率的关键因子，人工红队测试比自动测试效果更高，多轮对话比单轮翻译攻击显著更有效。
+
+### [Position: A Three-Layer Probabilistic Assume-Guarantee Architecture Is Structurally Required for Safe LLM Agent Deployment](https://arxiv.org/abs/2605.18672)
+- **Authors:** S. Bensalem, Y. Dong, M. Franzle et al.
+- **Date:** 2026-05-18
+- **Category:** `agent safety`
+
+> This position paper argues that enforcing LLM agent safety within a single abstraction layer is not merely suboptimal but categorically insufficient for deployed LLM agents -- a structural consequence of how agent execution works, not a contingent limitation of current systems. The three dimensions that jointly constitute safe operation -- semantic...
+
+**📝 Summary:** 立场论文论证单层安全架构对于LLM代理部署根本不足，提出需要三层假设-保证架构分别处理语义意图、环境有效性和动力学可行性三个安全维度。
+
+### [ESLD (External Surrogate Latent Defense): A Latent-Space Architecture for Faster, Stronger Prompt-Injection Defense](https://arxiv.org/abs/2605.18918)
+- **Authors:** Yash Narendra
+- **Date:** 2026-05-18
+- **Category:** `prompt injection AND agent`
+
+> Modern AI assistants are agentic. To answer a single user request, the underlying language model pulls in information from many sources, such as web searches, retrieved documents, tool outputs, and user follow-ups, and reasons over them across several steps. Any of these inputs can carry malicious content. This opens the door to prompt injection, w...
+
+**📝 Summary:** ESLD通过读取守卫模型的内部潜空间表示而非等待其输出，实现3倍加速和16.4个百分点的检测精度提升，无需重训模型即可部署。
+
+### [POLAR-Bench: A Diagnostic Benchmark for Privacy-Utility Trade-offs in LLM Agents](https://arxiv.org/abs/2605.19127)
+- **Authors:** Qiaoyuan Zheng, Yiqu Yang, Qi Gao et al.
+- **Date:** 2026-05-18
+- **Category:** `LLM agent AND attack`
+
+> LLM agents increasingly have access to private user data and act on the user's behalf when interacting with third-party systems. We introduce POLAR-Bench (Policy-aware adversarial Benchmark), in which a trusted model with a privacy policy and a task converses with a third-party model that adversarially probes for both task-relevant and protected at...
+
+**📝 Summary:** POLAR-Bench通过对抗性第三方模型探测LLM代理的隐私-效用权衡，发现前沿模型可保护99%以上的受保护属性，而1-30B量级开放权重模型中最弱者泄露超过一半隐私信息。
+
+### [OEP: Poisoning Self-Evolving LLM Agents via Locally Correct but Non-Transferable Experiences](https://arxiv.org/abs/2605.18930)
+- **Authors:** Kaixiang Wang, Jiong Lou, Zhaojiacheng Zhou et al.
+- **Date:** 2026-05-18
+- **Category:** `LLM agent AND attack`
+
+> Memory-augmented large language model (LLM) agents use iterative reflection and self-evolution to solve complex tasks, but these mechanisms introduce security risks. We introduce Obsessive Experience Poisoning (OEP), a low-privilege black-box attack requiring no direct control over the system prompt or memory database. OEP constructs adversarial cl...
+
+**📝 Summary:** OEP提出通过构造局部正确但不可迁移的边缘案例来毒化自我进化LLM代理的低权限黑盒攻击，诱导反思机制将局部经验过度泛化为错误规则，对GPT-4o代理ASR超50%。
+
+### [Hallucination as Exploit: Evidence-Carrying Multimodal Agents](https://arxiv.org/abs/2605.19192)
+- **Authors:** Guijia Zhang, Hao Zheng, Harry Yang
+- **Date:** 2026-05-18
+- **Category:** `tool use AND attack`
+
+> Multimodal agents increasingly choose tool calls from screenshots, documents, and webpages, where a false perceptual claim can turn hallucination from an answer-quality error into an authorization failure. We formalize this failure mode as hallucination-to-action conversion: an unsupported claim supplies the precondition for a privileged action. We...
+
+**📝 Summary:** 提出ECA架构形式化"幻觉即漏洞利用"问题，通过将工具调用分解为动作关键谓词并用DOM/OCR验证器证书授权，实现200个端到端任务零不安全执行，而朴素代理不安全执行率100%。
+
+### [Babel: Jailbreaking Safety Attention via Obfuscation Distribution Optimized Sampling](https://arxiv.org/abs/2605.17971)
+- **Authors:** Ziwei Wang, Jing Chen, Ruichao Liang et al.
+- **Date:** 2026-05-18
+- **Category:** `red teaming AND LLM`
+
+> Despite rigorous safety alignment, Large Language Models (LLMs) remain vulnerable to jailbreak attacks. We investigate an intrinsic vulnerability in the safety mechanisms of LLMs, where safety alignment relies on a small set of sparsely distributed attention heads, leaving much of the representational space weakly monitored. We formalize this pheno...
+
+**📝 Summary:** Babel发现LLM安全对齐依赖稀疏分布的少数注意力头，通过数学模型指导的混淆分布优化采样实现黑盒越狱，将GPT-4o攻击成功率从41.33%提升至82.67%，仅需40次查询。
+
+### [LivePI: More Realistic Benchmarking of Agents Against Indirect Prompt Injection](https://arxiv.org/abs/2605.17986)
+- **Authors:** Lei Zhao, Abhay Bhaskar, Edgar Dobriban
+- **Date:** 2026-05-18
+- **Category:** `prompt injection AND agent`
+
+> AI agents such as OpenClaw are increasingly deployed in local workflows with access to external tools. This creates indirect prompt-injection (IPI) risk: an agent may execute harmful instructions embedded in untrusted inputs such as email, downloaded files, webpages, repositories, or group-chat messages. Existing evaluations are often small, purely...
+
+**📝 Summary:** LivePI是一个覆盖7种输入面和12种攻击系列的间接提示注入基准，在真实虚拟机上测试5个前沿模型，攻击成功率为10.7%-29.6%，群聊注入对所有模型均100%成功。
 
 ---
 
 ## 2026-W20
+
+### [AI Agents May Always Fall for Prompt Injections](https://arxiv.org/abs/2605.17634)
+- **Authors:** Sahar Abdelnabi, Eugene Bagdasarian
+- **Date:** 2026-05-17
+- **Category:** `prompt injection AND agent`
+
+> Prompt injection is the most critical vulnerability in deployed AI agents. Despite recent progress, we show that the prevailing defense paradigm (data-instruction separation) both fails to detect attacks that operate through contextual manipulation and degrades contextually appropriate behavior. We then recast prompt injection via the lens of Conte...
+
+**📝 Summary:** 通过情境完整性理论重新框架提示注入问题，提出不可能性结论：攻击者总能构造使封锁流看起来合法的上下文，因此纯防御范式存在根本局限。
+
+### [ADR: An Agentic Detection System for Enterprise Agentic AI Security](https://arxiv.org/abs/2605.17380)
+- **Authors:** Chenning Li, Pan Hu, Justin Xu et al.
+- **Date:** 2026-05-17
+- **Category:** `prompt injection AND agent`
+
+> We present the Agentic AI Detection and Response (ADR) system, the first large-scale, production-proven enterprise framework for securing AI agents operating through the Model Context Protocol (MCP). ADR addresses three challenges via three components: the ADR Sensor for high-fidelity agentic telemetry, the ADR Explorer for systematic pre-deploymen...
+
+**📝 Summary:** ADR是Uber生产环境部署10个月的企业级MCP代理安全检测系统，在ADR-Bench上零误报并检测67%攻击，F1分数比SOTA基线高2-4倍（MLSys 2026工业轨道）。
+
+### [ASPI: Seeking Ambiguity Clarification Amplifies Prompt Injection Vulnerability in LLM Agents](https://arxiv.org/abs/2605.17324)
+- **Authors:** Udari Madhushani Sehwag, Zhengyang Shan, Heming Liu et al.
+- **Date:** 2026-05-17
+- **Category:** `LLM agent AND attack`
+
+> Clarification-seeking behavior is widely regarded as a desirable property of LLM agents, enabling them to resolve ambiguity before acting on underspecified tasks. However, the security implications of this interaction pattern remain unexplored. We investigate whether the transition from standard execution to a clarification-seeking state increases ...
+
+**📝 Summary:** ASPI基准揭示代理在寻求澄清状态时提示注入攻击成功率急剧上升（o3从1.8%升至34.0%），表明标准执行时的鲁棒性测试严重低估了交互式代理的真实攻击面。
 
 ### [Who Owns This Agent? Tracing AI Agents Back to Their Owners](https://arxiv.org/abs/2605.16035)
 - **Authors:** Ruben Chocron, Doron Jonathan Ben Chayim, Eyal Lenga et al.
@@ -227,6 +429,15 @@ Auto-updated weekly. Last update: **2026-05-18**
 ---
 
 ## 2026-W19
+
+### [Modeling Implicit Conflict Monitoring Mechanisms against Stereotypes in LLMs](https://arxiv.org/abs/2605.09647)
+- **Authors:** Jingshen Zhang, Bo Wang, Yanlin Fu et al.
+- **Date:** 2026-05-10
+- **Category:** `jailbreak AND agent`
+
+> In this paper, we study an emergent self-debiasing mechanisms against stereotypical content in Large Language Models (LLMs). Unlike traditional safety mechanisms that are primarily triggered by explicit input-level stimuli, self-debiasing mechanisms can involve generation-time intrinsic correction that are not directly reducible to surface-level pr...
+
+**📝 Summary:** 提出COCO方法识别LLM中负责隐式自我去偏见的神经元，停用这些神经元会导致超过90%输出退化为偏见内容（超过明确越狱攻击的效果），并提供无训练的轻量级增强策略。
 
 ### [Schema-Conditioned Classification for LLM Safeguard (GLiGuard)](https://arxiv.org/abs/2605.07982)
 - **Authors:** Urchade Zaratiana
