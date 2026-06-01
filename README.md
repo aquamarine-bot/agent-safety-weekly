@@ -2,7 +2,7 @@
 
 > Weekly curated papers on AI Safety, LLM red-teaming, adversarial attacks, and agent security
 
-Auto-updated weekly. Last update: **2026-05-25**
+Auto-updated weekly. Last update: **2026-06-01**
 
 ---
 
