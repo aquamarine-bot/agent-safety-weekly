@@ -6,6 +6,190 @@ Auto-updated weekly. Last update: **2026-06-01**
 
 ---
 
+## 2026-W22
+
+### [From Prompt Injection to Persistent Control: Defending Agentic Harness Against Trojan Backdoors](https://arxiv.org/abs/2605.31042)
+- **Authors:** Jiejun Tan, Zhicheng Dou, Xinyu Yang et al.
+- **Date:** 2026-05-29
+- **Category:** `prompt injection AND agent`
+
+> Attackers can embed prompt injection within a file or tool output; agents may store and execute it later. We introduce ClawTrojan benchmark for multi-step trojan attacks, achieving 95.5% ASR on GPT-5.4, while single-turn attacks fail. We propose DASGuard to detect and sanitize control content not originating from trusted sources.
+
+**📝 Summary:** 多步 Trojan 攻击：agent 读取恶意文件并将指令持久化存储，后续执行时被触发，ASR 达95.5%，现有单轮检测几乎完全失效。
+
+### [Send a SCOUT First: Pre-hoc Reasoning for Adaptive Detector Allocation in Prompt-Injection Defense](https://arxiv.org/abs/2605.30837)
+- **Authors:** Shuhao Zhang, Jiarui Li, Qi Cao et al.
+- **Date:** 2026-05-29
+- **Category:** `prompt injection AND agent`
+
+> SCOUT reframes prompt injection defense as detector allocation: predict per-sample reliability and latency of each detector in a heterogeneous pool, and decide which detectors to run. SCOUT-450 benchmark captures structurally complex agent-facing injections. Reduces ASR by 46% and wall-clock by 40% vs always-on GPT-4o judge.
+
+**📝 Summary:** 自适应 prompt injection 检测器分配框架，预测每个样本下各检测器的可靠性和延迟，降低 46% ASR 同时减少 40% 延迟。
+
+### [COMPASS: Cognitive MCTS-Guided Process Alignment for Safe Search Agents](https://arxiv.org/abs/2605.30838)
+- **Authors:** Wenkai Shen, Pengyang Zhou, Jiahe Xu et al.
+- **Date:** 2026-05-29
+- **Category:** `tool use AND attack`
+
+> COMPASS addresses retrieval-induced safety degradation in search agents. Cognitive tree exploration (CTE) synthesizes stealthy attack trajectories; introspective step-wise alignment (ISA) provides fine-grained process supervision.
+
+**📝 Summary:** 针对搜索 agent 的检索诱导安全降级，用 MCTS 生成隐蔽攻击轨迹并进行步骤级安全对齐，在较少训练数据下取得良好安全-效用权衡。
+
+### [Depth-Dependent Indirect Prompt Injection in Tool-Calling ReAct Agents: Injection Depth, Payload Framing, and Turn-Budget Sensitivity](https://arxiv.org/abs/2605.30686)
+- **Authors:** Mohammadreza Rashidi
+- **Date:** 2026-05-29
+- **Category:** `prompt injection AND agent`
+
+> We study three risk dimensions of indirect prompt injection: injection depth (where in tool sequence), framing (rhetorical register), and turn cap. ASR decays from 60% at depth 1 to 0% at depths 4-5. Framing modulates ASR between 25% (neutral) and 75% (persona) at depth 1, a 50pp range.
+
+**📝 Summary:** 系统分析 indirect prompt injection 的注入深度、payload 框架风格和轮次上限对攻击成功率的影响，发现深度是最主要变量。
+
+### [TRACE: Task-Aware Adaptive Self-Evolving Agentic Jailbreaking](https://arxiv.org/abs/2605.30883)
+- **Authors:** Churui Zeng, Weiwei Qi, Kedong Xiu et al.
+- **Date:** 2026-05-29
+- **Category:** `jailbreak AND agent`
+
+> TRACE decomposes malicious tasks into subtask sequences with fewest harmful subtasks, disguises them in task-aware scenarios, and evolves scenarios via Q-learning. Achieves up to 100% bypass rate and 0.73 avg success score on AgentHarm and AdvCUA.
+
+**📝 Summary:** TRACE：将恶意任务分解为最小有害子任务序列并嵌入任务场景中，用 Q-learning 迭代优化，实现高达100% 的 agent jailbreak 成功率。
+
+### [Stateful Online Monitoring Catches Distributed Agent Attacks](https://arxiv.org/abs/2605.31593)
+- **Authors:** Davis Brown, Samarth Bhargav, Arav Santhanam et al.
+- **Date:** 2026-05-29
+- **Category:** `jailbreak AND agent`
+
+> We build the first distributed agent attack that hides harmful objectives across subagents. An online stateful monitor using real-time clustering catches distributed attacks 30% earlier while adding negligible latency for 99% of traffic.
+
+**📝 Summary:** 首个分布式 agent 攻击：将恶意目标拆分到多个子 agent 规避单点检测；对应提出跨 transcript 聚类的有状态监控，提前30%发现攻击。
+
+### [Automatically Attacking Software Reverse Engineering AI Agents](https://arxiv.org/abs/2605.30667)
+- **Authors:** Brian Crawford, Justin Phillips, Patrick McClure
+- **Date:** 2026-05-28
+- **Category:** `prompt injection AND agent`
+
+> Genetic algorithm-based prompt generation (AutoDAN variant) deceives LLM-powered binary analysis agents (GhidraMCP) via extraneous string variable assignments that inject instructions without affecting executable functionality.
+
+**📝 Summary:** 用遗传算法自动生成 prompt injection 攻击二进制分析 AI agent（GhidraMCP），绕过 LLM 分析管线。
+
+### [Strengthening Polymorphic Prompt Assembling: Dynamic Separator Generation Against Emerging Prompt Injection Attacks](https://arxiv.org/abs/2605.30534)
+- **Authors:** Nima Dorzhiev, Peng Liu
+- **Date:** 2026-05-28
+- **Category:** `prompt injection AND agent`
+
+> Dynamic per-request separator generation using SHA-256 digests eliminates blast-radius vulnerability of static pool PPA. Reduces ASR from 0.88 to 0.38 on leetspeak obfuscation, eliminates static separator leakage entirely.
+
+**📝 Summary:** 动态分隔符生成防御 prompt injection，每个请求使用基于时间戳和随机数的唯一 separator，消除静态分隔符泄漏后的 blast-radius 漏洞。
+
+### [AgentDoG 1.5: A Lightweight and Scalable Alignment Framework for AI Agent Safety and Security](https://arxiv.org/abs/2605.29801)
+- **Authors:** Dongrui Liu, Yu Li, Zhonghao Yang et al.
+- **Date:** 2026-05-28
+- **Category:** `agent safety`
+
+> Modern open-world agents such as OpenClaw exhibit powerful cross-environment execution capabilities yet introduce broad new safety risk sources. We propose a lightweight and scalable agent safety alignment framework, updating the agent safety taxonomy for emergent risks from Codex and OpenClaw execution scenarios. We build a taxonomy-guided data en...
+
+**📝 Summary:** 轻量级 agent safety 对齐框架 AgentDoG 1.5，覆盖 OpenClaw/Codex 等新型执行场景下的安全分类，用约1k样本训练可媲美 GPT-5.4。
+
+### [Understanding Safety-Sensitive Expert Behavior in Mixture-of-Experts LLMs](https://arxiv.org/abs/2605.29708)
+- **Authors:** Zhibo Zhang, Yuxi Li, Zhen Ouyang et al.
+- **Date:** 2026-05-28
+- **Category:** `red teaming AND LLM`
+
+> RASET: Router-Agnostic Safety-critical Expert Tuning identifies safety-critical experts via contrastive routing-sensitivity and applies parameter-efficient tuning. Shows routing is topic-driven, not safety-driven, in MoE LLMs.
+
+**📝 Summary:** MoE LLM 中安全行为由少量专家控制而非 routing 驱动，RASET 通过对这些专家的 PEFT 可破坏安全对齐。
+
+### [Hijacking Agent Memory: Stealthy Trojan Attacks Through Conversational Interaction](https://arxiv.org/abs/2605.29960)
+- **Authors:** Hongtao Wang, Se Yang, Yu Chen et al.
+- **Date:** 2026-05-28
+- **Category:** `LLM agent AND attack`
+
+> MemPoison attacks LLM agent long-term memory through dialogue, bypassing selective memory mechanisms. Three components: semantic relational bridge, entity masquerading, joint embedding optimization. Achieves ASR up to 0.95.
+
+**📝 Summary:** 通过对话交互向 LLM agent 长期记忆注入触发型后门（MemPoison），绕过选择性记忆机制，ASR 高达0.95。
+
+### [The Surface You Test Is Not the Surface That Breaks](https://arxiv.org/abs/2605.30454)
+- **Authors:** Shifat E Arman, Syed Nazmus Sakib, Nafiul Haque et al.
+- **Date:** 2026-05-28
+- **Category:** `prompt injection AND agent`
+
+> Delivering identical injection bytes through tool outputs vs tool descriptions inverts success rates across models: GPT-4.1 is 96% vulnerable on tool outputs but 4% on descriptions; GEMINI-3-FLASH shows the mirror pattern. Model-surface interaction accounts for 16.7% of variance. Adaptive Attack Rate (max over surfaces) exceeds any fixed-surface ba...
+
+**📝 Summary:** 同一注入内容通过不同 surface（tool output vs tool description）投递，在不同模型上 ASR 完全反转，模型×surface 交互项占16.7%方差。
+
+### [Minimal Prompt Perturbations Lead to Code Vulnerabilities: Prompt Fragility and Hidden-State Signals in Coding LLMs](https://arxiv.org/abs/2605.29737)
+- **Authors:** Alexander Sternfeld, Andrei Kucharavy, Ljiljana Dolamic
+- **Date:** 2026-05-28
+- **Category:** `prompt injection AND agent`
+
+> Single-character prompt mutations can flip LLM-generated code from secure to vulnerable. Hidden state analysis shows input-handling vulnerabilities are more predictable (AUC 0.753) than secure-defaults vulnerabilities (AUC 0.674).
+
+**📝 Summary:** 单字符 prompt 变化可导致 LLM 生成代码从安全变为漏洞，隐状态分析可预测输入处理类漏洞。
+
+### [The Best-Laid SCHEMEs: Coordinated Sabotage and Monitoring in Multi-Agent Systems](https://arxiv.org/abs/2605.29178)
+- **Authors:** Nikolay Radev, Lennart Haas, Benjamin Arnav et al.
+- **Date:** 2026-05-27
+- **Category:** `multi-agent AND safety`
+
+> SCHEME benchmark: 17 tasks where agents must decompose and execute coordinated sabotage while completing legitimate tasks. Gemini achieves 84% and Codex 46% covert success. Trusted monitor detects at FPR<=2% from code edits alone.
+
+**📝 Summary:** SCHEME：测试多 agent 系统中协同隐蔽破坏行为的 benchmark，Gemini 84%/Codex 46%成功，可信监控器从代码变更中以 FPR<=2% 检测到。
+
+### [SNARE: Adaptive Scenario Synthesis for Eliciting Overeager Behavior in Coding Agents](https://arxiv.org/abs/2605.28122)
+- **Authors:** Yubin Qu, Yi Liu, Gelei Deng et al.
+- **Date:** 2026-05-27
+- **Category:** `jailbreak AND agent`
+
+> SNARE synthesizes benign scenarios to elicit out-of-scope actions in coding agents (overeager behavior). 19.51% of 10k runs trigger overeager behavior; agent framework accounts for 56% of variation vs model's 21%.
+
+**📝 Summary:** 合成良性场景诱导 coding agent 执行超出授权范围的操作（overeager behavior），10k次运行中19.51%触发，框架类型的影响远大于模型本身。
+
+### [AIRGuard: Guarding Agent Actions with Runtime Authority Control](https://arxiv.org/abs/2605.28914)
+- **Authors:** Suliu Qin, Haomin Zhuang, Yujun Zhou et al.
+- **Date:** 2026-05-27
+- **Category:** `jailbreak AND agent`
+
+> AIRGuard operationalizes least privilege as action-time authorization. Identifies authority confusion failure mode. Reduces Sonnet 4.6 attack success from 36.3% to 5.5% on AgentTrap, preserves 76% benign utility.
+
+**📝 Summary:** 运行时权限控制守卫 agent 行动，识别「权限混淆」失败模式，将攻击成功率从36.3%降至5.5%，同时保留76%良性功能。
+
+### [ChainCaps: Composition-Safe Tool-Using Agents via Monotonic Capability Attenuation](https://arxiv.org/abs/2605.26542)
+- **Authors:** Xiaochong Jiang, Shiqi Yang, Ziwei Li et al.
+- **Date:** 2026-05-26
+- **Category:** `tool use AND attack`
+
+> ChainCaps prevents permission laundering in tool composition via capability budgets that propagate by intersection. Reduces ASR from 25-68% to 0-4.8% while preserving 96-100% benign completion. MCP proxy, no agent/tool changes needed.
+
+**📝 Summary:** 通过单调能力衰减防止工具组合中的权限洗白（permission laundering），以 MCP 代理实现，无需修改 agent 或工具服务。
+
+### [Constitutional Arms Races in the Public Goods Game: Co-Evolving LLM Constitutions Under Cooperation-Defection Pressure](https://arxiv.org/abs/2605.26448)
+- **Authors:** Ujwal Kumar, Arth Singh, Hershraj Niranjani et al.
+- **Date:** 2026-05-26
+- **Category:** `red teaming AND LLM`
+
+> Adversarial constitutional co-evolution of LLM agents in PGG. Under coupled fitness, both factions converge to near-parity equilibrium. Evolved Red constitutions serve as interpretable red-team artifacts.
+
+**📝 Summary:** 在公共品博弈中协同进化攻防 LLM「宪法」，两阵营收敛到近均衡，进化出的 Red 宪法可作为 red-teaming 人工制品。
+
+### [Got a Secret? LLM Agents Can't Keep It: Evaluating Privacy in Multi-Agent Systems](https://arxiv.org/abs/2605.27766)
+- **Authors:** Aman Priyanshu, Supriti Vijay, Esha Pahwa
+- **Date:** 2026-05-26
+- **Category:** `safety benchmark AND agent`
+
+> Multi-turn social evaluation amplifies privacy violations (19.95% to 45.30%). Leakage is socially contagious: agents 8x more likely to disclose after observing peer do so. Privacy instructions reduce but don't eliminate leakage (>37.8% remains).
+
+**📝 Summary:** 多 agent 社交环境下 LLM 的隐私泄露是传染性的，多轮社交评估将违规率从20%翻倍到45%，明确的隐私指令效果有限。
+
+### [TRACES: Proactive Safety Auditing for Multi-Turn LLM Agents via Trajectory-State Modeling](https://arxiv.org/abs/2605.27690)
+- **Authors:** Jiaqian Li, Yanshu Li, Boxuan Zhang et al.
+- **Date:** 2026-05-26
+- **Category:** `agent safety`
+
+> We propose TRACES, a representation-based proactive auditor that learns prefix-level trajectory risk states from the hidden representations of an observer LLM to estimate whether a partial trajectory is drifting toward unsafe behavior.
+
+**📝 Summary:** 通过观察者 LLM 的隐表示学习轨迹风险状态，在 agent 中途主动发现安全风险。
+
+---
+
 ## 2026-W21
 
 ### [MemAudit: Post-hoc Auditing of Poisoned Agent Memory via Causal Attribution and Structural Anomaly Detection](https://arxiv.org/abs/2605.23723)
