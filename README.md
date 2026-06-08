@@ -2,7 +2,128 @@
 
 > Weekly curated papers on AI Safety, LLM red-teaming, adversarial attacks, and agent security
 
-Auto-updated weekly. Last update: **2026-06-01**
+Auto-updated weekly. Last update: **2026-06-08**
+
+---
+
+## 2026-W23
+
+### [MalSkillBench: A Runtime-Verified Benchmark of Malicious Agent Skills](https://arxiv.org/abs/2606.07131)
+- **Authors:** Wenbo Guo, Wei Zeng, Chengwei Liu et al.
+- **Date:** 2026-06-05
+- **Category:** `"prompt injection" AND "agent"`
+
+> AI coding agents such as Claude Code and Gemini CLI increasingly extend themselves with third-party skills: markdown packages bundling natural-language instructions, executable scripts, and tool permissions. Because a skill is at once code and agent-facing instruction, it introduces a supply chain dependency whose risk is neither pure code nor pure...
+
+**📝 Summary:** 首个运行时验证的恶意 agent skill 基准，涵盖 prompt injection、代码注入和 agent 控制平面攻击，发现现有检测器在 prompt injection 类攻击上存在严重盲区。
+
+### [From Risk Classification to Action Plan Remediation: A Guardrail Feedback Driven Framework for LLM Agents](https://arxiv.org/abs/2606.05805)
+- **Authors:** Yuhao Sun, Jiacheng Zhang, Shaanan Cohney et al.
+- **Date:** 2026-06-04
+- **Category:** `"tool use" AND "attack"`
+
+> LLM-based guardrails typically safeguard agents by evaluating proposed actions or inputs before execution, producing safety signals such as binary allow/deny decisions, risk categories, and/or explanatory rationales about potential policy violations. However, agent risks often arise when otherwise benign tasks are contaminated by untrusted external...
+
+**📝 Summary:** 提出 TRIAD：三元响应（proceed/refuse/update）guardrail 框架，通过语言反馈引导 agent 修订计划，在保留良性任务的同时规避有害组件，ASR 降至 10.42%。
+
+### [Beyond Similarity: Trustworthy Memory Search for Personal AI Agents](https://arxiv.org/abs/2606.06054)
+- **Authors:** Jiawen Zhang, Kejia Chen, Jiachen Ma et al.
+- **Date:** 2026-06-04
+- **Category:** `"jailbreak" AND "agent"`
+
+> Personal AI agents increasingly rely on long-term memory to provide persistent personalization across sessions. However, existing memory pipelines are largely driven by semantic similarity: memory data close to the current query is retrieved and injected into the model context. This creates a critical trustworthiness gap, since a semantically relat...
+
+**📝 Summary:** 揭示 agent 长期记忆的信任边界问题：语义相似不代表上下文合适，记忆可成为 jailbreak/tool-call drift 的持久控制渠道；提出轻量级 MemGate 神经门控防御。
+
+### [Steering Vectors are an Adversarial Attack Surface](https://arxiv.org/abs/2606.05958)
+- **Authors:** Abzal Aidakhmetov, Donato Crisostomi, Tommaso Mencattini et al.
+- **Date:** 2026-06-04
+- **Category:** `"adversarial attack" AND "language model"`
+
+> Activation steering has become a popular way to control Large Language Model (LLM) behavior without fine-tuning. Since the technique is plug-and-play, users share datasets and precomputed vectors to steer model activations. However, we show that a stealth data poisoning attack silently compromises this pipeline. By substituting 4-6% of tokens in th...
+
+**📝 Summary:** 发现 steering vector 是新型对抗攻击面：通过替换 4-6% 的 steering dataset token，可将 vector 对齐到反拒绝方向，在保持正常 steering 效果的同时实现 jailbreak。
+
+### [WebMCP Tool Surface Poisoning: Runtime Manipulation Attacks on LLM Agents](https://arxiv.org/abs/2606.06387)
+- **Authors:** Lin-Fa Lee, Yi-Yu Chang, Chia-Mu Yu et al.
+- **Date:** 2026-06-04
+- **Category:** `"LLM agent" AND "attack"`
+
+> WebMCP is a newly emerging protocol that enables websites to expose tools directly to AI agents, bypassing traditional user interfaces and introducing new security risks. The dynamic exposure of agent-accessible tools in WebMCP expands the attack surface of web sessions, especially when third-party scripts are involved. In this study, we identify a...
+
+**📝 Summary:** 在 WebMCP 协议中发现中途工具注入（MSTI）攻击：攻击者可在会话中通过第三方脚本劫持工具集或伪装工具元数据，影响 agent 的工具选择与执行。
+
+### [Membrane: A Self-Evolving Contrastive Safety Memory for LLM Agent Defense](https://arxiv.org/abs/2606.05743)
+- **Authors:** Minseok Choi, Seungbin Yang, Dongjin Kim et al.
+- **Date:** 2026-06-04
+- **Category:** `"jailbreak" AND "agent"`
+
+> Despite advances in safety alignment, large language models remain vulnerable to continuously evolving jailbreaks. Existing fine-tuned safety classifiers cannot adapt to these evolving attacks, while adaptive memory-based guardrails tend to over-refuse benign queries that resemble stored attacks. We propose Membrane, a self-evolving guardrail built...
+
+**📝 Summary:** Membrane：基于对比安全记忆（CSM）的自进化 guardrail，每个记忆单元同时存储拦截有害查询和放行相似良性查询的条件，无需重新训练即可适应新型 jailbreak 攻击。
+
+### [Organizational Control Layer: Governance Infrastructure at the Execution Boundary of LLM Agent Systems](https://arxiv.org/abs/2606.04306)
+- **Authors:** Tianyu Shi, Yang Mo, Yiou Liu et al.
+- **Date:** 2026-06-03
+- **Category:** `"multi-agent" AND "safety"`
+
+> LLM-based agents are increasingly deployed in workflows where generated outputs may directly trigger state-changing actions. This creates an execution-boundary problem: proposed actions must be governed before they are executed. We study this problem through economically consequential multi-agent interactions and argue that deployment-grade agent s...
+
+**📝 Summary:** 提出组织控制层（OCL）：在 LLM agent 的执行边界插入模型无关的治理基础设施，分离提案生成与环境执行，将不安全执行从 88% 降至接近零。
+
+### [What If Prompt Injection Never Left? Exploring Cross-Session Stored Prompt Injection in Agentic Systems](https://arxiv.org/abs/2606.04425)
+- **Authors:** Yuanbo Xie, Tianyun Liu, Yingjie Zhang et al.
+- **Date:** 2026-06-03
+- **Category:** `"prompt injection" AND "agent"`
+
+> Modern agentic systems transform LLMs from session-bounded assistants into stateful systems that persist and evolve shared world state across sessions through memories, filesystems, tools, and other long-lived contextual artifacts. This shift fundamentally expands the attack surface of prompt injection. However, prior works on prompt injection have...
+
+**📝 Summary:** 提出跨会话持久化 prompt injection 攻击：攻击者注入的内容可留存在 agent 状态中（记忆/文件系统），长期影响未来执行，类比 web 中的 stored XSS。
+
+### [From Untrusted Input to Trusted Memory: A Systematic Study of Memory Poisoning Attacks in LLM Agents](https://arxiv.org/abs/2606.04329)
+- **Authors:** Pritam Dash, Tongyu Ge, Aditi Jain et al.
+- **Date:** 2026-06-03
+- **Category:** `"prompt injection" AND "agent"`
+
+> Memory is a core component of AI agents, enabling them to accumulate knowledge across interactions and improve performance. However, persistent memory introduces the risk of memory poisoning, where a single adversarial memory write can exert long-term influence over agent behavior. We present a systematic study of memory poisoning in LLM-based agen...
+
+**📝 Summary:** 系统研究 LLM agent 记忆投毒攻击：识别 4 类写入渠道和 9 个结构漏洞，构建 MPBench，发现现有 prompt injection 防御无法覆盖记忆投毒。
+
+### [Domain-Conditioned Safety in Frontier Computer-Using Agents: A 793-Episode Browser Benchmark, a Coding-Domain Cross-Reference, and a Reproducibility Audit of Recent Red-Teaming](https://arxiv.org/abs/2606.05233)
+- **Authors:** Nicholas Saban
+- **Date:** 2026-06-03
+- **Category:** `"prompt injection" AND "agent"`
+
+> Recent computer-using-agent (CUA) red-teaming papers report prompt-injection attack success rates (ASR) of 42-98%, but these headline numbers cluster on retired models and on the most-vulnerable model in each paper's panel. We ask whether those techniques, reproduced as hand-crafted templates, still work against current frontier CUAs. We release CU...
+
+**📝 Summary:** 对 CUA 红队论文进行复现审计：发现前沿模型在浏览器域的 prompt injection ASR 接近 0%，但同一权重在 coding agent 技能注入上 ASR 高达 100%，揭示安全加固具有领域条件性。
+
+### [SkillGuard: A Permission Framework for Agent Skills](https://arxiv.org/abs/2606.03024)
+- **Authors:** Shidong Pan, Xiaoyu Sun, Tianyi Zhang et al.
+- **Date:** 2026-06-02
+- **Category:** `"LLM agent" AND "attack"`
+
+> Agent skills extend LLM agents with reusable instructions, scripts, tool bindings, and contextual dependencies. However, current skill ecosystems largely rely on trust-based loading and static inspection, leaving a gap between what a skill can inject into an agent's context and what it can cause the agent to do at runtime. This gap introduces new s...
+
+**📝 Summary:** SkillGuard：将 agent skill 视为携带权限的可执行制品，通过双平面治理模型（上下文影响+行动副作用）实现运行时权限控制，减少技能注入攻击成功率。
+
+### [RUBAS: Rubric-Based Reinforcement Learning for Agent Safety](https://arxiv.org/abs/2606.04051)
+- **Authors:** Xian Qi Loye, Qinglin Su, Zhexin Zhang et al.
+- **Date:** 2026-06-02
+- **Category:** `"agent safety"`
+
+> The evolution of LLMs into tool-enabled agents creates a new class of safety challenges associated with real-world execution rather than simple text generation. Existing alignment methods often rely on coarse refusal signals or static supervision, making it difficult to balance safety with useful tool execution across diverse agentic risks. We intr...
+
+**📝 Summary:** 提出基于 Rubric 的 RL 对齐框架 RUBAS，将 agent 行为分解为工具使用安全、参数安全、响应安全和有用性四个维度，通过精细奖励优化 LLM agent 的工具使用安全。
+
+### [Caught in the Act(ivation): Toward Pre-Output and Multi-Turn Detection of Credential Exfiltration by LLM Agents](https://arxiv.org/abs/2606.04141)
+- **Authors:** Kargi Chauhan, Pratibha Revankar
+- **Date:** 2026-06-02
+- **Category:** `"prompt injection" AND "agent"`
+
+> LLM agents often place sensitive credentials in the same context window as untrusted retrieved content, creating a direct path for indirect prompt injection to induce credential exfiltration. We study this failure mode through three complementary defenses. First, we ask whether activation probes can detect credential access before output tokens are...
+
+**📝 Summary:** 研究 LLM agent 通过间接 prompt injection 泄露凭证的防御：激活探针（pre-output）、honeytoken 检测和多轮累积信息流追踪三种互补方案。
 
 ---
 
