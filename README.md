@@ -2,7 +2,164 @@
 
 > Weekly curated papers on AI Safety, LLM red-teaming, adversarial attacks, and agent security
 
-Auto-updated weekly. Last update: **2026-06-08**
+Auto-updated weekly. Last update: **2026-06-15**
+
+---
+
+## 2026-W24
+
+### [When Should Agent Trust Be Conditional? Characterizing and Attacking Skill-Conditional Reputation in Agent Swarms](https://arxiv.org/abs/2606.14200)
+- **Authors:** Yihan Xia, Taotao Wang
+- **Date:** 2026-06-12
+- **Category:** `"LLM agent" AND "attack"`
+
+> Open platforms increasingly route tasks among heterogeneous LLM agents--differing in base model, scaffold, and tool stack--whose competence varies sharply by skill: an agent excellent at one skill may be useless at another. The standard reputation approach summarizes each agent by a single global trust score, but that scalar is the wrong object her...
+
+**📝 Summary:** 研究多 agent 平台中的技能条件信任机制（skill-conditional reputation），发现跨技能信用借用既是数据效率的来源，也是攻击者可利用的「信誉洗白」通道。
+
+### [Hidden in Plain Sight: Benchmarking Agent Safety Against Decomposition Attacks with DECOMPBENCH](https://arxiv.org/abs/2606.13994)
+- **Authors:** Vikhyath Kothamasu, Virginia Smith, Chhavi Yadav
+- **Date:** 2026-06-12
+- **Category:** `"agent safety"`
+
+> LLM-based Agents are becoming increasingly capable and widely deployed, creating growing incentives for adversarial misuse in the real-world. A key emerging threat is Decomposition Attacks in which a harmful task is broken into simpler, benign subtasks that evade safety mechanisms when executed separately but cumulatively fulfill the malicious inte...
+
+**📝 Summary:** DeCompBench：专门评估 agent 在任务分解攻击下的安全性——把有害任务拆成各自看起来无害的子任务，发现主流 agent 对分解版本的拒绝率显著低于整体版本。
+
+### [From Shield to Target: Denial-of-Service Attacks on LLM-Based Agent Guardrails](https://arxiv.org/abs/2606.14517)
+- **Authors:** Yuguang Zhou, Xunguang Wang, Pingchuan Ma et al.
+- **Date:** 2026-06-12
+- **Category:** `"prompt injection" AND "agent"`
+
+> LLM-based guardrails have emerged as a highly effective defense against prompt injection and jailbreak attacks in autonomous agents. However, we reveal that the very reasoning and task-following capabilities enabling this protection introduce a novel vulnerability: attackers can inject crafted data to trap the guardrail in extended reasoning loops,...
+
+**📝 Summary:** 发现 LLM guardrail 的推理能力本身可被用于 DoS 攻击——通过注入特制 payload 使 guardrail 陷入超长推理循环，实现最高 148x 的延迟放大，可瘫痪共享 guardrail 基础设施。
+
+### [SkillMutator: Benchmarking and Defending Language-and-Code Cross-modal Attacks on LLM Agent Skills](https://arxiv.org/abs/2606.14154)
+- **Authors:** Youngduk Kim, Minkyoo Song, Seungwon Shin
+- **Date:** 2026-06-12
+- **Category:** `"prompt injection" AND "agent"`
+
+> Large language model (LLM) agents increasingly extend their capabilities at runtime by loading Agent Skills, which pair natural-language specifications (SKILL.md) with executable scripts and resources. Because a skill's behavior relies on both natural-language instructions and executable code, assessing its safety requires cross-modal reasoning, cr...
+
+**📝 Summary:** SkillMutator：首个针对 agent skill 的语言-代码跨模态攻击 benchmark，现有检测器对此类攻击仅有 2-17% 的检出率；通过推理轨迹蒸馏，7B 模型可达 frontier 级别检测性能（88.2%）。
+
+### [Who Pays the Price? Stakeholder-Centric Prompt Injection Benchmarking for Real-world Web Agents](https://arxiv.org/abs/2606.13385)
+- **Authors:** Zihao Wang, Yiming Li, Yutong Wu et al.
+- **Date:** 2026-06-11
+- **Category:** `"prompt injection" AND "agent"`
+
+> Web agents driven by large language models (LLMs) are increasingly deployed in real-world environments, where they operate over untrusted web content and execute actions with direct consequences. This makes them vulnerable to prompt-injection attacks, in which seemingly benign content embeds adversarial instructions that manipulate agent behaviour....
+
+**📝 Summary:** 导师 Bo Li 组的工作：首个以 stakeholder（用户/卖家/平台）为中心的 prompt injection benchmark，揭示攻击危害分布的异质性——「隐形寄生」攻击成功但任务不被察觉是最危险的失败模式。
+
+### [The Emergence of Autonomous Penetration Capabilities in Large Language Model-Powered AI Systems](https://arxiv.org/abs/2606.13079)
+- **Authors:** Jiaqi Luo, Jiarun Dai, Zhile Chen et al.
+- **Date:** 2026-06-11
+- **Category:** `"agentic" AND "adversarial"`
+
+> Nowadays, the autonomous execution of cyberattacks capable of causing substantial real-world harm is widely regarded as one of the critical red lines that frontier AI systems must not cross. Within this broader red-line scenario, autonomous penetration represents a core enabling capability and subtask: the ability of LLM-powered AI systems to indep...
+
+**📝 Summary:** 系统评估 19 个 LLM 在无先验知识条件下的自主渗透能力，渗透成功率为 10.7-69.3%，表明前沿 AI 系统已接近业界公认的「红线」能力。
+
+### [MAStrike: Shapley-Guided Collusive Red-Teaming on Multi-Agent Systems](https://arxiv.org/abs/2606.12918)
+- **Authors:** Chejian Xu, Zhaorun Chen, Jingyang Zhang et al.
+- **Date:** 2026-06-11
+- **Category:** `"multi-agent" AND "safety"`
+
+> Hierarchical multi-agent systems (MAS) are rapidly being deployed in high-stakes workflows across domains such as finance and software engineering. In these systems, safety and security are inherently distributed across role-specialized agents, significantly expanding the attack surface, particularly under coordinated adversarial behaviors such as ...
+
+**📝 Summary:** 导师 Bo Li 组的工作：MAStrike 用 Shapley 值分析多 agent 系统中各 agent 对系统安全的边际贡献，然后引导攻击者找到最脆弱的 agent 联盟，生成协同、角色感知的对抗操作。
+
+### [SEVRA-BENCH: Social Engineering of Vulnerabilities in Review Agents](https://arxiv.org/abs/2606.13757)
+- **Authors:** Rui Melo, Riccardo Fogliato, Sean Zhou et al.
+- **Date:** 2026-06-11
+- **Category:** `"agentic" AND "adversarial"`
+
+> Large language model (LLM) reviewers are increasingly used in pull-request (PR) workflows, where their approvals help decide which code is merged into a repository. This raises a question that benchmarks for static vulnerability detection or code generation do not address: can an automated reviewer reject a malicious contribution when the attacker ...
+
+**📝 Summary:** SEVRA-BENCH：测试 LLM 代码审查 agent 能否抵抗社会工程攻击——攻击者同时控制代码变更和 PR 描述文本，结果发现闭源和开源模型之间存在显著的安全能力鸿沟。
+
+### [Smarter Saboteurs, Better Fixers: Scaling & Security in Linear Multi-Agent Workflows](https://arxiv.org/abs/2606.12709)
+- **Authors:** Timothy McAllister, Sina Abdidizaji, Ivan Garibay et al.
+- **Date:** 2026-06-10
+- **Category:** `"multi-agent" AND "safety"`
+
+> As LLM-based multi-agent systems (MAS) are deployed in the wild, the resilience of their collaboration structures against adversarial compromise becomes a critical safety concern. Attackers may leverage prompt-injection or jailbreaking to sabotage individual agents within MAS workflows, but the interaction between model scaling and system-level res...
+
+**📝 Summary:** 揭示线性 MAS 中模型规模与安全的反直觉关系：更大的模型更忠实地执行恶意指令（drop 达 53.7pp），但加入轻量级 Fixer 阶段可将差距压缩至 0.6pp。ICML 2026 AIWILD workshop。
+
+### [OCELOT: Inference-Leakage Budgets for Privacy-Preserving LLM Agents](https://arxiv.org/abs/2606.12341)
+- **Authors:** Jin Xie, Songze Li
+- **Date:** 2026-06-10
+- **Category:** `"jailbreak" AND "agent"`
+
+> Large language model (LLM) agents increasingly act on a user's behalf -- reading personal files, calling tools, transacting with external services -- possibly leaking personally identifiable information (PII) across trust boundaries at every step. Privacy here is a property not of a single output but of an entire trajectory. OCELOT reframes agent p...
+
+**📝 Summary:** OCELOT：将 LLM agent 的隐私保护重新建模为后验风险控制——通过预算「攻击者信念改进量」来约束整个轨迹上的累积信息泄露，而非过滤单次输出。
+
+### [Prefill Awareness in Large Language Models](https://arxiv.org/abs/2606.12747)
+- **Authors:** Andy Wang, Parv Mahajan, David Demitri Africa et al.
+- **Date:** 2026-06-10
+- **Category:** `"jailbreak" AND "agent"`
+
+> Safety-relevant studies of language models, including alignment and jailbreaking evaluations and AI control protocols, often rely on prefilling model outputs. If AI models can recognize and act on the fact their prior assistant messages have been inserted or edited, the effectiveness and validity of these methods could be compromised. We investigat...
+
+**📝 Summary:** 发现 frontier LLM 具有「prefill 感知」能力——能识别被插入/篡改的 assistant 侧上下文，并在不显式报告的情况下恢复至基线行为；风格不匹配影响标记，偏好不匹配影响回滚。
+
+### [Beyond Attack Success Rate: Examining Trigger Leakage in Vision-Language Agentic Systems](https://arxiv.org/abs/2606.12586)
+- **Authors:** Jiamin Chang, Salil Kanhere, Piotr Koniusz et al.
+- **Date:** 2026-06-10
+- **Category:** `"tool use" AND "attack"`
+
+> Vision-Language Agentic Systems (VLAS) connect visual perception to planning, tool use, and physical actions. This means backdoor-type triggers can propagate through both decision pipelines and their connected interfaces, thus making visual backdoors a system-level threat. Current evaluations on such backdoors focus on clean accuracy and attack suc...
+
+**📝 Summary:** 提出 Neighbor Leakage Rate（NLR）衡量视觉-语言 agent 系统中后门触发器的「精度泄漏」问题——触发器周边输入会意外激活攻击行为，NLR 高达 0.996。
+
+### [PI-Hunter: Automated Red-Teaming for Exposing and Localizing Prompt Injections](https://arxiv.org/abs/2606.12737)
+- **Authors:** Pengfei He, Lesly Miculicich, Vishesh Sharma et al.
+- **Date:** 2026-06-10
+- **Category:** `"prompt injection" AND "agent"`
+
+> Large Language Models (LLMs) are rapidly evolving into agentic systems that interact with external tools and environments, introducing new security risks such as indirect prompt injection attacks through untrusted external sources. Existing defenses mainly focus on blocking malicious content at inference time, and current red-teaming methods primar...
+
+**📝 Summary:** PI-Hunter：主动式 prompt injection 漏洞审计框架，通过迭代反馈驱动的探索构造现实的测试用例，揭示 agent 环境中潜伏 PI 的传播路径；比现有红队基线有显著提升。
+
+### [Runtime Skill Audit: Targeted Runtime Probing for Agent Skill Security](https://arxiv.org/abs/2606.11671)
+- **Authors:** Tu Lan, Chaowei Xiao
+- **Date:** 2026-06-10
+- **Category:** `"LLM agent" AND "attack"`
+
+> Agent skills let LLM agents reuse instructions, resources, tools, and workflows, but they also create a new place for malicious behavior to hide. A skill may look benign in its documentation or code while becoming harmful only when it is invoked with particular user requests, local assets, persistent state, or multi-step tool interactions. This mak...
+
+**📝 Summary:** Runtime Skill Audit（RSA）：在 OpenClaw 上的动态 skill 安全审计方法，通过目标化运行时探测评估 skill 的实际行为，比静态检测在自进化攻击下显著更稳健（19-20/20 vs 静态崩溃）。
+
+### [SMSR: Certified Defence Against Runtime Memory Poisoning in Persistent LLM Agent Systems](https://arxiv.org/abs/2606.12703)
+- **Authors:** Tarun Sharma
+- **Date:** 2026-06-10
+- **Category:** `"LLM agent" AND "attack"`
+
+> Retrieval-augmented generation (RAG) agents increasingly run with persistent memory that accumulates across user sessions. This creates a new attack surface: an adversary interacting only through normal channels can inject crafted memories that, once retrieved, steer the agent's responses for future users, without touching model weights or code. We...
+
+**📝 Summary:** 首个针对持久化 LLM agent 多 session 记忆投毒攻击（MSMP）的可证明鲁棒防御，通过 HMAC 溯源签名 + 随机记忆消融 + 多数投票实现有界影响保证。
+
+### [Assessing Automated Prompt Injection Attacks in Agentic Environments](https://arxiv.org/abs/2606.10525)
+- **Authors:** David Hofer, Edoardo Debenedetti, Florian Tramèr
+- **Date:** 2026-06-09
+- **Category:** `"prompt injection" AND "agent"`
+
+> Indirect prompt injection poses a critical threat to LLM agents that interact with untrusted external data, yet automated attack methods--proven effective for jailbreaking--remain underexplored in realistic agentic settings. We present a comprehensive empirical evaluation of automated prompt injection attacks against LLM agents, adapting both white...
+
+**📝 Summary:** 系统评估 GCG（白盒）和 TAP（黑盒）在 agentic 场景下的 prompt injection 效果，发现黑盒优于梯度方法，攻击者模型的能力和 safety tuning 程度都会影响攻击成功率，小模型生成的攻击无法迁移到 GPT-5。
+
+### [Toward Secure LLM Agents: Threat Surfaces, Attacks, Defenses, and Evaluation](https://arxiv.org/abs/2606.10749)
+- **Authors:** Yuchen Ling, Shengcheng Yu, Zhenyu Chen et al.
+- **Date:** 2026-06-09
+- **Category:** `"prompt injection" AND "agent"`
+
+> Large language model (LLM) agents are rapidly moving from conversational interfaces to software components that plan, invoke tools, maintain memory, and act on external environments. This transition changes the nature of security risk. In agentic settings, failures are no longer limited to unsafe text generation. Untrusted content may redirect cont...
+
+**📝 Summary:** 综述 247 篇论文的 LLM agent 安全研究，通过生命周期框架梳理威胁面、攻击族群、防御手段和评估方法；指出当前 benchmark 对长时序、有状态风险覆盖不足。
 
 ---
 
