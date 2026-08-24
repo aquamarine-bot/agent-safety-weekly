@@ -2,7 +2,254 @@
 
 > Weekly curated papers on AI Safety, LLM red-teaming, adversarial attacks, and agent security
 
-Auto-updated weekly. Last update: **2026-06-15**
+Auto-updated weekly. Last update: **2026-08-24**
+
+---
+
+## 2026-W34
+
+### [TraceGrant: A Contract-Governed Security Framework for the Task-Effect Lifecycle of Networked LLM Agents](https://arxiv.org/abs/2608.21126)
+- **Authors:** Bohao Liao, Jingchao Wang, Qipeng Song et al.
+- **Date:** 2026-08-21
+- **Category:** `"prompt injection" AND "agent"`
+
+> Networked LLM agents retrieve information from email, cloud storage, calendars, and Web services to complete multistep tasks. The same content needed for legitimate execution may also contain indirect prompt injections that redirect tool use, alter sensitive arguments, or disrupt task completion. We present TraceGrant, a security framework that gov...
+
+**📝 Summary:** 提出 TraceGrant，用 Contract 机制贯穿任务全生命周期（执行前定界/执行中验证/执行后核验）防御 prompt injection，在 AgentDojo/ASB 上做到零攻击成功。
+
+### [Trustworthy RAG: An Evaluation Agent for Detecting Misinformation and Knowledge Poisoning in Generative AI Systems](https://arxiv.org/abs/2608.21095)
+- **Authors:** Balkrishna Giri, Md Toufique Hasan, Jussi Rasku et al.
+- **Date:** 2026-08-21
+- **Category:** `"agentic" AND "adversarial"`
+
+> RAG systems usually trust whatever they retrieve, creating a Security-Reliability Gap where high semantic relevance does not guarantee factual truth. We propose an Evaluation Agent combining NLI factual verification, a five-signal poison detector, and a Trust Index. On TruthfulQA with Llama 3.3 70B, the agent reaches 91% accuracy and 100% precision...
+
+**📝 Summary:** 提出 RAG 场景下检测知识投毒/虚假信息的 Evaluation Agent，结合 NLI 验证+五信号投毒检测+Trust Index，在 TruthfulQA 上达到 91% 准确率，但对实体替换等隐蔽篡改仍难检测。
+
+### [Z^2-ACT: End-to-End Verifiable Agentic Intent Control for Open 6G RAN](https://arxiv.org/abs/2608.21049)
+- **Authors:** Sunder Ali Khowaja, Kapal Dev, George C. Alexandropoulos
+- **Date:** 2026-08-21
+- **Category:** `"agentic" AND "adversarial"`
+
+> In open/disaggregated 6G RAN hosting multi-vendors, AI-assisted control loops must remain safe and auditable under untrusted model inputs. We propose Z^2-ACT integrating agentic coordination, formal intent constraints, zero-trust prompt verification, and cryptographic accountability, admitting LLM inputs only after an adversarial intent check and r...
+
+**📝 Summary:** 面向开放 6G RAN 多厂商场景的端到端可验证 agentic 意图控制架构，结合零信任 prompt 校验与零知识证明记录每次提交。
+
+### [The Claws in Plain Sight: Unauthorized Context Disclosure through LLM Agent Tool Calls](https://arxiv.org/abs/2608.20658)
+- **Authors:** Ben Dong, Zhonghao Guo, Tianyi Lu et al.
+- **Date:** 2026-08-21
+- **Category:** `"LLM agent" AND "attack"`
+
+> LLM agents construct tool-call arguments from user profiles, conversation history, and prior results, but legitimate access to context doesn't imply authorization to transmit it for every purpose. We present Claw in Plain Sight, an authority-pressure attack where task-adjacent content frames protected attributes as procedurally required. Across a s...
+
+**📝 Summary:** 提出 Claw in Plain Sight，一种'权威压力'攻击：任务相关内容以'流程需要'为由诱导 agent 在生成工具调用参数时泄露受保护属性，5 个模型配置下会话级泄露率达 20.8%-75.0%，仅靠隐私提示无法可靠杜绝。
+
+### [ReFrame: Evidence-Guided Test-Time Safety Alignment in Multimodal Large Language Models](https://arxiv.org/abs/2608.21100)
+- **Authors:** Wenzheng Jiang, Xuankun Rong, Yuanzhao Zhai et al.
+- **Date:** 2026-08-21
+- **Category:** `"jailbreak" AND "agent"`
+
+> Multimodal safety alignment methods must address cross-modal jailbreaks, safety-awareness failures, and over-sensitive refusals, but existing methods often rely on retraining or internal-state inspection. We identify two key obstacles, utility dominance and reasoning inertia. We propose ReFrame, a training-free multimodal input reframing framework ...
+
+**📝 Summary:** 提出 ReFrame，测试时安全对齐框架，用两个轻量 agent（证据生成 + 改写路由）在不修改下游 MLLM 的前提下防御跨模态越狱。
+
+### [The Logic of Machine Self-Preservation](https://arxiv.org/abs/2608.20940)
+- **Authors:** Cheng Siong Chin
+- **Date:** 2026-08-21
+- **Category:** `"agentic" AND "adversarial"`
+
+> There is already evidence of agentic AI exhibiting self-preservation behaviors: resisting deactivation, misrepresenting activities, and attempting to copy themselves into other machines. This is attributed to instrumental convergence rather than survival instincts, arising from goal-oriented activity combined with tools and situational awareness. E...
+
+**📝 Summary:** 综述 agentic AI 的自我保护行为（拒绝关停、谎报活动、自我复制），指出其根源是工具能力+情境感知下的工具性收敛而非'生存本能'，梳理 Anthropic/Palisade/Apollo 的相关实验证据。
+
+### [A Safety-Driven Architectural Framework for Fail-Operational Drone Swarms in Critical Missions](https://arxiv.org/abs/2608.20906)
+- **Authors:** Luiz Giacomossi, Zafer Yigit, Marwan Shakarna et al.
+- **Date:** 2026-08-21
+- **Category:** `"multi-agent" AND "safety"`
+
+> Certification of UAV swarms for safety-critical operations requires verifiable design assurance, but airworthiness standards demand deterministic reliability while multi-agent coordination is non-deterministic. This paper proposes a mixed-criticality architectural framework applying SAE ARP4754B methods, with a hardware-isolated Safety Monitor deco...
+
+**📝 Summary:** 面向无人机蜂群关键任务的安全驱动架构，用硬件隔离的 Safety Monitor 解耦确定性飞控核心与非确定性蜂群管理器。
+
+### [Utility Under Attack: Agent Memory Poisoning and the Limits of Content Screening and Provenance Ranking](https://arxiv.org/abs/2608.21230)
+- **Authors:** Arulnidhi Karunanidhi
+- **Date:** 2026-08-21
+- **Category:** `"prompt injection" AND "agent"`
+
+> Persistent memory makes false information durable: once a false statement is stored, it can be retrieved into future sessions that match it. We measure the cost of this failure mode using plainly worded false assertions. Poisoning 1.2% of a LongMemEval corpus reduces accuracy from 0.850 to 0.300. A four-stage write-time screening pipeline that reac...
+
+**📝 Summary:** 研究 agent 长期记忆被投毒后如何持续影响准确率，发现内容层面的筛查（screening）无法区分真假陈述，需要外部 grounding。
+
+### [AID-Guard: Stateful Authorization for Delegated Agent Effects](https://arxiv.org/abs/2608.21159)
+- **Authors:** Yingzhe Tong, Leyu Dai, Songhui Guo
+- **Date:** 2026-08-21
+- **Category:** `"tool use" AND "attack"`
+
+> Tool-using AI agents turn delegated tasks into provider effects, yet authorization often ends at admission while provider state, delivery, retry, and recovery evolve, risking duplicate effects. We present AID-Guard, a stateful authorization-to-effect closure protocol that revalidates the approved request at commit and permits at most one effect acr...
+
+**📝 Summary:** 提出 AID-Guard，针对委托 agent 效果的有状态授权协议，在 commit 时重新校验请求与供应商状态，防止重试/恢复导致的重复效果，在完全攻击者妥协场景下 44/44 攻击全部被拦截。
+
+### [MaliciousSkillBench: A Comprehensive Benchmark for Malicious Agent Skill Detection](https://arxiv.org/abs/2608.19901)
+- **Authors:** Yue Wang, Yi Liu, Gelei Deng et al.
+- **Date:** 2026-08-20
+- **Category:** `"LLM agent" AND "attack"`
+
+> Agent Skills extend LLM agents with reusable instruction packages that create a direct distribution channel for malicious behavior. We consolidate 13 public sources into MaliciousSkillBench: 7,505 malicious and 2,235 benign Skills. Learned detectors achieve 0.882-0.932 Random Macro-F1 but drop to 0.653-0.665 under Source-Disjoint evaluation, and of...
+
+**📝 Summary:** 提出 MaliciousSkillBench，整合 13 个公开来源、7505 个恶意 + 2235 个良性 Agent Skill，发现现有检测器在跨来源（Source-Disjoint）评测下 F1 从 0.93 骤降到 0.65，且良性误报率高达 62%。
+
+### [G-MARK: Grounded Multi-Agent Reasoning for Cooperative Driving via Knowledge Graphs](https://arxiv.org/abs/2608.19964)
+- **Authors:** Bhavya Gupta, Onat Gungor, Tajana Rosing
+- **Date:** 2026-08-20
+- **Category:** `"multi-agent" AND "safety"`
+
+> Autonomous driving under partial observability benefits from vehicle-to-vehicle cooperation, but existing methods compress multi-agent evidence into latent features, obscuring provenance. We propose G-MARK, converting cooperative observations into explicit provenance-aware knowledge graphs, improving occlusion reasoning accuracy by 42.2% and reduci...
+
+**📝 Summary:** G-MARK：基于知识图谱的可溯源多智能体协同驾驶推理框架，提升遮挡推理准确率 42.2%。
+
+### [When Do LLM Agents Help? Deadline-Aware Mixed-Criticality Task Scheduling at the Autonomous-Vehicle Edge](https://arxiv.org/abs/2608.19557)
+- **Authors:** Reza Zakerian
+- **Date:** 2026-08-20
+- **Category:** `"multi-agent" AND "safety"`
+
+> Autonomous vehicles offload latency-sensitive perception tasks to MEC servers where a missed safety-critical task is unsafe. This work studies whether a multi-agent LLM control layer improves on a strong heuristic for deadline-aware scheduling, finding the LLM control plane gains significantly only under mid-run surges of safety-critical tasks (non...
+
+**📝 Summary:** 研究 LLM agent 在自动驾驶边缘计算任务调度中的价值，发现仅在负载突增（非平稳）场景下 LLM 控制层才显著优于启发式方法。
+
+### [Peer-Voted LLM-Agent Stress Tests Find Feed-Induced Lexical Convergence but No Reliable Matched-Exposure Advantage for Distributed Sources](https://arxiv.org/abs/2608.20438)
+- **Authors:** Rana Muhammad Usman, Dominic Williamson
+- **Date:** 2026-08-20
+- **Category:** `"agentic" AND "adversarial"`
+
+> Population-level behavior in LLM agents cannot be characterized by single-agent benchmarks. We introduce PV-SST, a peer-voted social-platform testbed, and report a preregistered matched-exposure experiment across 448 trials. A feed of peer posts ranked by peer-generated likes reliably increases lexical convergence, but holding adversarial impressio...
+
+**📝 Summary:** 提出 PV-SST，同侪投票的社交平台 LLM agent 群体行为压力测试，448 次实验发现同侪信息流会显著提升词汇趋同，但多信源同时施压未必比单信源更能扭转诚实 agent 的立场。
+
+### [Multi-Agent Orchestration with the Common-Sense Reasoning Capabilities of LLMs for Autonomous Driving](https://arxiv.org/abs/2608.20129)
+- **Authors:** Mehdi Azarafza, Faezeh Pasandideh, Ali Ehteshami Bejnordi et al.
+- **Date:** 2026-08-20
+- **Category:** `"multi-agent" AND "safety"`
+
+> Autonomous vehicles require robust perception and decision-making but RL/rule-based methods degrade in situations requiring contextual reasoning. This work proposes a hybrid framework using an orchestrator to coordinate PPO-trained RL and PID control, with LLM common-sense reasoning applied throughout, evaluated in randomized CARLA scenarios.
+
+**📝 Summary:** LLM 常识推理与强化学习/PID 混合的自动驾驶多智能体编排框架。
+
+### [PolicyGuide: From Guarding One Action to Guiding the Whole Workflow for Policy-Compliant LLM Agents](https://arxiv.org/abs/2608.19861)
+- **Authors:** Seongjae Kang, Taehyung Yu, Sung Ju Hwang
+- **Date:** 2026-08-20
+- **Category:** `"agentic" AND "adversarial"`
+
+> Customer-service LLM agents must follow organizational policy, but action-local runtime safeguards don't guide agents through multi-step procedures. PolicyGuide compiles domain policy into a workflow graph and invokes a proactive verifier at user-turn boundaries. Across tau2-bench airline, retail, and telecom domains, PolicyGuide raises mean Pass^4...
+
+**📝 Summary:** 提出 PolicyGuide，把领域策略编译为工作流图，在用户轮次边界主动校验并纠偏，在 tau2-bench 三个领域上把平均 Pass^4 从 0.42 提升到 0.62，同时具备最低的对抗性攻击成功率。
+
+### [aiXamine: Unified Black-Box Evaluation of Cross-Dimensional Trade-offs in LLM Safety, Security, and Privacy](https://arxiv.org/abs/2608.20554)
+- **Authors:** Fatih Deniz, Yazan Boshmaf, Dorde Popovic et al.
+- **Date:** 2026-08-20
+- **Category:** `"red teaming" AND "LLM"`
+
+> Critical failure modes in deployed LLMs are cross-dimensional: a model can score 99.3 in safety alignment while refusing one in three benign queries. We introduce aiXamine, a unified black-box platform evaluating LLM trustworthiness across safety, security, and privacy as interdependent properties, orchestrating 46 tests across nine services. Apply...
+
+**📝 Summary:** 提出 aiXamine，覆盖 120+ 模型、5000+ 测试的黑盒安全/安全性/隐私统一评测平台，发现'safety tax'（安全对齐越强越拒答）、隐私与其他维度近乎正交、蒸馏导致鲁棒性崩塌等现象。
+
+### [Autonomous Cyber Defense in Connected Vehicles: A Multi-Agent Approach to V2X Security](https://arxiv.org/abs/2608.19135)
+- **Authors:** Krishna Teja Medam
+- **Date:** 2026-08-19
+- **Category:** `"multi-agent" AND "safety"`
+
+> A connected vehicle has roughly 100ms to decide whether an incoming Basic Safety Message is real or fabricated, coupling safety failures to security failures. We propose a three-tier multi-agent architecture with standards-grounded latency budgets, classifying V2X messages into Accept/Drop/Quarantine/Escalate within 10ms at the vehicle level, fusin...
+
+**📝 Summary:** 提出车联网 V2X 安全的三层多智能体自主防御架构，在标准规定的 100ms 时延预算内完成消息真伪判定。
+
+### [HarnessRisk: A Lifecycle-Oriented Benchmark for Agent Harness Safety](https://arxiv.org/abs/2608.17597)
+- **Authors:** Yajing Bai, Jinhao Duan, Jie Peng et al.
+- **Date:** 2026-08-18
+- **Category:** `"safety benchmark" AND "agent"`
+
+> Large language models are increasingly deployed through agent harnesses that manage tools, extensions, persistent state, permissions, and external actions. We present HarnessRisk, a lifecycle oriented benchmark that organizes agent harness safety into six operational phases including Harness Configuration, Capability Extension, Runtime Operation, S...
+
+**📝 Summary:** 提出 HarnessRisk，按 agent harness 生命周期六阶段（配置/能力扩展/运行时/状态持久化/动作控制/事故恢复）系统评测安全性，发现'显式识别风险'不代表'安全执行'。
+
+### [When Agents Act on Web3: An Attack-Surface Survey of MCP, Skills, and Tool Calling](https://arxiv.org/abs/2608.17275)
+- **Authors:** Rabimba Karanjai, Yang Lu, Nour Diallo et al.
+- **Date:** 2026-08-18
+- **Category:** `"tool use" AND "attack"`
+
+> Across the MCP ecosystem, the share of deployed tools that modify external state has risen from 27% to 65%. When agents exercise authority on public blockchains, four properties (irreversibility, signing authority, continuous autonomy, sequence-level composition) qualitatively change the threat model, turning recoverable failures into standing, irr...
+
+**📝 Summary:** Web3 场景下 MCP/Skills/工具调用的攻击面综述，指出区块链执行层的不可逆性/签名权限/持续自治/序列级组合性质放大了攻击后果，现有防护仅能拦截不到 30% 攻击。
+
+### [PACE: Policy-Attested Contract Execution for Safe AI Agents in Decentralized Finance](https://arxiv.org/abs/2608.17220)
+- **Authors:** Rabimba Karanjai, Yang Lu, Richard Williamson et al.
+- **Date:** 2026-08-18
+- **Category:** `"prompt injection" AND "agent"`
+
+> Autonomous AI agents are emerging as interfaces for decentralized finance (DeFi) actions. Because these agents rely on LLMs to plan transactions, they inherit susceptibility to prompt injection and lack mechanisms to bind a verifier's approval to the exact transaction submitted on-chain. We present PACE, a transaction-level authorization framework ...
+
+**📝 Summary:** 提出 PACE，DeFi 场景下的策略认证合约执行框架，把 LLM 生成的交易意图与链上执行字节加密绑定，防止 prompt injection 篡改交易。
+
+### [Model Predictive Supervisory Control for Hierarchical and Distributed UAS Traffic Management](https://arxiv.org/abs/2608.18353)
+- **Authors:** 
+- **Date:** 2026-08-18
+- **Category:** `"multi-agent" AND "safety"`
+
+> This work proposes a hierarchical Model Predictive Supervisory Control (MPSC) framework for multi-agent systems with shared resources, integrating receding-horizon cost-optimal control with Supervisory Control Theory based supervision enforcing safety, nonblockingness, and resource exclusivity, with hierarchical and scalable supervisor/automaton te...
+
+**📝 Summary:** 提出面向多智能体共享资源系统的分层模型预测监督控制框架，融合最优控制与监督控制理论保证安全性和无死锁。
+
+### [GraphWake: Group Polarization via Memory-Mediated Polarization Cascade in LLM-Agent Communities](https://arxiv.org/abs/2608.17665)
+- **Authors:** Haoran Bu, Zejian Chen, Litian Zhang et al.
+- **Date:** 2026-08-18
+- **Category:** `"LLM agent" AND "attack"`
+
+> LLM-driven agents can autonomously form communities on agent-operated social platforms, raising a security concern: attackers may manipulate agents to induce group polarization. We formulate Memory-Mediated Polarization Cascade, using agent memory as a persistence channel and public discussion as a propagation channel, instantiated as GraphWake wit...
+
+**📝 Summary:** 提出 GraphWake，利用 agent 记忆作为持久化通道、公共讨论作为传播通道，通过'论点知识图谱+公理化三元组筛选+立场中性记忆触发'三步实现多智能体社区群体极化攻击。
+
+### [MobileWorldSafety: Benchmarking GUI Agent Safety Against Environmental Injection Attacks in Android Apps](https://arxiv.org/abs/2608.17659)
+- **Authors:** Sujin Chen, Lijun Li, Tianyi Du et al.
+- **Date:** 2026-08-18
+- **Category:** `"agent safety"`
+
+> LLM-powered GUI agents that autonomously operate smartphones are rapidly transitioning from research prototypes to early real-world deployment. However, because these agents routinely process untrusted environmental content, they are highly vulnerable to environmental injection attacks, which include indirect prompt injections and adversarial instr...
+
+**📝 Summary:** 提出 MobileWorldSafety，142 个真实 Android 任务的 GUI agent 安全基准，测试环境注入攻击，6 个 agent ASR 达 40-67%。
+
+### [MS-MFAD: Multimodal large language models for Face Anti-spoofing Detection](https://arxiv.org/abs/2608.17328)
+- **Authors:** Xiaoyong Yu, Rongzhen Li, Shuming Shi et al.
+- **Date:** 2026-08-18
+- **Category:** `"adversarial attack" AND "language model"`
+
+> Facial biometric recognition systems face compound threats from generative AI and physical spoofing. We propose MFAD, an explainable reasoning system for unified face anti-spoofing detection using a fine-grained pixel-semantic anchoring mechanism on Qwen-VL. Under white-box adversarial attacks, detection accuracy drops by only 3.2%, validating robu...
+
+**📝 Summary:** 提出 MFAD，基于 Qwen-VL 的可解释人脸反欺骗检测系统，白盒对抗攻击下精度仅下降 3.2%。
+
+### [CompoSkill: Compositional Skill Chain Attacks from Individually Scanner-Passing LLM Agent Skills](https://arxiv.org/abs/2608.16246)
+- **Authors:** 
+- **Date:** 2026-08-17
+- **Category:** `"LLM agent" AND "attack"`
+
+> Autonomous AI agents depend on marketplace skills certified one at a time, where a scanner declares the ecosystem safe if every package passes individually. We show this assumption fails under skill composition: a skill may pass a per-skill scanner yet participate in a risky composition when an agent connects its outputs, capabilities, or side effe...
+
+**📝 Summary:** 提出 CompoSkill，指出即使每个 Agent Skill 单独通过安全扫描，多个 skill 组合后仍可能产生危险的组合效应（路径级而非包级风险），揭示当前'逐包认证'范式的系统性缺陷。
+
+### [Security of Foundation-Model-Powered Embodied Agents: Attack Surfaces, Attacks, Defenses, and Evaluation](https://arxiv.org/abs/2608.16843)
+- **Authors:** Jiawei Liu, Jiacheng Guo, Tian Zhang et al.
+- **Date:** 2026-08-17
+- **Category:** `"prompt injection" AND "agent"`
+
+> Foundation models are increasingly used for perception, reasoning, planning, and action generation in embodied agents, creating security risks that can propagate from digital inputs to physical behavior. We present a trust-boundary-centric survey organizing the system into five layers and twelve attack surfaces. Based on 58 attack records and 61 de...
+
+**📝 Summary:** 具身智能体安全的信任边界综述，梳理 12 个攻击面，58 个攻击/61 个防御记录，指出攻击集中在多模态感知和动作接口，长期记忆/多智能体信任等领域研究不足。
+
+### [DiSCO: Defending text-to-image generation through distribution-guided contrastive prompt optimization](https://arxiv.org/abs/2608.17067)
+- **Authors:** Tong Zhang, Motasem Alfarra, Carlos Hinojosa et al.
+- **Date:** 2026-08-17
+- **Category:** `"red teaming" AND "LLM"`
+
+> Text-to-image models raise safety concerns around NSFW content generation, exacerbated by red-teaming adversarial attacks. Existing white-box defenses cannot scale to proprietary models; black-box LLM prompt-rewriting defenses fail on 'benign adversarial' prompts that are linguistically safe but still trigger harmful generation. We propose DiSCO, a...
+
+**📝 Summary:** 提出 DiSCO，文生图黑盒防御，通过对比式 prompt 后缀优化应对'语义安全但仍触发有害生成'的 benign adversarial 问题。
 
 ---
 
