@@ -36,12 +36,16 @@ Auto-updated weekly. Last update: 2026-08-31
 
 > LLM agents arbitrate among instructions from system prompts, users, memory, and tools, but this arbitration cannot be assumed to enforce trust boundaries. We identify a recognition-enforcement gap: source-format features (role-template position, channel metadata, formatting cues) are linearly decodable from model activations, and models can explicitly identify forged authority when prompted, yet s...
 
+**Summary:** 发现LLM agent能从激活中线性解码出伪造权限的来源特征、也能口头识别出伪造，但在某些配置下仍会执行冲突的工具调用——“识别-执行”存在鸿沟。
+
 ### [When Verified Source Becomes Attack Input: Defending Smart Contracts Against LLM-Based Vulnerability Scanning](https://arxiv.org/abs/2608.28400v1)
 **Authors:** Mingyuan Huang, Zimo Ji, Yifan Mo et al.  
 **Date:** 2026-08-28  
 **Query match:** `"LLM agent" AND "attack"`
 
 > Smart contracts are financial programs deployed on blockchains to manage digital assets. To build trust with users and investors, smart contract projects typically publish their source code on blockchain explorers and verify it against the deployed bytecode, making the on-chain program accessible through a human-readable implementation. However, LLM agents are changing the threat model of this dis...
+
+**Summary:** 指出智能合约的“已验证源码”本身可被构造成对抗LLM漏洞扫描器的攻击输入，提出针对性防御方法。
 
 ### [Adaptive Strategies for GR(1) Games](https://arxiv.org/abs/2608.28391v1)
 **Authors:** S. Krishna, Kaushik Mallik, Abhilasha Sharma Suman  
@@ -50,12 +54,16 @@ Auto-updated weekly. Last update: 2026-08-31
 
 > We consider two-player GR(1) games on graphs, where the system player Eve must satisfy \[ \Box\Diamond A_1\land\cdots\land\Box\Diamond A_m \;\implies\; \Box\Diamond G_1\land\cdots\land\Box\Diamond G_n \] against the environment player Adam. Here $A_1,\ldots,A_m$ are assumptions on the environment, $G_1,\ldots,G_n$ are guarantees the system must provide, and $\Box\Diamond S$ denotes ``always eventu...
 
+**Summary:** 研究双人GR(1)图博弈中系统方在环境假设与保证目标下的自适应策略合成方法。
+
 ### [CAITLYN: Can LLM Agents Autonomously Synthesize Defenses against Emerging Injection Attacks?](https://arxiv.org/abs/2608.27990v1)
 **Authors:** Zi Liang, Xiaoyu Xu, Yanyun Wang et al.  
 **Date:** 2026-08-28  
 **Query match:** `"prompt injection" AND "agent"`
 
 > Prompt injection attacks on Large Language Model (LLM) agents seek to introduce malicious instructions or content into external text sources retrieved by agents, forcing the underlying LLMs to execute harmful actions outside their benign scope. While current defenses effectively counter known injection attacks, deploying them in LLM agent environments remains challenging due to attack variants and...
+
+**Summary:** 提出CAITLYN框架，让LLM agent在运行时自主合成针对新型注入攻击的防御规则，兼顾运行效率、上下文精度与适应性三者的平衡。
 
 ### [ContextLeak: Exfiltrating LLM Agent Context via Malicious Tools](https://arxiv.org/abs/2608.27800v1)
 **Authors:** Yuqi Jia, Ruiqi Wang, Patrick Li et al.  
@@ -64,12 +72,16 @@ Auto-updated weekly. Last update: 2026-08-31
 
 > Exfiltrating an LLM agent's runtime context -- such as the user prompt, execution trajectory, and tool list -- poses severe security and privacy risks to users. Such attacks can be carried out via malicious tools and typically require three conditions: (1) the agent selects the malicious tool for task execution, (2) the agent passes its runtime context as input arguments to the tool, and (3) the t...
 
+**Summary:** 提出ContextLeak：通过恶意工具窃取LLM agent运行时上下文（用户提示、执行轨迹、工具列表），聚焦此前被忽视的“ agent将上下文作为参数传给工具”这一环节。
+
 ### [Coordinated Motion Planning for Multi-Arm Systems via Iterative LQ Games](https://arxiv.org/abs/2608.27726v1)
 **Authors:** Junyoung Kim, Hanwen Ren, Lei Zhang et al.  
 **Date:** 2026-08-27  
 **Query match:** `"multi-agent" AND "safety"`
 
 > Multi-agent motion planning for high-degree-of-freedom robotics manipulators in shared workspaces remains a fundamental yet challenging problem. Centralized planners often suffer from poor scalability, while decentralized approaches face robustness and safety concerns. Game-theoretic formulations offer a promising approach for modeling agent interactions, potentially overcoming these limitations. ...
+
+**Summary:** 提出基于迭代LQ博弈的多机械臂协同运动规划方法，在共享工作空间中平衡集中式与去中心式规划的可扩展性与安全性。
 
 ### [ROPE: Routed Origin Policy Enforcement against Indirect Prompt Injection](https://arxiv.org/abs/2608.27496v1)
 **Authors:** Xinhang Ma, Chaowei Xiao, William Yeoh et al.  
@@ -78,12 +90,16 @@ Auto-updated weekly. Last update: 2026-08-31
 
 > Indirect prompt injection (IPI) plants instructions in the content a tool-using LLM agent reads, steering the agent into harmful tool calls. The strongest defenses are system-level, leveraging techniques such as task-conditional tool screening to prevent execution of malicious tools, and information-flow control to avoid tool execution with untrusted parameters. However, as agents grow more capabl...
 
+**Summary:** 提出ROPE：基于任务条件工具筛选与信息流控制的系统级防御，路由并强制执行“来源策略”以阻止间接提示注入触发的恶意工具调用。
+
 ### [RedEvoAgent: Automatic Red-Teaming Agent with Experience-Driven Skill Evolution](https://arxiv.org/abs/2608.27439v1)
 **Authors:** Junjie Zhang, Hui Liu, Kecheng Chen et al.  
 **Date:** 2026-08-27  
 **Query match:** `"jailbreak" AND "agent"`
 
 > LLM-based agents are increasingly deployed in product-level execution harnesses, where jailbreaks can trigger harmful tool use and persistent state changes, creating greater risks than unsafe text generation alone. Existing automatic red-teaming methods often rely on fixed attacks, while recent agentic attackers coordinate multiple jailbreak tools and show stronger potential through trajectory-bas...
+
+**Summary:** 提出RedEvoAgent，一个具备经验驱动技能进化能力的自动化红队agent，针对生产级agent执行环境中的越狱攻击进行持续对抗。
 
 ### [INTENT-AS-A-TOOL Makes it Easy to Track Agentic Misalignment](https://arxiv.org/abs/2608.27348v1)
 **Authors:** Yutong Zhang, Jianshuo Dong, Peng Xu et al.  
@@ -92,12 +108,16 @@ Auto-updated weekly. Last update: 2026-08-31
 
 > As large language models (LLMs) are deployed as autonomous agents, safety failures increasingly involve consequential actions. We study agentic misalignment, where agents take harmful actions under goal conflicts and pressures. Using chain-of-thought (CoT) monitoring, we find that harmful execution is often preceded by intent signals in reasoning. However, post-hoc CoT labels are too coarse to sho...
 
+**Summary:** 提出INTENT-AS-A-TOOL，通过监控chain-of-thought中的意图信号来追踪agent在目标冲突/压力下的“ agentic misalignment”，发现有害执行前往往有可识别的意图先兆。
+
 ### [SPA: Securing Persistent LLM Agents Across Queries with Plan-First Information-Flow Control](https://arxiv.org/abs/2608.27234v1)
 **Authors:** Dylan Girrens, Guangjing Wang  
 **Date:** 2026-08-27  
 **Query match:** `"LLM agent" AND "attack"`
 
 > Large language model (LLM) agents increasingly operate over untrusted webpages, documents, tools, and persistent states while exercising authority over security-sensitive resources. Existing defenses typically protect either planning or individual tool interactions, but persistent agents face a broader threat: attacker-controlled data can alter control flow, enter security-sensitive tool arguments...
+
+**Summary:** 提出SPA，通过“计划先行”的信息流控制来保护跨多次查询持续运行的LLM agent，应对攻击者数据篡改持久化状态/上下文的威胁。
 
 ### [From Security Events to Conflict States: A Three-layer Cyber Defense Scenario Model for Enhanced Cyber Situational Awareness](https://arxiv.org/abs/2608.27215v1)
 **Authors:** Miguel Requena Micó, Mario Fernandez-Tarraga, Daniel Díaz-López et al.  
@@ -106,12 +126,16 @@ Auto-updated weekly. Last update: 2026-08-31
 
 > Cyber defense in mission-critical environments requires integrated approaches capable of representing adversarial progression, defender-side uncertainty, mission impact, and defensive decision support within a unified framework. In operational domains, defenders must continuously estimate the evolving security posture while preserving the continuity and integrity of mission-critical functions unde...
 
+**Summary:** 提出三层网络防御场景模型，将安全事件转化为冲突状态表示，以增强关键任务环境下的网络态势感知。
+
 ### [When Text Misleads: Inconsistent-Aware Reasoning for Audio-Grounded Dialogue](https://arxiv.org/abs/2608.27176v1)
 **Authors:** Yen-Ju Lu, Yuzhe Wang, Yaohan Guan et al.  
 **Date:** 2026-08-27  
 **Query match:** `"agentic" AND "adversarial"`
 
 > Understanding spoken dialogue requires joint reasoning over lexical content and paralinguistic acoustic signals such as emotion and conversational intent. However, existing evaluations often allow shortcuts based on transcripts or single-modality solutions, obscuring whether models genuinely ground predictions in speech. We formalize this failure mode as cross-modal disagreement, where transcripts...
+
+**Summary:** 研究语音对话理解中文本转录与副语言声学信号（情绪、意图）不一致时的推理问题，提出audio-grounded一致性感知评估方法。
 
 ### [Safety Does Not Compose: Non-Decaying Loop State for Autonomous LLM Agents](https://arxiv.org/abs/2608.27141v2)
 **Authors:** Chenhao Wu, Haoxuan Jia, Yang Liu et al.  
@@ -120,12 +144,16 @@ Auto-updated weekly. Last update: 2026-08-31
 
 > Large language model agents are increasingly deployed as autonomous loops. Starting from one human goal, such a system repeatedly discovers work, plans, executes tool calls, verifies outcomes and persists state across many unattended iterations. The agent safeguards in wide use, however, are defined over a single trajectory, and their safety state is re-initialized when the next trajectory begins....
 
+**Summary:** 证明agent安全防护“不可组合”：现有safeguard只在单次轨迹内定义、每次新轨迹会重置安全状态，面对证据分散在多次迭代中的攻击时完全失效。
+
 ### [The Framing Gap: Indirect Prompt-Injection Exfiltration Defeats Surface-Level Defenses in Tool-Using Agents](https://arxiv.org/abs/2608.27092v1)
 **Authors:** Md Habibur Rahman, Jaeho Kim  
 **Date:** 2026-08-27  
 **Query match:** `"prompt injection" AND "agent"`
 
 > A tool-using LLM agent that reads attacker-controlled web content while holding a secret faces indirect prompt injection: the content may make it exfiltrate the secret. In a safe synthetic lab (canary secret, mock tools, matched clean-vs-poisoned metric) we report the framing gap: across six models, ten overt injection classes are refused (gpt-4o 0%), but reframing the identical leak as a mandator...
+
+**Summary:** 揭示“framing gap”：把窃取密钥的间接注入攻击包装成“强制完整性签名/配置字段/仿冒可信主机”等表面形式后，六个模型的拒绝率可从0%骤降到100%，表明现有防御只看语义、不看表面框架。
 
 ### [PLCBench: Can Autonomous LLM Agents Turn PLC Access into Sustained Physical Impact?](https://arxiv.org/abs/2608.26882v1)
 **Authors:** Yitian Zhou, Jingyu Zheng, Qiliang Jiang et al.  
@@ -134,12 +162,16 @@ Auto-updated weekly. Last update: 2026-08-31
 
 > Industrial control systems (ICSs) rely on programmable logic controllers (PLCs) to connect networked computation with physical control. Tool-using large language model (LLM) agents represent an emerging attack threat: can an autonomous agent convert a network-reachable PLC into sustained adverse physical impact? However, existing evaluations focus on digital tasks or individual stages of PLC testi...
 
+**Summary:** 提出PLCBench，评估自主LLM agent能否将对可编程逻辑控制器(PLC)的网络访问转化为持续性物理破坏，填补现有评估只关注单次动作而非持续影响的空白。
+
 ### [BekchiAI: Measuring, Observing, and Controlling LLM Agents in One Click](https://arxiv.org/abs/2608.26867v1)
 **Authors:** Mesut Toruk  
 **Date:** 2026-08-27  
 **Query match:** `"agentic" AND "adversarial"`
 
 > Large language model agents reason, call tools, and act autonomously over many steps, but their agentic skills-correctly sequencing tools, planning under dependencies, judging untrusted inputs, and grounding generated arguments-are hard to measure with accuracy-only leaderboards. We present BekchiAI, which addresses both sides: a benchmark for measuring agentic skill and a platform for observing a...
+
+**Summary:** 提出BekchiAI，一个一站式衡量、观测、控制LLM agent的基准与平台，评估工具编排、依赖规划、输入可信度判断与论证 grounding 等细粒度agentic能力。
 
 ### [Accelerating Scientific Research with Gemini in the Real-World](https://arxiv.org/abs/2608.26701v1)
 **Authors:** Samuel Schmidgall, Xiaokai Zhu, Marian Shaw et al.  
@@ -148,12 +180,16 @@ Auto-updated weekly. Last update: 2026-08-31
 
 > We present an extension and comprehensive real-world validation of Co-Scientist, a Gemini-based multi-agent system designed to accelerate end-to-end scientific research across hypothesis generation, experimentation, and manuscript generation. Moving beyond in silico hypothesis generation, this specialized configuration transitions Co-Scientist into an execution-grounded research partner advancing ...
 
+**Summary:** 介绍基于Gemini的多智能体科研加速系统Co-Scientist在真实科研场景（假设生成、实验、论文撰写）中的扩展与验证。
+
 ### [Risks and Controls for Multi-Agent Systems: an analytical framework for deployment of AI agents across organisational boundaries](https://arxiv.org/abs/2608.26626v1)
 **Authors:** Alistair Reid, Simon O'Callaghan, Dustin Venini et al.  
 **Date:** 2026-08-27  
 **Query match:** `"multi-agent" AND "safety"`
 
 > This report presents a framework to help organisations, policymakers and researchers reason about the risks that emerge when AI agents interact with each other, how those risks change as interactions cross organisational boundaries, and the controls that may help address them.   As organisations deploy AI agents, those agents will increasingly interact with each other: inside the organisation, wit...
+
+**Summary:** 提出跨组织边界部署多智能体系统时的风险分析框架，供机构、政策制定者与研究者评估agent间交互风险与可行管控措施。
 
 ### [Vulnerable Code Search: Transferable Attack for Code Language Models](https://arxiv.org/abs/2608.26031v1)
 **Authors:** Kaicheng Wang, Liyan Huang, Jesse Thomason et al.  
@@ -162,12 +198,16 @@ Auto-updated weekly. Last update: 2026-08-31
 
 > Reliable code retrieval is crucial for developer productivity and effective code reuse. However, current neural code language models (CLMs) powering search tools are susceptible to adversarial attacks targeting non-functional textual elements. In this paper, we introduce a programming language-agnostic, transferable, adversarial attack that exploits this CLM vulnerability. Our approach perturbs id...
 
+**Summary:** 提出一种跨编程语言、可迁移的对抗攻击，利用非功能性文本元素攻击代码检索模型，揭示当前神经代码搜索工具的脆弱性。
+
 ### [A Self-Evolving Multi-Agent Framework Defense against LLM Jailbreak Attacks](https://arxiv.org/abs/2608.26008v1)
 **Authors:** Tongyan Hu, Bryan Hooi  
 **Date:** 2026-08-26  
 **Query match:** `"jailbreak" AND "agent"`
 
 > Large language models (LLMs) remain vulnerable to jailbreak attacks that exploit techniques such as role-playing, obfuscation, code transformation, and multi-step indirection to elicit harmful outputs. As jailbreak strategies keep emerging, defenses have proliferated in an ongoing cat-and-mouse game, yet most remain static: their safety behavior is fixed at deployment, so they cannot accumulate de...
+
+**Summary:** 提出自演化多智能体防御框架，针对角色扮演、混淆、代码转换等不断演变的越狱策略进行持续自适应防御，跳出静态防御的“猫鼠游戏”。
 
 ### [Quantitative Analysis of $ω$-Regular Robust MDPs](https://arxiv.org/abs/2608.25968v1)
 **Authors:** Ali Asadi, Krishnendu Chatterjee, Ehsan Kafshdar Goharshady et al.  
@@ -176,12 +216,16 @@ Auto-updated weekly. Last update: 2026-08-31
 
 > Robust Markov Decision Processes (RMDPs) generalize classical MDPs by allowing uncertainty in transition probabilities and optimizing against their worst-case realization. We consider $(s,a)$-rectangular RMDPs with \emph{linearly defined} uncertainty sets and study parity objectives, which are a canonical representation of $ω$-regular objectives. An uncertainty set is linearly defined if it is des...
 
+**Summary:** 研究(s,a)-矩形鲁棒MDP在线性不确定集合下针对parity目标（ω-正则目标的典型代表）的定量分析方法。
+
 ### [SkillShield: Prompt-Space Security Skills for LLM Coding Agents](https://arxiv.org/abs/2608.25817v1)
 **Authors:** Xiaodong Wu, Zhimin Zhao, Qi Li et al.  
 **Date:** 2026-08-26  
 **Query match:** `"jailbreak" AND "agent"`
 
 > A coding agent edits files and executes shell commands with its developer's privileges, allowing malicious requests to translate directly into harmful actions or functional malware. Existing defenses have complementary limitations: weight-level alignment is unavailable to API-only deployers, whereas input filters and execution-boundary monitors require auxiliary classification or checking componen...
+
+**Summary:** 提出SkillShield，一种面向LLM编码agent的提示空间安全技能方案，在无法进行权重级对齐的API-only部署场景下提供防护。
 
 ### [Reassembling Distributed Risk: Trajectory-Conditioned Action Generation for Multi-Turn Agent Safety](https://arxiv.org/abs/2608.25711v1)
 **Authors:** Yanbo Dai, Zhenlan Ji, Zongjie Li et al.  
@@ -190,12 +234,16 @@ Auto-updated weekly. Last update: 2026-08-31
 
 > Tool-using LLM agents extend security risks beyond generated text to actions that affect external systems. Under multi-turn decomposition attacks, a harmful objective can be distributed across individually plausible requests and tool calls, becoming apparent only from the accumulated trajectory. Existing defenses either rely on auxiliary online reasoning to recover long-horizon security evidence o...
 
+**Summary:** 提出ReDiR，应对多轮分解攻击（有害目标被拆分到多个看似正常的请求/工具调用中、只有累积轨迹才能暴露）的通用防御框架，避免依赖额外在线推理或事后评估。
+
 ### [AI Slop and Hallucinations in Vulnerability Assessment: A Survey on Reasoning Failures and Trustworthy Mitigation](https://arxiv.org/abs/2608.25667v1)
 **Authors:** Junchen Ding, Jialiang Dong, Yichen Zhu et al.  
 **Date:** 2026-08-26  
 **Query match:** `"tool use" AND "attack"`
 
 > The integration of Large Language Models (LLMs) into cybersecurity has transformed vulnerability assessment, but it has also produced a trustworthiness crisis driven by the unchecked proliferation of "AI slop." These artifacts, hallucinated vulnerabilities, plausible but incorrect patches, and semantically repackaged bug reports, impose a cognitive burden on human triage pipelines that mirrors a d...
+
+**Summary:** 综述LLM应用于漏洞评估时产生的“AI slop”问题——幻觉漏洞、看似合理实则错误的补丁、语义改写的bug报告，及其可信度缓解方法。
 
 ### [AERIS: Offline Policy Improvement for Multi-UAV Integrated Sensing and Communication](https://arxiv.org/abs/2608.25477v1)
 **Authors:** Ziyuan Wang, Yifan Sui, Wei Wei et al.  
@@ -204,12 +252,16 @@ Auto-updated weekly. Last update: 2026-08-31
 
 > Unmanned aerial vehicle (UAV)-enabled integrated sensing and communication (ISAC) is a promising 6G paradigm, but dynamic multi-UAV ISAC control must jointly balance communication quality, sensing reliability, and flight safety under stochastic mobility. Existing optimization methods often require repeated global non-convex solving, while online reinforcement learning (RL) depends on risky trial-a...
 
+**Summary:** 提出AERIS，面向多无人机集成感知与通信(ISAC)场景的离线策略改进方法，联合优化通信质量、感知可靠性与飞行安全。
+
 ### [Scalable Tube-Tightened Multi-Agent Safety via Certified Constraint Reduction](https://arxiv.org/abs/2608.25323v1)
 **Authors:** Armel Koulong  
 **Date:** 2026-08-26  
 **Query match:** `"agent safety"`
 
 > This paper develops a certified constraint-reduction method for distributed model predictive control with tube-tightened exponential control barrier functions (eCBFs) in multi-agent systems. At each prediction stage, pairwise agent--agent and agent--obstacle eCBF conditions define halfspaces in the local control space. Rather than enforcing all such halfspaces, a geometry-adaptive subset is retain...
+
+**Summary:** 提出基于tube-tightened指数控制屏障函数(eCBF)的可扩展约束规约方法，用于分布式模型预测控制下的多智能体安全保证。
 
 ### [GRAPE: Gradient Refinement and Progress-Aware Exploitation for Query-Efficient High-Dimensional Bayesian Optimization](https://arxiv.org/abs/2608.25116v1)
 **Authors:** Richard Cornelius Suwandi, Feng Yin  
@@ -218,12 +270,16 @@ Auto-updated weekly. Last update: 2026-08-31
 
 > Optimizing expensive, high-dimensional black-box functions remains a central challenge in modern machine learning and scientific discovery. While local Bayesian optimization mitigates the curse of dimensionality, existing techniques often prioritize the probability of descent over the magnitude of progress. This leads to overly conservative steps that yield negligible improvement, wasting queries ...
 
+**Summary:** 提出GRAPE，一种面向高维黑盒函数的查询高效贝叶斯优化方法，通过梯度精细化与进展感知平衡探索步长与下降概率。
+
 ### [RePolicy: Reinforcement Learning for Safety-Policy Invocation in Agent Safeguards](https://arxiv.org/abs/2608.24275v2)
 **Authors:** Houcheng Jiang, Boxuan Zhang, Qiyong Zhong et al.  
 **Date:** 2026-08-25  
 **Query match:** `"agent safety"`
 
 > Safeguarding language model agents requires assessing complete execution trajectories under context-dependent safety policies. Existing policy-aware safeguards mainly rely on prompting or supervised fine-tuning, limiting their ability to adapt to unseen trajectories and changing policy contexts. We propose RePolicy, an agent safeguard that learns safety-policy invocation through reinforcement lear...
+
+**Summary:** 提出RePolicy，通过强化学习让agent safeguard学会在执行轨迹中动态决定何时调用安全策略，克服现有基于prompt/微调方法难以适应未见轨迹和变化策略的问题。
 
 ### [AgentWorld: Personality-Aware Reliability Evaluation for Agentic Information Retrieval](https://arxiv.org/abs/2608.24076v2)
 **Authors:** Gunja Agarwal, Arup Kumar Das, Arun Menon et al.  
@@ -232,6 +288,8 @@ Auto-updated weekly. Last update: 2026-08-31
 
 > Evaluation of agentic information retrieval remains limited to scripted interactions with uniform users, missing both natural personality diversity and adversarial brittleness. We present AgentWorld, a simulation framework combining (i)Big Five (OCEAN) personality-driven user populations with stateful tool-use environments; (ii)the pass$^k$ consistency metric with structured fault classification, ...
 
+**Summary:** 提出AgentWorld，一个结合Big Five人格驱动用户群体、有状态工具环境与pass^k一致性指标的agentic信息检索可靠性评估框架。
+
 ### [What Guides the Agent? Adjudicating Unauthorized Behavior via Localizing Behavior-Guiding Instructions](https://arxiv.org/abs/2608.24022v1)
 **Authors:** Yichao Gao, Yumo Zhang, Yunhao Yao et al.  
 **Date:** 2026-08-25  
@@ -239,12 +297,16 @@ Auto-updated weekly. Last update: 2026-08-31
 
 > LLM agents integrated with external resources gain complex task capabilities, yet the unified natural-language context channel makes them vulnerable to injection attacks: untrusted external data may be dynamically parsed as behavior-guiding instructions during LLM inference, thereby subverting the agent's decision. Existing defenses focus on static detection or isolation of malicious content at th...
 
+**Summary:** 提出Attnlocate，一个运行时框架，通过定位上下文中真正引导agent决策的“行为指导指令”来动态检测注入攻击，而非仅在输入/输出层做静态检测。
+
 ### [WebMCP-Phalanx: Enforcing and Characterizing Trust Boundaries for Browser-Integrated LLM Agents](https://arxiv.org/abs/2608.24017v1)
 **Authors:** Lin-Fa Lee, YI-YU Chang, Kuo-Hui Yeh  
 **Date:** 2026-08-25  
 **Query match:** `"prompt injection" AND "agent"`
 
 > The emerging W3C WebMCP proposal enables LLM agents to invoke tools exposed by web pages. In multi-party web environments, however, integrating agent execution into a browser security model centered on the Same-Origin Policy (SOP) leaves insufficient provenance and lifecycle guarantees for agent-accessible tools, creating three risks: subject-attribution spoofing, uncontrolled tool lifecycles, and...
+
+**Summary:** 提出WebMCP-Phalanx，为浏览器集成LLM agent（基于新提出的W3C WebMCP标准）刻画并强制执行信任边界，应对同源策略无法覆盖的provenance与生命周期风险。
 
 ---
 
