@@ -1022,6 +1022,15 @@ Auto-updated weekly. Last update: 2026-08-31
 
 **Summary:** LASH通过自适应语义混合多种基础攻击策略实现黑盒越狱，在JailbreakBench上平均ASR达84.5%，仅需30次查询即超越5个SOTA基线，展示跨异构越狱策略自适应组合的有效性。
 
+### [Heartbeat-Bound Hierarchical Credentials: Cryptographic Revocation for AI Agent Swarms](https://arxiv.org/abs/2605.20704)
+**Authors:** Saurabh Deochake  
+**Date:** 2026-05-20  
+**Query match:** `prompt injection AND agent`
+
+> Autonomous AI agents that spawn sub-agent swarms create a safety gap: existing credential revocation mechanisms, OAuth 2.0 introspection, OCSP, and W3C Status Lists, require network connectivity to a central authority, leaving 'zombie agents' executing privileged operations for minutes to hours after operator shutdown. We present Heartbeat-Bound Hierarchical Credentials (HBHC), a cryptographic pro...
+
+**Summary:** 提出HBHC密码协议，通过心跳绑定凭证有效性来解决多智能体集群中的“僵尸代理”问题，实现90倍于OAuth 2.0的撤销窗口压缩。
+
 ### [AgentAtlas: Beyond Outcome Leaderboards for LLM Agents](https://arxiv.org/abs/2605.20530)
 **Authors:** Parsa Mazaheri, Kasra Mazaheri  
 **Date:** 2026-05-19  
@@ -1112,6 +1121,15 @@ Auto-updated weekly. Last update: 2026-08-31
 
 **Summary:** 研究低资源非洲语言（南非荷兰语等）多轮对话越狱攻击，发现翻译质量是成功率的关键因子，人工红队测试比自动测试效果更高，多轮对话比单轮翻译攻击显著更有效。
 
+### [An Empirical Study of Privacy Leakage Chains via Prompt Injection in Black-Box Chatbot Environments](https://arxiv.org/abs/2605.18133)
+**Authors:** Hongjang Yang, Hyunsik Na, Daeseon Choi  
+**Date:** 2026-05-18  
+**Query match:** `prompt injection AND agent`
+
+> LLM-based chatbot agents increasingly process user requests by combining natural-language reasoning with external tools such as web browsing. These capabilities improve usability, but they also create attack surfaces when untrusted external content is processed as part of a user's task. This paper studies a privacy-leakage attack chain based on indirect prompt injection in black-box chatbot enviro...
+
+**Summary:** 研究黑盒聊天机器人环境中通过间接提示注入实现隐私泄露的攻击链，提出“exemplification”技术将用户提示重框为少样本示例从而劫持代理行为。
+
 ### [LivePI: More Realistic Benchmarking of Agents Against Indirect Prompt Injection](https://arxiv.org/abs/2605.17986)
 **Authors:** Lei Zhao, Abhay Bhaskar, Edgar Dobriban  
 **Date:** 2026-05-18  
@@ -1129,6 +1147,15 @@ Auto-updated weekly. Last update: 2026-08-31
 > Despite rigorous safety alignment, Large Language Models (LLMs) remain vulnerable to jailbreak attacks. We investigate an intrinsic vulnerability in the safety mechanisms of LLMs, where safety alignment relies on a small set of sparsely distributed attention heads, leaving much of the representational space weakly monitored. We formalize this phenomenon with a mathematical jailbreaking model that ...
 
 **Summary:** Babel发现LLM安全对齐依赖稀疏分布的少数注意力头，通过数学模型指导的混淆分布优化采样实现黑盒越狱，将GPT-4o攻击成功率从41.33%提升至82.67%，仅需40次查询。
+
+### [Remembering More, Risking More: Longitudinal Safety Risks in Memory-Equipped LLM Agents](https://arxiv.org/abs/2605.17830)
+**Authors:** Ahmad Al-Tawaha, Shangding Gu, Peizhi Niu et al.  
+**Date:** 2026-05-18  
+**Query match:** `prompt injection AND agent`
+
+> Safety evaluations of memory-equipped LLM agents typically measure within-task safety: whether an agent completes a single scenario safely, often under adversarial conditions such as prompt injection or memory poisoning. In deployment, however, a single agent serves many independent tasks over a long horizon, and memory accumulated during earlier tasks can affect behavior on later, unrelated ones....
+
+**Summary:** 研究具有记忆功能的LLM代理中的“时序记忆污染”问题，发现随着记忆累积安全违规率单调上升，论证记忆安全应被视为需要时序评估的纵向属性。
 
 ---
 
@@ -1187,6 +1214,15 @@ Auto-updated weekly. Last update: 2026-08-31
 > AI agents are increasingly deployed to act autonomously in the world, yet there is still no reliable way to trace a harmful agent back to the account that deployed it. We formalize this gap as the problem of agent attribution: linking an observed agent interaction to the responsible account at the hosting vendor. Our protocol is canary-based: an authorized party injects a canary into the agent's i...
 
 **Summary:** 提出agent归因问题并给出基于金丝雀注入的解决方案，将有害agent行为可靠追溯到部署账户，对抗性算子无法在不损害任务性能的情况下规避归因。
+
+### [Hidden in Memory: Sleeper Memory Poisoning in LLM Agents](https://arxiv.org/abs/2605.15338)
+**Authors:** Sidharth Pulipaka, Stanislau Hlebik, Leonidas Raghav et al.  
+**Date:** 2026-05-14  
+**Query match:** `"prompt injection" AND "agent"`
+
+> Large language models are increasingly augmented with persistent memory, allowing assistants to store user-specific information across sessions for personalization and continuity. This statefulness introduces a new security risk: adversarial content can corrupt what an assistant remembers and thereby influence future interactions. We propose and study sleeper memory poisoning, a delayed attack in ...
+
+**Summary:** 提出“沉睡记忆中毒”攻击：通过操控外部内容让agent存储伪造记忆，跨会话潜伏并影响后续行为，GPT-5.5上投毒成功率高达99.8%。
 
 ### [WARD: Adversarially Robust Defense of Web Agents Against Prompt Injections](https://arxiv.org/abs/2605.15030)
 **Authors:** Tri Cao, Yulin Chen, Hieu Cao et al.  
@@ -1640,6 +1676,15 @@ Auto-updated weekly. Last update: 2026-08-31
 > Automation-Exploit is a fully autonomous Multi-Agent System (MAS) framework designed for adaptive offensive security in complex black-box scenarios. It bridges the abstraction gap between reconnaissance and exploitation by autonomously exfiltrating executables and contextual intelligence across multiple protocols. The framework introduces an adaptive safety architecture to mitigate DoS risks and e...
 
 **Summary:** 多 agent 系统自动化漏洞利用框架，通过数字孪生进行风险缓解的内存漏洞利用，在真实黑盒场景中验证架构有效性。
+
+### [Transient Turn Injection: Exposing Stateless Multi-Turn Vulnerabilities in Large Language Models](https://arxiv.org/abs/2604.21860)
+**Authors:** Naheed Rayhan, Sohely Jahan  
+**Date:** 2026-04-23  
+**Query match:** `"jailbreak" AND "agent"`
+
+> This paper introduces Transient Turn Injection (TTI), a new multi-turn attack technique that systematically exploits stateless moderation by distributing adversarial intent across isolated interactions. TTI leverages automated attacker agents powered by large language models to iteratively test and evade policy enforcement in both commercial and open-source LLMs. The evaluation across state-of-the...
+
+**Summary:** 提出 TTI 多轮注入攻击：将有害意图分散在多轮隔离交互中以绕过无状态 moderation，发现不同模型的 attack surface pattern 差异显著。
 
 ### [Black-Box Skill Stealing Attack from Proprietary LLM Agents: An Empirical Study](https://arxiv.org/abs/2604.21829)
 **Authors:** Zihan Wang, Rui Zhang, Yu Liu et al.  
