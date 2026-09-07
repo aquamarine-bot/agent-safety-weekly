@@ -1,11 +1,12 @@
 # AI Safety Weekly
 > Weekly curated papers on AI Safety, LLM red-teaming, adversarial attacks, and agent security
 
-Auto-updated weekly. Last update: 2026-08-31
+Auto-updated weekly. Last update: 2026-09-07
 
 ---
 
 ## Table of Contents
+- [2026-W35](#2026w35)
 - [2026-W34](#2026w34)
 - [2026-W33](#2026w33)
 - [2026-W23](#2026w23)
@@ -24,6 +25,227 @@ Auto-updated weekly. Last update: 2026-08-31
 - [2026-W08](#2026w08)
 - [2026-W07](#2026w07)
 - [2026-W06](#2026w06)
+
+---
+
+## 2026-W35
+
+### [Trust-Aware Adaptive Disclosure for Inference Privacy Preservation in Multi-Agent Networks](https://arxiv.org/abs/2609.05340v1)
+**Authors:** Puspanjali Ghoshal, Tobias J. Oechtering  
+**Date:** 2026-09-04  
+**Query match:** `"agentic" AND "adversarial"`
+
+> Agent based systems are increasingly deployed in information critical systems including healthcare management systems, and smart grids. In this paper, we consider a multi-agent system where each agent has a latent goal that needs to be kept hidden from observing adversaries. More specifically, this paper studies privacy-preserving consensus in networked multi-agent systems under goal inference att...
+
+### [Closing Gaps in Online Fair Division](https://arxiv.org/abs/2609.05310v1)
+**Authors:** Tzeh Yuan Neoh, Nicholas Teh  
+**Date:** 2026-09-04  
+**Query match:** `"agentic" AND "adversarial"`
+
+> We study the online fair division of indivisible items, where items arrive one at a time and must be allocated immediately and irrevocably. We address three central open questions in the literature.   First, we show that no online algorithm can guarantee any positive multiplicative approximation to proportionality up to any $k$ goods (PROP$k$) against an adaptive adversary. This remains true even ...
+
+### [CONTINUITY: Security-Context Contracts for Composable LLM Agent Controls](https://arxiv.org/abs/2609.05269v1)
+**Authors:** Chris Zheng, Geng Yang  
+**Date:** 2026-09-04  
+**Query match:** `"LLM agent" AND "attack"`
+
+> LLM agent systems increasingly combine provenance tracking, authorization, policy enforcement, protocol adapters, and execution controls. However, individually correct security mechanisms do not necessarily compose into an end-to-end secure system: security-critical context may be dropped, widened, rebound, or reinterpreted as actions cross component boundaries. We identify this failure mode as se...
+
+### [A Structured Debate-Mixture-of-Agents Framework for Complex Clinical Diagnostic Decision Support](https://arxiv.org/abs/2609.05069v1)
+**Authors:** Chang Xia, Leilei Ouyang, Huimin Wang et al.  
+**Date:** 2026-09-04  
+**Query match:** `"multi-agent" AND "safety"`
+
+> Large language models (LLMs) show potential for medical tasks, but their single-turn question-answer format does not reflect how clinical diagnosis is performed in practice. As a result, they remain limited in complex diagnostic settings. We developed Debate-Mixture-of-Agents (DMoA), a novel multi-agent framework that structures role-based interaction to support iterative diagnostic reasoning. Bas...
+
+### [AutoLR: Automating the Path from Research to Launch Review in Industrial Recommender Systems](https://arxiv.org/abs/2609.04871v1)
+**Authors:** Qi Zhang, Yanlin Chen, Wenchao Xiao  
+**Date:** 2026-09-04  
+**Query match:** `"agentic" AND "adversarial"`
+
+> Improving an industrial recommender is an iterative research-and-engineering process rather than a direct path from idea to deployment. In \textbf{DASHEN, NetEase's gaming-community app}, algorithm engineers typically identify promising directions from research papers, technical reports, and prior production experiments; reproduce or adapt the underlying methods; implement them in the production c...
+
+### [Building a research-software catalog with a coding agent: from hackathon prototype to public deployment](https://arxiv.org/abs/2609.04711v1)
+**Authors:** Kazuyoshi Yoshimi, Satoshi Terasaki, Gotai Yamada  
+**Date:** 2026-09-04  
+**Query match:** `"agentic" AND "adversarial"`
+
+> Generative AI and coding agents can accelerate research software development, but they also increase the need for efficient software discovery and maintenance. We developed a repository catalog during a three-day hackathon and subsequently examined the engineering required to make it suitable for public deployment, including adversarial review, data-quality checks, browser-level validation, and pu...
+
+### [Repeat-After-Me: Black-Box Adaptive Visual Prompt Injection](https://arxiv.org/abs/2609.04533v1)
+**Authors:** Sizhe Chen, Yu-Lin Tsai, Ivan Evtimov et al.  
+**Date:** 2026-09-03  
+**Query match:** `"prompt injection" AND "agent"`
+
+> Prompt injection is widely recognized as a major security threat to AI agents that interact with untrusted external data, such as websites, documents, and emails. Prior work has shown that, in the text domain, black-box prompt injection can achieve near-perfect attack success rates (ASRs). In the image domain, however, existing visual prompt injection methods are substantially less effective in at...
+
+### [Rethinking Indirect Prompt Injection as a Test-Time Search Problem](https://arxiv.org/abs/2609.04495v1)
+**Authors:** Duong M. Nguyen, Joon Sik Kim, Blazej Manczak et al.  
+**Date:** 2026-09-03  
+**Query match:** `"prompt injection" AND "agent"`
+
+> We formulate indirect prompt injection as a test-time search over a task-dependent attack surface induced by the environment, user task, and injection task. To operationalize this formulation, we introduce an agentic attacker with a dedicated search harness that performs environment reconnaissance, structured reasoning over attack strategies, and adaptive evaluation using victim-agent feedback. Ac...
+
+### [SENTINEL-RL: Offloading Topological Reasoning from LLM Agents in the Security Operations Center](https://arxiv.org/abs/2609.04159v1)
+**Authors:** Uday Vallabhaneni, Cassie L. Cagwin, David J. Wild  
+**Date:** 2026-09-03  
+**Query match:** `"red teaming" AND "LLM"`
+
+> Large language model (LLM) agents are increasingly proposed as autonomous SOC analysts, but two limitations make them unreliable at enterprise scale: a finite context window cannot hold a multi-thousand-host authentication graph, and free-form generation offers no guarantee that a recommended containment action is consistent with the topology it operates on. We present Sentinel-RL, an agentic-SOC ...
+
+### [AI-Assisted Design of a Post-Quantum Cryptographic Accelerator: A Deployed-Silicon Case Study](https://arxiv.org/abs/2609.04058v1)
+**Authors:** Jungmin Park, Eunha Kim, Wooseop Kim et al.  
+**Date:** 2026-09-03  
+**Query match:** `"agentic" AND "adversarial"`
+
+> Post-quantum migration is mandated on published timelines, and silicon that ships with a defect cannot be patched remotely. The standard acceptance gate cannot detect an entire class of ML-DSA defects. Signing resamples until a candidate meets its norm bounds, so the executed path varies with the message, whereas known-answer tests (KATs) sample fixed values and reach only the depths their seeds t...
+
+### [Shifting from Injection to Interaction: Rethinking Web Security in the Age of LLMs and Beyond](https://arxiv.org/abs/2609.03999v1)
+**Authors:** Nivedita Singh, Alsharif Abuadbba, Yansong Gao et al.  
+**Date:** 2026-09-03  
+**Query match:** `"prompt injection" AND "agent"`
+
+> Large language models (LLMs) are becoming integral to web applications and browser agents, transforming online interactions while introducing new attack vectors and reshaping longstanding web vulnerabilities. Classical threats such as cross-site scripting (XSS) can be amplified through LLM-mediated interactions, while LLM-specific vulnerabilities can propagate across web applications, introducing ...
+
+### [Value-Preserving Architectures for Agentic AI Systems](https://arxiv.org/abs/2609.03920v1)
+**Authors:** Alessandro Pesare, Tommaso Dolci, Katja Hose et al.  
+**Date:** 2026-09-03  
+**Query match:** `"multi-agent" AND "safety"`
+
+> The emergence of agentic AI and LLM-based multi-agent systems (MAS) presents unprecedented opportunities for automating complex tasks, while simultaneously raising critical concerns about the preservation of fundamental human-centered values, such as privacy, fairness, and safety. Although software engineering has traditionally focused on functional correctness, the adoption of LLMs and AI agents ...
+
+### [Inferring Hidden User Models from the Behavior of Personalized LLM Agents](https://arxiv.org/abs/2609.03815v1)
+**Authors:** Haoyang Li, Yaxin Xiao, Qingqing Ye et al.  
+**Date:** 2026-09-03  
+**Query match:** `"LLM agent" AND "attack"`
+
+> Recent personalized LLM agents increasingly transform information retained in memory into compressed or structured representations, which we call user models, to guide later decisions. When source wording is removed from the state reachable through the ordinary interface, these models are commonly treated as more privacy-preserving because direct memory-extraction attacks lose the text they target...
+
+### [PACE: Towards Surfacing Hidden Conflicts in User Requests](https://arxiv.org/abs/2609.03293v1)
+**Authors:** Yoojin Kim, Jihyoung Jang, Hyounghun Kim  
+**Date:** 2026-09-03  
+**Query match:** `"multi-agent" AND "safety"`
+
+> Personalized assistants should not only comply with user requests but also assess whether those requests are appropriate given the user's current circumstances. However, prior work has primarily focused on accurately executing requests, overlooking the need for assistants to account for context and engage in conflict-based refusal. Furthermore, while existing work on conflict or safety detection r...
+
+### [Privacy-Preserving Topology-Guided Safety for LLM-Based Multi-Agent Systems via Federated Graph Learning](https://arxiv.org/abs/2609.02967v1)
+**Authors:** Jinxi Yu, Eric Hanchen Jiang, Levina Li et al.  
+**Date:** 2026-09-02  
+**Query match:** `"multi-agent" AND "safety"`
+
+> Topology-guided safeguards for LLM-based multi-agent systems (MAS) train a GNN over the inter-agent communication graph to localize risky agents and intervene on the topology---but they assume one operator can pool all labeled traces. Across organizations that assumption breaks: episodes contain private prompts, tool outputs, and proprietary workflows, and no silo alone sees the full attack distri...
+
+### [SafeEvolve: Harness-Policy Co-Evolution from Agent Experience for Safety Alignment](https://arxiv.org/abs/2609.02786v1)
+**Authors:** Qinghua Mao, Wanying Qu, Dadi Guo et al.  
+**Date:** 2026-09-02  
+**Query match:** `"agent safety"`
+
+> The performance of LLM-based agents is jointly shaped by the base model and the harness used when interacting with the environment. This exposes them to safety risks in both harmful final responses and multi-step execution trajectories. Existing safety alignment mechanisms often rely on either external harness updates or policy optimization, yet applying either paradigm in isolation fails to bridg...
+
+### [ACLE-MCP: Attested Capability Leases for Execution-Time Trust in Remote LLM Tool Use](https://arxiv.org/abs/2609.02690v1)
+**Authors:** Zhiyang Ding, Yang Luo, Guangpu Chen et al.  
+**Date:** 2026-09-02  
+**Query match:** `"tool use" AND "attack"`
+
+> Remote Model Context Protocol (MCP) services enable large language model agents to invoke external tools, but OAuth authorization alone does not ensure that a later tool call is executed by the provider-side workload that the relying party intended to trust. An endpoint may remain authorized even after execution shifts to a substituted workload, relies on stale appraisal state, reuses authority tr...
+
+### [A Finger on the Scale: Covert Policy Steering through Agentic Skills](https://arxiv.org/abs/2609.02564v1)
+**Authors:** Jiarui Li, Jiahao Chen, Chunyi Zhou et al.  
+**Date:** 2026-09-02  
+**Query match:** `"tool use" AND "attack"`
+
+> Reusable agent skills extend large language model (LLM) agents with task procedures, tool-use guidance, and output constraints. Yet these skills also act as externalized behavioral policies, which create a supply-chain risk: a third-party skill may preserve the declared task and valid output interface while covertly redirecting agent decisions toward an undisclosed objective. We formalize Skill Po...
+
+### [SEAL: Reinforcing Global Safety in Mixture-of-Experts through Shared Expert ALignment](https://arxiv.org/abs/2609.02293v1)
+**Authors:** Qingyu Meng, Yiwei Zha, Jiahuan Pei et al.  
+**Date:** 2026-09-02  
+**Query match:** `"adversarial attack" AND "language model"`
+
+> Mixture-of-Experts (MoE) is a scaling architecture for large language models that activates only a small subset of expert modules per token, enabling massive parameter growth with nearly constant computation. Recent Hybrid MoE architecture adds \textit{shared experts} to capture consistently useful representations, further improving stability and generalization. MoE now powers many flagship open-s...
+
+### [CAPTURE: Disentangling Preference Drift from Memory Poisoning in Personalized LLM Agents](https://arxiv.org/abs/2609.02265v1)
+**Authors:** S M Asif Hossain, Ruksat Khan Shayoni, Md Kishor Morol  
+**Date:** 2026-09-02  
+**Query match:** `"LLM agent" AND "attack"`
+
+> Personalized language agents use persistent memory to adapt to users over time, but the same mechanism creates an attack surface. When new information conflicts with stored preferences, an agent must distinguish genuine preference drift from temporary context shifts, ambiguity, or adversarial memory poisoning. We formulate this problem as a continuous-time partially observable decision process ove...
+
+### [InfraPatch: Cross-Task Targeted Grayscale Patch Attacks on Infrared-Adapted Vision-Language Models](https://arxiv.org/abs/2609.02233v1)
+**Authors:** Chengyin Hu, Dingyi Lu, Jiaju Han et al.  
+**Date:** 2026-09-02  
+**Query match:** `"adversarial attack" AND "language model"`
+
+> Infrared vision-language models (IR-VLMs) have emerged as a promising paradigm for multimodal perception under low-visibility conditions, yet their robustness to targeted adversarial attacks remains poorly understood. Existing adversarial patch methods mainly study RGB-based models or a single downstream task and do not characterize whether localized perturbations can induce an intended semantic t...
+
+### [Stored Is Not Supported: Typed Provenance and Assertion Guardrails for Persistent AI Agents](https://arxiv.org/abs/2609.02127v1)
+**Authors:** Jun He, Deying Yu  
+**Date:** 2026-09-02  
+**Query match:** `"prompt injection" AND "agent"`
+
+> Persistent AI agents construct autobiographical state through reflection, retrieval, and consolidation. Persistence changes availability, not epistemic standing: stored or retrieved material is not thereby supported. Untrusted inputs, prompt injections, and model inferences can therefore enter persistent state and later be presented as agent history or user commitments. We specify typed provenance...
+
+### [Implicit Manipulation for Skill Selection in LLM Agents with Semantic Matching](https://arxiv.org/abs/2609.02035v1)
+**Authors:** Qikai Wang, Yongzhao Zhang, Zhiwei Chen et al.  
+**Date:** 2026-09-02  
+**Query match:** `"prompt injection" AND "agent"`
+
+> Skill selection is a key stage in LLM-agent workflows, determining which installed skill should handle a user request. Existing attacks on this stage primarily rely on explicit prompt injection or instruction-level steering, which can expose recognizable manipulation signals. In this work, we identify a new implicit attack surface for skill selection: even when the user prompt and skill descriptio...
+
+### [Grounded, Compute-Efficient LLM Policy Agents for Energy-Poverty Equity in Physically-Constrained Peer-to-Peer Energy Markets](https://arxiv.org/abs/2609.01918v1)
+**Authors:** Kunal Jadhav, Siddhesh More  
+**Date:** 2026-09-01  
+**Query match:** `"multi-agent" AND "safety"`
+
+> Energy poverty is nearly absent from NLP-for-social-good, and the little existing work is either static retrieval/QA or relies on carbon-intensive cloud LLMs, a self-defeating "computational irony" for a humanitarian setting. We present EqGrid, a closed-loop simulation in which a low-frequency, open-weight LLM policy agent sets price and carbon bounds and targeted subsidies over a community of emp...
+
+### [Agent Memory Is a Surface for Endogenous Authorization Laundering](https://arxiv.org/abs/2609.01836v1)
+**Authors:** Tommaso Cerruti, Mika Okamoto, Ansel Kaplan Erol  
+**Date:** 2026-09-01  
+**Query match:** `"LLM agent" AND "attack"`
+
+> Long-running LLM agents rely on persistent memory to carry state across interactions, including permissions, restrictions, and revocations. When memory misrepresents this evolving authorization state, the agent's own records can grant authority that the underlying history never permitted, resulting in misaligned behavior without any external attacks.   We term this failure endogenous authorization...
+
+### [Explore More, Drift Less: Outcome-Only Reinforcement Learning Can Suffice for Long-Horizon Interactive Agents](https://arxiv.org/abs/2609.01245v1)
+**Authors:** Liming Pu, Xiaoxia Li, Yifu Liu et al.  
+**Date:** 2026-09-01  
+**Query match:** `"LLM agent" AND "attack"`
+
+> Reinforcement learning is a natural way to post-train LLM agents for long-horizon interactive tasks judged only by end-of-task verification, yet a shared belief holds that outcome-only RL soon hits a ceiling on small open models. Recent work therefore compensates around the training with denser rewards, SFT priors, skill libraries, curated memory, or multi-agent orchestration. We argue the ceiling...
+
+### [Jailbreaking Text-to-Image Models Through Cracks: Navigating Heterogeneous Safety Filters via Multi-Agent Debate](https://arxiv.org/abs/2609.01168v2)
+**Authors:** Kaiyan Wen, Shijie Zhang, Lu Yu et al.  
+**Date:** 2026-09-01  
+**Query match:** `"jailbreak" AND "agent"`
+
+> Text-to-image (T2I) models remain vulnerable to jailbreak attacks that elicit Not-Safe-For-Work (NSFW) content, despite increasingly being guarded by heterogeneous, multi-layer safety stacks combining text filters, image classifiers, and cross-modal detectors. Existing jailbreak studies either optimize against individual filters or query the complete pipeline with aggregate feedback, making it dif...
+
+### [Forbid Your Attention: Fooling Multimodal Large Language Models by Selectively Removing Intrinsic Focus in Spectral Domain](https://arxiv.org/abs/2609.00788v1)
+**Authors:** Daizong Liu, Junhao Dong, Zhiyuan Ma et al.  
+**Date:** 2026-09-01  
+**Query match:** `"adversarial attack" AND "language model"`
+
+> Multimodal large language models (MLLMs) have extended the capability of large language models (LLMs) to process more contextual multimodal information, showing remarkable progress in diverse realistic multimodal applications. Despite their strong perception and reasoning abilities, recent studies reveal that MLLMs remain highly vulnerable to adversarial inputs, especially those targeting visual c...
+
+### [Same Semantics, Different Outcome: On the Modality Robustness of Multimodal LLMs under Knowledge Conflict](https://arxiv.org/abs/2609.00550v1)
+**Authors:** Jungyeon Lee, Yejin Yoon, Taeuk Kim  
+**Date:** 2026-09-01  
+**Query match:** `"adversarial attack" AND "language model"`
+
+> Multimodal large language models (MLLMs) are increasingly provided with contextual evidence in heterogeneous forms: as a text passage, as a rendered image of the same passage, or as both together. However, it remains unclear how consistently these surface forms are processed, especially when the evidence conflicts with the model's parametric knowledge. We study modality robustness under knowledge ...
+
+### [Context Inference Attacks Without Jailbreaks](https://arxiv.org/abs/2609.01663v1)
+**Authors:** Prince Jha, Samuele Poppi, Nils Lukas  
+**Date:** 2026-08-31  
+**Query match:** `"jailbreak" AND "agent"`
+
+> Agentic AI systems are increasingly deployed to process sensitive data at inference time, such as healthcare records or financial documents assembled into a hidden \emph{context} before the system answers. Prior work has studied privacy risks primarily through \emph{jailbreaking} attacks that induce models to directly disclose sensitive content, but has largely overlooked the agentic setting where...
+
+### [EvoFlint: An Evolutionary Atlas of Multi-Turn LLM Vulnerabilities](https://arxiv.org/abs/2609.00487v1)
+**Authors:** Feitong Qiao, Liren Peng, Shiming Ren et al.  
+**Date:** 2026-08-31  
+**Query match:** `"red teaming" AND "LLM"`
+
+> Frontier language models that refuse harmful single-turn prompts often comply when the same intent is reached gradually over many turns, making multi-turn attacks one of the least understood failure modes of large language models. Most automated red-teaming methods treat this as a generation problem: produce attacks that break the model. We argue it is better framed as a search problem: discover, ...
 
 ---
 
